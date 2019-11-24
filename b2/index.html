@@ -1,0 +1,470 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>과학기술정보통신부</title>
+	<link rel="shortcut icon" href="image/main/pavi16x16.png">
+    <link rel="apple-touch-icon-precomposed" href="image/pavi180x180.png">
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+       
+    <style>
+        *{margin: 0;padding: 0;}
+        img{border: 0;}
+        body,html{width: 100%;height: 100%;;overflow-x: hidden;
+        font-family:'adobegothicstd-bold' ,sans-serif;background-color: #f5f5f5;
+    }
+        a{text-decoration: none;color: black}
+        ul{list-style: none;}
+        button,a,input{border: 0;outline: 0;}
+       .wrap {width: 1920px;height: 2500px;}
+       body,footer {width: 1920px;}
+        .logo {float: left;display: block;z-index: 3;top: 20px;width: 400px;height: 100px;
+        position: absolute;z-index: 1;}
+        .logo img{width: 400px;height: 80px;}
+.line1 {position: fixed;z-index: 2;;width: 1905px;height: 20px;background:#4271e5;}
+.line2 {position: fixed;width: 1900px;;height: 100px;background: #f5f5f5;border:2px solid #4271e5 ;
+        z-index: 1;}
+.gnb {position: fixed;left: 460px;top: 20px;background:#f5f5f5 ;
+    width:1000px;
+    height:80px;z-index:2;
+}
+.gnb li { float:left; margin-top: 15px;
+    width: 150px; 
+    height: 40px;
+    position:relative;
+}
+.gnb li a { 
+    display:block;
+    width: 150px; 
+    height: 40px;
+    line-height:40px;
+    text-align:center; 
+    color:#333;
+    font-weight:600;
+}
+.gnb li .sub {
+    width: 150px;
+    height: 170px;
+    background:#fff;
+    border-top:3px solid #ccc;
+    position:absolute;
+    top: 40px;
+    left: 0;
+    z-index:999;
+    visibility: hidden;
+    opacity:0;
+    transition:0.5s;
+}
+
+/*
+.gnb li:hover .sub {
+    visibility:visible;
+    opacity: 1;
+}
+*/
+.gnb:hover li .sub {
+    visibility:visible;
+    opacity: 1;
+}
+.gnb li a.dp1 {
+    font-size:16px;     
+    
+    border-bottom:1px solid #4171e5;
+}
+.gnb li:hover a.dp1 {
+    background:#4171e5;
+    color:#fff;
+}
+.gnb li .sub a {
+    font-size:14px;
+}
+.gnb li .sub a:hover {
+    background:#4171e5;
+    color:#fff;
+}
+.top_image {position: relative;;top: 100px;}
+
+
+
+.ban_box {position: relative;;margin-left: 360px;bottom: 1100px;}
+.ban_box img {border-radius: 25%;width: 300px;height: 250px;padding-left: 10px;float: left;}
+        .pop_box{position:;left: 1820px}
+        .pop1 {position:absolute;margin-top: 500px;margin-left: 1700px}
+        .pop2 {position: absolute;}  
+     
+
+
+.top_link {width: 300px;height: 30px;position: absolute;left: 1500px;bottom: 855px;z-index:3 ;}
+.top_link li{float: left;}
+.top_link li img {width: 50px;height: 50px;}
+
+/*이미지 슬라이드*/
+
+/* 각 구역 서식 설정 */
+
+
+
+
+/* 헤더 구역 서식 설정 */
+
+.img_box { width:2400px; height:350px; }
+.img_box li { width:800px; height:350px; float:left;  transition:0.8s; transition-timing-function:ease-in; }
+.img_box li.on {  transition-timing-function:ease-out; }
+.img_box li a, .img_box li img { display:block; width:1200px; height: 350px; } 
+.img_box li a { position:relative; }
+.img_box li .vs_title { position:absolute; top:120px; left:0; color:#fff; font-size:24px; 
+text-align:center; text-shadow:2px 2px 2px #0066ad, -2px -2px 2px #0066ad; line-height:800px; width:800px; transition:0.8s; }
+.img_box li.on .vs_title { line-height:60px;  }
+.prev button, .next button { position:absolute; top:120px; z-index:20; display:block; 
+    font-size:36px; text-align:center; width:80px; height:80px; 
+    line-height:76px; cursor: pointer; color:#0066ad; border:2px solid #ffffff; border-radius:54px; }    
+.prev button { left:20px; }
+.next button { right:20px; }    
+/*검색창*/
+   
+    
+    #frm1 { border: 2px solid #4271e5;width: 1100px; height: 80px; margin:0 auto;margin-top: 100px; background-color }  
+    #keyword {display:block; height: 70px; width:910px; font-size:18px; text-indent:24px; 
+    margin: 5px;;float:left; opacity:0.6; transition:0.5s;  } 
+    #search { display:block; width: 70px; height: 70px; float:right; margin: 5px; 
+
+        ; background-color:#4271e5 ;background-image:url("image/search.png"); text-indent:-9999px;
+         background-size:70px 70px; background-position:center center; background-repeat:no-repeat; opacity:0.6;  transition:0.5s;  } 
+    #keyword:focus { opacity:1; width: 800px; }   
+    #keyword:focus ~ #search { opacity:1; }    
+
+
+.menu_icon{position: relative;left: 400px;}
+.menu_icon img {float: left;widows: 170px;height: 170px;padding: 10px;margin-top: 
+ px;border-radius: 300px;float:}
+ 
+          
+/*라디오탭*/
+con_box li.item { float:left; }
+.con_box li.nt { width:450px; }
+.rdo { display:none; }
+.con_box li.ban { 
+    width:360px;
+    margin-left: 14px; 
+}
+.con_box li.sht { 
+    width:360px; 
+    margin-left:14px; 
+}
+.con_box .nt_tit { 
+    display:block; 
+    font-size:16px; 
+    color:#333; 
+    width:120px; 
+    line-height:36px; 
+    font-weight:600; 
+    text-indent:14px;
+}
+.con_box li.nt .nt_tit { 
+    float:left; 
+    cursor:pointer;
+    text-align:center; 
+    text-indent:0;
+    border-radius:10px 10px 0px 0px;
+}
+con_box li.ban .nt_tit, .con_box li.sht .nt_tit {
+    width:auto;
+    background:#e0e0e0;
+    border-radius:10px 10px 0px 0px;
+}
+.con_box li.nt .item_box { clear:both;
+border-top:2px solid #333; display:none;  }
+#ra1:checked ~ .nt_hd .lb1 {
+    background:#333;
+    color:#fff;
+}
+#ra2:checked ~ .nt_hd .lb2 {
+    background:#333;
+    color:#fff;
+}
+#ra1:checked ~ #notice {
+    display:block;
+}
+#ra2:checked ~ #gallery {
+    display:block;
+}
+/*동그랑 아이콘 6개*/
+/*
+.menu_icon li:hover {animation: ani1 linear 1s;}
+@keyframes ani1 {
+    from{transform:rotateY(0deg) ;}
+    to {transform: rotateY(360deg);} */
+
+    /*기관소개 아이콘3개*/
+    .pub_wrap{position: relative;margin-left: 455px;}
+    .pub li{float: left;margin-left:  5px;padding-left: 30px;}
+    .pub li img{height: 150px;border: 3px solid #4271e5}
+    .pub li:hover .pub li img {width: 400px;height: 10px;;background-color: orange;}
+    
+    /*박스4개*/
+    .css_tit { text-align:center; border-bottom:1px solid #333; }    
+    .lst { clear:both; width:1280px; margin:10px auto; position:relative; }    
+    .lst li { margin:10px; float:left; width: 300px; height: 300px;  }
+    .lst.sq li { overflow:hidden;}    
+    .lst .bx_fr { width:600px; height:300px; transition:0.5s; }
+    .lst li .tit_box { width:300px; height:300px; background:#282828; color:#fff; 
+        transition:0.5s;   position:relative; }    
+    .lst li .img_box { width: 300px; height: 300px; transition:0.5s; 
+         transition-timing-function:ease-in-out; }    
+    .lst .bx_fr .tit_box, .lst .bx_fr .img_box { float:left; }    
+    .tit { text-align:center; border-bottom:1px solid #fff; }
+    .com { padding:14px; }    
+    .lnk_box { text-align: center; line-height:1.3; padding-top: 36px; }   
+    .more { padding:8px 28px; border:1px solid #fff; color:#fff;background-color: #4271e5;
+     border-radius:8px; font-size:14px; }   
+    .img_box img { display:block; width:100%; height:auto; }    
+   
+    .bx.sq6:hover .img_box {left:75px; top:-75px; width: 150px; height: 150px; }     
+    
+    .lst.sq6 li { position:relative; overflow:visible; }
+    .lst.sq6 li:before { content:""; display:block; width:300px; height:300px; 
+        box-sizing:border-box; border:10px solid rgba(255,255,255,0.7); 
+        position:absolute; top:0; left:0; z-index:6; opacity:0; transition:0.5s; 
+        transform:scale(0); }
+    .lst.sq6 {right: 180px;}
+    .lst.sq6 li:hover::before { opacity:1; transform:scale(1); }  
+    .lst.sq6 .img_box { position:absolute; top:0; left:0; z-index:5; overflow: hidden; } 
+    .lst.sq6 .tit_box { position:absolute; top:0; left:0; z-index:6; overflow: hidden; 
+        opacity:0; background-color:rgba(40,40,40,0.7); }    
+    .lst.sq6 li .more { position:absolute; bottom:30px; left:50%; margin-left:-49px; }   
+    .lst.sq6 .bx:hover .tit_box { opacity:1; }   
+    .lst.sq6 .img_box img { height: 100%; } 
+  
+    .bx.sq23 .tit { margin-top:-120px; border:0; transition:0.5s; }     
+    .bx.sq23 .com { margin-left:-350px; width:300px; height:4em; box-sizing:border-box; 
+    transition:0.5s; transition-delay:0.5s;font-size: 25px; }      
+    .bx.sq23:hover .tit { margin-top:0px; border:0; }     
+    .bx.sq23:hover .com { margin-left:0; }    
+    .lst.sq6 {margin-left: 100px;}
+
+    /*푸터 링크*/
+    .ftnav {bottom: 540px;position: relative;width: 1920px;height: 100px;
+    background-color: #e3e3e3;border: 1px solid #4271e5;}
+    .ftnav h2 {text-align:  center;}
+    .ftnav li {float: left;}
+    .ftnav li img{width: 200px;height: 70px;padding-left: 30px; }
+.ftnav2 {padding:15px 300px 15px 300px;}
+
+.ft {margin-left:00px;}
+.ft_link { width:1300px; margin:6px auto; height:28px; }
+.ft_link li { float:left; padding:0px 8px; }
+.ft_link li a { font-size:14px; color:#333333; font-weight:bold;}
+.ft_link li.item1 a:after { content:"|"; padding-left:16px; }
+.ft_link li.item2 a:after { content:"|"; padding-left:16px; }
+.ft_link li.item3 a:after { content:"|"; padding-left:16px; }
+.ft_link li.item4 a:after { content:"|"; padding-left:16px; }
+.ft_link li.item5 a:after { content:"|"; padding-left:16px; }
+.ft_link li.item5 a:after { content:"|"; padding-left:16px; }
+.ft_link li.item6 a:after { content:""; }
+.ft_link li a:hover { color:#5b9bd5; }
+.ft_link li a:hover::after { color:#333; }
+.cr {position: relative;}
+.copyright {margin-left: 800px;font-size:16px;font-weight: bold; color:#333333;display: block;width: 600px; }
+.copyright2 { margin-left: 765px;font-size:16px;font-weight: bold ;color:#333333;display: block;width: 600px; }
+.copyright3 {display: block;margin-left: 900px;bottom: 100px;float: left;}
+.family_box { width:200px; height:100px; position:absolute; 
+right:0; bottom:0; }
+#family { display:block; line-height:96px; width:200px; font-size:14px;
+ border:1px solid #333333; position:absolute; right:0; top:32px; }
+#family option { display:block; line-height: 40px; }
+.hr { width:100%; height:2px; background:#333; clear:both; margin-top: 10px; }
+.ft {width: 1920px;position: relative;bottom: 548px;}
+
+
+</style>
+</head>
+<body>
+ <div class="wrap">
+   
+ <header class="hd">
+        <div class="line1"></div>
+        <div class="line2"></div>
+ <a href="index.html" class="logo"><img src="./image/main/logo.PNG" alt=""></a>
+ <nav class="gnb">
+                <ul>
+                    <li>
+                        <a href="menu1-1.html" class="dp1">소통광장</a>
+                        <ul class="sub">
+                            <li><a href="menu1-1.html">민원신고</a></li>
+                            <li><a href="#">전자민원센터</a></li>
+                            <li><a href="#">부정비리신고센터</a></li>
+                            <li><a href="#">국민제안</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dp1">업무안내</a>
+                        <ul class="sub">
+                            <li><a href="#">R&D</a></li>
+                            <li><a href="#">ICT</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dp1">정보공개</a>
+                        <ul class="sub">
+                            <li><a href="#">정보목록</a></li>
+                            <li><a href="#">공공데이터개방</a></li>
+                            <li><a href="#">정보공개안내제도</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="dp1">기관소개</a>
+                        <ul class="sub">
+                            <li><a href="#">업무계획예산</a></li>
+                            <li><a href="#">찾아오시는길</a></li>
+                            <li><a href="#">조직도/직원안내</a></li>
+                        </ul>
+                    </li>
+                        <li>
+                              <a href="#" class="dp1">로그인</a>
+                        </li>
+                        <li>
+                              <a href="#" class="dp1">회원가입</a>
+                        </li>
+                </ul>
+            </nav>
+            <div class="top_link">
+                    <ul class="5set">
+                        <li><a href="https://www.facebook.com/withmsit"><img src="image/main/face.png" alt=""></a></li>
+                        <li><a href="https://blog.naver.com/with_msip"><img src="image/main/set2.png" alt=""></a></li>
+                        <li><a href="https://www.youtube.com/c/withmsit"><img src="image/main/set3.png" alt=""></a></li>
+                        <li><a href="https://twitter.com/withmsit/"><img src="image/main/set4.png" alt=""></a></li>
+                        <li><a href="https://www.instagram.com/withmsit/"><img src="image/main/set5.png" alt=""></a></li>
+                    </ul>
+                </div>
+            <div class="top_image">
+               
+                    <a href=""><img src="./image/main/test2.png" alt=""></a>    
+                    </div>           
+        </header>
+        <section class="page_wrap" id="cover_page">
+                <h2 class="tit"><!-- 444x55 --></h2>
+                <form action="" id="frm1">
+                    <input type="text" id="keyword" placeholder="검색어를 입력해주세요">
+                    <input type="submit" id="search">
+                </form>
+            </section>
+            <content>
+            <ul class="menu_icon">
+                <li id="icon1"><a href=""><img src="image/main/ban1.png" alt=""></a></li>
+                <li id="icon2"><a href=""><img src="image/main/ban2.png" alt=""></a></li>
+                <li id="icon3"><a href=""><img src="image/main/ban311.png" alt=""></a></li>
+                <li id="icon6"><a href=""><img src="image/main/pop111.png" alt=""></a></li>
+                <li id="icon6"><a href=""><img src="image/main/pop211.png" alt=""></a></li>
+                <li id="icon6"><a href=""><img src="image/main/pop311.png" alt=""></a></li>
+            </ul>
+            <img src="image/main/slide1.png" alt="">            
+           </content>
+      <content2>
+        <div class="pub_wrap">
+            <ul class="pub">
+                <li ><a href=""><img src="image/main/pub10.png" alt=""></a></li>
+                <li><a href=""><img src="image/main/pub20.png" alt=""></a></li>
+                <li><a href=""><img src="image/main/pub30.png" alt=""></a></li>
+                <li><a href=""><img src="image/main/pub40.png" alt=""></a></li>
+
+            </ul>
+            
+      </content2>
+            <content3>
+                <ul class="lst sq6">
+                    
+                    <li class="bx sq23">
+                        <div class="img_box"><img src="image/main/box11.PNG" alt="롤오버이미지"></div>
+                        <div class="tit_box">
+                            <h3 class="tit">소식</h3>
+                            <p class="com">문재인정부 2년반, 이렇게 달라졌습니다.</p>
+                            <p class="lnk_box"><a href="" class="more">MORE</a></p>
+                        </div>     
+                    </li>
+                    <li class="bx sq23">
+                        <div class="img_box"><img src="image/main/box22.PNG" alt="롤오버이미지"></div>
+                        <div class="tit_box">
+                            <h3 class="tit">소식</h3>
+                            <p class="com">한-아세안 특별정상회의</p>
+                            <p class="lnk_box"><a href="" class="more">MORE</a></p>
+                        </div>     
+                    </li>
+                    <li class="bx sq23">
+                        <div class="img_box"><img src="image/main/box33.PNG" alt="롤오버이미지"></div>
+                        <div class="tit_box">
+                            <h3 class="tit">소식</h3>
+                            <p class="com">MSIT WEBZINE</p>
+                            <p class="lnk_box"><a href="" class="more">MORE</a></p>
+                        </div>     
+                    </li>
+                    <li class="bx sq23">
+                        <div class="img_box"><img src="image/main/box44.PNG" alt="롤오버이미지"></div>
+                        <div class="tit_box">
+                            <h3 class="tit">소식</h3>
+                            <p class="com">최신정보를 알려드립니다.</p>
+                            <p class="lnk_box"><a href="" class="more">MORE</a></p>
+                        </div>     
+                    </li>
+                </ul>       
+              </content3>
+
+            </div>
+        </div>
+    </div>
+</div>      
+     <div class="ftnav">
+        <div class="ftnav2">  
+        <ul class="ftlink">
+            <li class="ftl1"><a href=""><img src="image/main/footer-site01.png" alt=""></a></li>
+            <li class="ftl2"><a href=""><img src="image/main/footer-site02.png" alt=""></a></li>
+            <li class="ftl3"><a href=""><img src="image/main/footer-site03.png" alt=""></a></li>
+            <li class="ftl4"><a href=""><img src="image/main/footer-site04.png" alt=""></a></li>
+            <li class="ftl5"><a href=""><img src="image/main/footer-site05.png" alt=""></a></li>
+        </ul>   
+    </div>
+     </div>
+     
+<footer class="ft">
+        <div class="hr"></div>
+        <div class="ftwrap">
+                
+                <div class="ft_link">
+                    <nav class="fnb">
+                        <ul>
+                            <li><a href="" class="ftimage1"><img src="image/main/footer-logo.png" alt=""></a></li>
+                            <li><a href="" class="ftimage2"><img src="image/main/koglmrak.png" alt=""></a></li>
+                            <li class="item1"><a href="#">개인정보처리방침</a></li>
+                            <li class="item2"><a href="#">법적고지</a></li>
+                            <li class="item3"><a href="#">이메일주소무단수집거부</a></li>
+                            <li class="item4"><a href="#">사이트맵</a></li>
+                            <li class="item5"><a href="#">고객센터</a></li>
+                            <li class="item6"><a href="#">사이버신문고</a></li>
+                           </ul>
+                    
+                    </nav>
+                 
+            </div>
+            
+                <div class="cr">
+                <p class="copyright">충남 공주시 웅진로 173-1, 303호-3전화 041-850-3960</p>
+                <p class="copyright2">COPYRIGHTⓒ 2019 Yujin Construction ALL RIGHTS RESERVED.</p>
+                
+            </div>
+        </footer>    
+             
+   </div>
+    
+    
+    
+        
+    
+    
+    
+        
+    
+     
+
+    </body>
+</html>
