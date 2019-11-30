@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>The National Gallery </title>
+     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon16.png">
+    <!-- 신형 브라우저와 안드로이드 폰 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon32.png">
+    <!-- 아이폰3 이하 -->
+    <link rel="apple-touch-icon" size="48x48" href="./img/favicon48.png">
+    <!-- 아이패드 -->
+    <link rel="apple-touch-icon" size="72x72" href="./img/favicon72.png">
+    <!-- 아이폰4 이상 -->
+    <link rel="apple-touch-icon" size="114x114" href="./img/favicon114.png">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="icon.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Playfair+Display&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style>
+        
+    * { margin: 0; padding: 0; }
+    body, html { width: 100%; height: 100%; font-family: 'Playfair Display', serif;
+font-family: 'Bree Serif', serif; font-weight:400; overflow-x: hidden;position: relative;background-color:whitesmoke;}
+    ul { list-style: none; }    
+    a { text-decoration:none; }  
+    img {width: 100%;}
+    p {text-align: center; font-size: 20px;}  
+    button, label, input { outline: 0; border:0; background:transparent; }
+    .ckItem, .raItem { display:none; }   
+    #hd { width: 100%; height:60px; background:#393c41; position:absolute; top: 0; left: 0; z-index:80; }
+    .logo { margin-left: 20px;;display:block; width:calc(100% - 100px); height:60px;
+        background-repeat:no-repeat; background-image:url("image/main/top_logo_02.png");
+         background-position:0px center; float:left; border-right:1px solid #000; }
+      
+    .lstBtn { display:block; border-left:1px solid #444; width: 60px; height:60px; float:right; position:relative; }
+    .lstBtn span { position: fixed;display:block; width:28px; height:2px; clear:both;  right:15px; float:right; background:#fff; position:absolute; }
+    .lstBtn .lst1 { top: 15px; }    
+    .lstBtn .lst2 { top: 27px; } 
+    .lstBtn .lst3 { top: 39px; } 
+    #lstCall:checked ~ #container .lstBtn .lst1 { transform:rotate(45deg); top:27px; }
+    #lstCall:checked ~ #container .lstBtn .lst2 { display:none; }
+    #lstCall:checked ~ #container .lstBtn .lst3 { transform:rotate(135deg); top:27px; }    
+        
+    #gnb { width:calc(100% - 60px); height:100%; 
+        background:#181818; color:#fff; position:fixed; top:0; left:-100%; z-index:90; transition:0.6s; }
+    #lstCall:checked ~ #gnb { left:0; }    
+        
+    .lbItem { width:100%; border-bottom:1px solid #333; 
+        height: 59px; }    
+    .lbItem li { float:left; width:20%; height:60px; }    
+    .lbItem li label { display:block; width:30px; height:30px; padding: 15px; background-repeat: no-repeat; background-position:center center; font-size:20px; }    
+    .closeBtn { background-image:url("./img/closeBtn.png"); } 
+    .langBtn { background-image:url("./img/ko.png"); background-size:20px 20px; }    
+    .mainItem { clear:both; width: 100%; } 
+    .mainItem li { line-height:3.6; border-top:1px solid #333; border-bottom:1px solid #000; }
+    .mainItem li a { display:block; text-indent:3em; color:#fff; font-size:1.1em; }    
+    #search, #login { width:100%; height:100%; background:rgba(0,0,0,0.85); position:fixed; top:-100%; left: 0; color:#fff; z-index:100; transition:0.6s; }
+    #search label { display:block; float:right; margin-right:50px; 
+        margin-top:50px; margin-bottom:50px; width: 30px; height: 30px; padding:15px; background-position:center center; background-repeat: no-repeat; }
+    .inputItem { clear:both; display:block; line-height:50px; width:70%; border-radius:5px 0px 0px 5px; 
+        background:#fff; color:#999; text-indent:1em; font-size:1em; 
+        margin-left:7%; float:left; }
+    .searchBtn { display:block; width:50px; height:50px; color:#999; background:#fff; float:left; border-radius:0px 5px 5px 0px; } 
+    .loginBox { width:85%; padding:20px; background:rgba(250, 250, 250, 0.8); margin:30px auto; clear:both; }    
+    .loginLock { font-size:3em; padding:1em; text-align:center; } 
+    #login label { display:block; } 
+    #login .closeBtn { width:30px; height:30px; margin-top: 50px; margin-right: 50px; margin-bottom: 50px; float:right; }    
+    #login .inputItem { margin:20px auto; clear:both; border-radius:5px 5px 5px 5px; float: none; width:80%; } 
+    .loginBtn, .contactBtn { display:block; width: 80%; line-height:40px; background:#38b5c7; color:#fff; text-align:center; font-size:1em; 
+        margin:10px auto; border:5px 5px 5px 5px; }
+    #searchRa:checked ~ #search { top:0; }    
+    #loginRa:checked ~ #login { top:0; }  
+    #closeRa:checked ~ #search { top:-100%; } 
+    #closeRa:checked ~ #login { top:-100%; } 
+
+    #container { clear:both; width:100%; height:9%; }
+    #visual { width: 100%; height: 100%; overflow:hidden; }    
+    .vsFrame { width:400%; height: 100%; }
+    .vsFrame li { float:left; width:25%; height: 100%; 
+        background-repeat:no-repeat; background-position:center center; background-size:70%; transition:0.5s;  }
+    .vsFrame li.on {  padding-top:0; opacity:1; }    
+    .vsFrame .item1 { background-image:url("http://placehold.it/111x111/#555")} 
+    .vsFrame .item2 { background-image:url("./img/slider2.jpg")} 
+    .vsFrame .item3 { background-image:url("./img/slider3.jpg")} 
+    .vsFrame .item4 { background-image:url("./img/slider4.jpg")} 
+    .vsFrame li .vsTit { text-align: center; padding:2em; padding-top:3em; color:#fff; font-size:2.4em; padding-bottom:0.5em; margin-top: 100%; opacity:0; transition:0.6s; transition-property:margin-top, opacity; transition-delay:0s, 0.6s; } 
+    .vsFrame li .vsCom { text-align:center; padding:2em; font-size:1.2em; color:#fff; text-shadow:1px 1px 5px #333, -1px -1px 5px #333; } 
+    .vsFrame li .vsMore { display:block; width:100px; line-height:2; margin:15px auto; border-bottom:2px solid rgba(255, 255, 255, 0.6); text-align:center; color:#fff; font-size:1.1em; }  
+    .vsFrame li.on .vsTit { margin-top:0; opacity:1; }            
+    .btnFrame { position:relative; width:30%; margin:15px auto;  z-index:50; } 
+    .btnFrame li { position:absolute; width:25%; height:10px; z-index:50; top:-80px; }
+    .btnFrame li.item1 { left:0; }   
+    .btnFrame li.item2 { left:25%; }  
+    .btnFrame li.item3 { left:50%; }  
+    .btnFrame li.item4 { left:75%; }  
+    .btnFrame li label { display:block; width:10px; height:10px; border-radius:5px; background:#333; margin:0 auto; }
+    .btnFrame li label.on { background:#38b5c7; width:40%; } 
+        
+    
+        /*figure*/    
+      
+        #main_01 {width:100%;height: 320px}
+        .subway_box{width:414px; height: 100px;}
+        .subway {position: relative;margin-left: 10px;float: left;width: 80px;height: 90px;border:3px #2672a1 solid;
+        border-radius: 3px;}
+        
+        .subway img {display: block;width: 60px;height: 70px;margin-left: auto;margin-right: auto;}
+        .subway p {display: block;;font-size: 13px;text-align: center;}
+        #sub1 {margin-left: 18px;}
+        
+        .p3  {background-color: #d5e2f0;font-size:30px;text-align: center;}
+        .p2 {font-size: 30px;text-decoration: underline;} 
+        .p1 {text-align: center;font-size: 20px;}  
+        
+        #map_canvas{z-index: 10;position: relative;top: 380px;border:1px #393c41 solid;opacity: 0.8;}
+        .map_wrap{width: 400px;height: 400px;overflow: visible;display: block;margin-top: 550px;}
+        .entrance {margin-top: 230px;}
+        #p3 {font-size: 20px;color: white; background: #393c41;}
+        #p4 {font-size: 20px;}
+        #p5{font-size: 20px;color: white; background: #393c41;}
+        /*image slide*/
+        .lst {position: relative;width: 300px;height: 378px;background: #fff;overflow: hidden;box-shadow:
+   1px 0px 25px rgb(41,40,40); box-sizing: border-box; margin: 50px auto;
+   box-shadow:1px solid cadetblue;box-sizing: border-box;}
+   .lst10 ul {width: 1242px; height: 310px;}
+   .lst10 li {float: left;cursor: pointer;}
+   .lst10 li img {display: block;max-width: 414px;}
+   .ser1 li{float: left;}
+   /*main image*/
+   .main_image {width: 100%;height: auto;}
+   #main_image_img_01{width: 100%;height: 400px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;}
+   #main_image_img_02,#main_image_img_03 {width: 100%;height: 400px;border-radius: 10px;}
+  /*coming soon*/
+  .coming_soon {height:525px}
+  .coming_soon ul {width: 2070px;height: 400px;}
+  .coming_soon li {float: left;cursor: pointer;}
+  .coming_soon li img {display: block;max-width: 414px;height: 400px;}
+#coming_p_01 {font-size: 20px;color: white; background: #393c41;}
+
+
+   
+   
+    </style>
+     <script src="https://code.jquery.com/jquery-latest.js"></script>
+     <script>
+            $(document).ready(function(){
+            var ls = $(".lst10 ul");
+            function ani(){
+                ls.delay(2000).animate({"margin-left":"0px"},500);
+                ls.delay(3000).animate({"margin-left":"-414px"},500);
+                ls.delay(3000).animate({"margin-left":"-828px"},500);
+            }
+            ani();
+            setInterval(function(){ani(); }, 6000);
+        });
+            </script>
+             <script>
+                $(document).ready(function(){
+                var ls2 = $(".coming_soon ul");
+                function ani2(){
+                    ls2.delay(2000).animate({"margin-left":"0px"},500);
+                    ls2.delay(3000).animate({"margin-left":"-414px"},500);
+                    ls2.delay(3000).animate({"margin-left":"-828px"},500);
+                    ls2.delay(3000).animate({"margin-left":"-1242px"},500);
+                    ls2.delay(3000).animate({"margin-left":"-1656px"},500);
+                }
+                ani2();
+            setInterval(function(){ani2(); }, 16500);
+            });
+                </script>
+   
+</head>
+<body onload="initialize()">
+    <div class="wrap">
+<input type="checkbox" id="lstCall" class="ckItem">
+<input type="radio" name="raItem" id="closeRa" class="raItem" checked>
+<input type="radio" name="raItem" id="searchRa" class="raItem">
+<input type="radio" name="raItem" id="loginRa" class="raItem">
+<div id="search">
+    <form action="" name="searchFrm">
+        <label for="closeRa" class="closeBtn"></label>
+        <div class="searchBox">
+            <input type="text" name="kewyword" placeholder="검색할 단어를 입력합니다" class="inputItem">
+            <button type="submit" class="searchBtn">
+                <i class="ki-search"></i>
+            </button>
+        </div>
+    </form>
+</div>
+
+<nav id="gnb">
+    <ul class="lbItem">
+        <li><label for="" class="langBtn"></label></li>
+        <li>
+            <label for="searchRa"><i class="ki-search"></i></label>
+        </li>
+        <li>
+            <label for="loginRa"><i class="ki-user-o"></i></label>
+        </li>
+        <li></li>
+        <li><label for="lstCall" class="closeBtn"></label></li>
+    </ul>
+    <ul class="mainItem">
+        <li><a href="#about">Visit us</a></li>
+        <li><a href="#service">Exhibitions</a></li>
+        <li><a href="#news">Event</a></li>
+        <li><a href="#contact">Menber ship</a></li>
+    </ul>
+</nav>
+<main id="container">
+    <header id="hd">
+        <a href="" class="logo"></a>
+        <label for="lstCall" class="lstBtn">
+            <span class="lst1"></span>
+            <span class="lst2"></span>    
+            <span class="lst3"></span>
+        </label>
+         <a href=""><img src="image/main/main_01.jpg" alt="" id="main_01"></a>
+         <ul>
+             <div class="subway_wrap">
+             <div class="subway_box">
+             <div class="subway" id="sub1">
+             <li>
+                 <a href="">
+                     <img src="image/main/train.PNG" alt="">
+                     <hr style="color: #2672a1;">
+                         <p>Subway</p>
+                 </a>
+             </li>
+            </div>
+            <div class="subway" id="sub2">
+             <li>
+                 <a href="">
+                     <img src="image/main/car.PNG" alt="">
+                     <hr style="color: #2672a1;">
+                         <p>Car</p>
+                 </a>
+             </li>
+             </div>
+             <div class="subway" id="sub3">
+             <li>
+                 <a href="">
+                     <img src="image/main/human.PNG" alt="">
+                     <hr style="color: #2672a1;">
+                         <p>Walking</p>
+                 </a>
+             </li>
+             </div>
+             <div class="subway" id="sub4">
+             <li>
+                 <a href="">
+                     <img src="image/main/byci.PNG" alt="">
+                     <hr style="color: #2672a1;">
+                         <p>Cycling</p>
+                 </a>
+             </li>
+             </div>
+            </div>
+        </div>
+    </ul>
+    <div class="p_wrap">
+    <p class="p2">Plan your visit</p><br>
+    <p class="p3">
+        Admission free<br><hr><br></p>
+        <p class="p1">
+    Some exhibitions and events are ticketed<br>
+       
+     <br>  Open daily 10am–6pm<br>
+       Friday until 9pm<br>
+       
+       (Closed 1 January and 24—26 December)<br><br>
+       
+       Trafalgar Square, London<br>
+       WC2N 5DN<br><br>
+       
+       Nearest underground stations<br>
+       Charing Cross, Leicester Square</p>
+    </div>
+    </header>
+</main>
+
+<div class="map_wrap">
+ <div id="map_canvas"style="width:410px; height:250px;"></div> 
+</div>
+ <script> 
+ function initialize() { 
+       var myLatlng = new google.maps.LatLng(36.3491563,127.3776857); 
+       var mapOptions = { 
+      zoom: 17, 
+      center: myLatlng, 
+      mapTypeId: google.maps.MapTypeId.ROADMAP 
+       } 
+        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions); 
+     } 
+ </script> 
+     <div class="entrance">
+            <p id="p3">Entrance</p>
+            <div class="lst10">
+                
+                    <ul><!--제어대상- target-->
+                        <li class="item1"><img src="image/main/ent_01.jpg" alt=""></li>
+                        <li class="item2"><img src="image/main/ent_02.jpg" alt=""></li>
+                        <li class="item3"><img src="image/main/ent_03.jpg" alt=""></li>
+                        
+                    </ul>
+                    <p id="p4">
+                        
+                            Our main entrance, the Sainsbury Wing,<br> 
+                            is facing Trafalgar Square, at the corner <br>  
+                            of Pall Mall and Whitcomb Street. <br><hr>
+                            
+                            
+
+                    </p>
+                    </div>
+                        </ul>
+                        <div class="txt"></div>
+     </div>   
+<div class="main_image">
+       <p id="p5">Current exhibitions
+       </p>
+       <ul class="main_ima">
+           <li class="main_i_1">
+               <img src="image/main/main_image_01.PNG" id="main_image_img_01" alt="">
+                   <p>Leonardo <br>
+                    Experience a Masterpiece <br>
+                    Extended until 26 January 2020</p>
+           </li>
+           <li class="main_i_2">
+               <img src="image/main/main_image_02.PNG" id="main_image_img_02" alt="">
+                   <p>The Credit Suisse Exhibition: <br>
+                    Gauguin Portraits <br>
+                    7 October 2019 – <br> 26 January 2020</p>
+           </li>
+           <li class="main_i_3">
+               <img src="image/main/main_image_03.PNG" id="main_image_img_01" alt="">
+                   <p>Young Bomberg and the  <br> Old Masters
+                    27 November 2019 – <br> 1 March 2020</p>
+           </li>
+       </ul>
+</div>
+<div class="coming_soon">
+    <p id="coming_p_01">Coming soon</p>
+    <ul class="coming">
+        <li class="comi com_01"><a href=""><img src="image/main/coming_01.PNG" alt=""><p>Nicolaes Maes: <br>
+                Dutch Master of the Golden Age <br>
+                22 February – 31 May 2020</p></a></li>
+        
+    <li class="comi com_02"><a href=""><img src="image/main/coming_02.PNG" alt=""><p>Titian: <br>
+            Love, Desire, Death <br>
+            16 March – 14 June 2020</p></a></li>
+        <li class="comi com_03"><a href=""><img src="image/main/coming_03.PNG" alt=""><p>Artemisia <br>
+                4 April – 26 July 2020</p></a></li>
+        <li class="comi com_03"><a href=""><img src="image/main/coming_04.PNG" alt=""><p>The Credit Suisse Exhibition: <br>
+                Raphael <br>
+                3 October 2020 – <br> 24 January 2021</p></a></li>
+        <li class="comi com_03"><a href=""><img src="image/main/coming_05.PNG" alt=""><p>Dürer's Journeys: <br>
+                Travels of a Renaissance Artist <br>
+                13 February – 16 May 2021</p></a></li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="service">
+    <ul class="servi">
+        <li class="ser1"><a href=""><img src="image/main/service_01.PNG" alt=""></a></li>
+        <li class="ser2"><a href=""><img src="image/main/service_02.PNG" alt=""></a></li>
+        <li class="ser3"><a href=""><img src="image/main/service_03.PNG" alt=""></a></li>
+        <li class="ser4"><a href=""><img src="image/main/service_04.PNG" alt=""></a></li>
+        <li class="ser5"><a href=""><img src="image/main/service_05.PNG" alt=""></a></li>
+    </ul>
+</div>
+-->
+    </div>
+</body>
+</html>
