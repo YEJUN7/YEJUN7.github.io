@@ -23,8 +23,8 @@
     body, html { width: 100%; height: 100%; font-family: 'Playfair Display', serif;
 font-family: 'Bree Serif', serif; font-weight:400; overflow-x: hidden;position: relative;background-color:whitesmoke;}
     ul { list-style: none; }    
-    a { text-decoration:none; }  
-    img {width: 100%;}
+    a { text-decoration:none;display: block; }  
+    img {width: 100%;display: block;}
     p {text-align: center; font-size: 20px;}  
     button, label, input { outline: 0; border:0; background:transparent; }
     .ckItem, .raItem { display:none; }   
@@ -101,7 +101,7 @@ font-family: 'Bree Serif', serif; font-weight:400; overflow-x: hidden;position: 
         /*figure*/    
       
         #main_01 {width:100%;height: 320px}
-        .subway_box{width:414px; height: 100px;}
+        .subway_box{width:100%; height: 100px;}
         .subway {position: relative;margin-left: 10px;float: left;width: 80px;height: 90px;border:3px #2672a1 solid;
         border-radius: 3px;}
         
@@ -116,9 +116,10 @@ font-family: 'Bree Serif', serif; font-weight:400; overflow-x: hidden;position: 
         #map_canvas{z-index: 10;position: relative;top: 380px;opacity: 0.9;}
         .map_wrap{width: 400px;height: 400px;overflow: visible;display: block;margin-top: 550px;}
         .entrance {margin-top: 230px;}
-        #p3 {font-size: 20px;color: white; background: #393c41;}
+        .entrance img {box-shadow: 1px 1px 5px #393c41;}
+        #p3 {font-size: 25px;color: white; background: #393c41;}
         #p4 {font-size: 20px;}
-        #p5{font-size: 20px;color: white; background: #393c41;}
+        #p5{font-size: 25px;color: white; background: #393c41;}
         /*image slide*/
         .lst {position: relative;width: 300px;height: 378px;background: #fff;overflow: hidden;box-shadow:
    1px 0px 25px rgb(41,40,40); box-sizing: border-box; margin: 50px auto;
@@ -130,27 +131,55 @@ font-family: 'Bree Serif', serif; font-weight:400; overflow-x: hidden;position: 
    /*main image*/
    
    .main_image {width: 100%;height: auto;}
+   .main_image img {box-shadow: 1px 1px 5px #393c41;}
    #main_image_img_01{width: 100%;height: 400px;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;}
    #main_image_img_02,#main_image_img_03 {width: 100%;height: 400px;border-radius: 10px;}
-   .main_more{width: 100px;height: 30px;color: white;background-color:#38b5c7 ;margin-left: auto;margin-right: auto;border-radius: 15px;}
+   .main_more{width: 100px;height: 30px;color: white;background-color:#38b5c7 ;margin-left: auto;margin-right: auto;
+   border-radius: 15px;box-shadow: 1px 1px 5px #393c41;}
   /*coming soon*/
   .coming_soon {height:525px}
+  .coming_soon img {box-shadow: 1px 1px 5px #393c41;}
   .coming_soon ul {width: 2070px;height: 400px;}
   .coming_soon li {float: left;cursor: pointer;}
   .coming_soon li img {display: block;max-width: 414px;height: 400px;}
-#coming_p_01 {font-size: 20px;color: white; background: #393c41;}
+#coming_p_01 {font-size: 25px;color: white; background: #393c41;}
 
-.event_wrap {position: relative;left: 7px;}
-
-.event_wrap li{border: px #393c41 solid;width: 190px;height: 300px;float: left;margin-top: 50px;
-margin-left: 5px;}   
-#event_p_01 {font-size: 30px;}   
+.event_wrap {width: 100%;}
+.event_wrap img {box-shadow: 1px 1px 5px #393c41;}
+.event_wrap li{width: 205px;height: 300px;float: left;box-shadow: 2px px 5px #393c41;margin-left: 1px;}   
+#event_p_01 {font-size: 25px;background: #393c41;color: white;}   
 .even_01 {background:url(image/main/event_01.png)}
 .even_02 {background:url(image/main/event_002.png)}
 #eve_01 {font-size: 20px;}
 #eve_02 {font-size: 20px;}
-.even_01 a p{margin-top: 150px;width: 100px;height: 30px;color: white;background-color:#38b5c7 ;margin-left: auto;margin-right: auto;border-radius: 15px;}
-.even_02 a p{margin-top: 175px;width: 100px;height: 30px;color: white;background-color:#38b5c7 ;margin-left: auto;margin-right: auto;border-radius: 15px;}
+.even_01 a p{box-shadow: 2px 1px 5px #393c41;margin-top: 150px;width: 100px;height: 30px;color: white;background-color:#38b5c7 ;
+margin-left: auto;margin-right: auto;border-radius: 15px;}
+.even_02 a p{box-shadow: 2px 1px 5px #393c41;margin-top: 175px;width: 100px;height: 30px;color: white;background-color:#38b5c7 ;
+margin-left: auto;margin-right: auto;border-radius: 15px;}
+.event_p_01 {background: #393c41;}
+
+/*member ship */
+.member img {height: 300px;}
+#mem_01 {font-size: 25px;color: white;background: #393c41;}
+.join {margin-left: 25px;margin-top: 5px;}
+.join p {margin-left: 20px; float: left; width: 150px;height: 30px;background:#38b5c7;border-radius: 30px;color: white;box-shadow: 1px 1px 5px #393c41;}
+
+
+
+/*footer*/
+.foo{font-size: 25px;margin-left: 68px;background-color:#393c41;}
+.foo li {width:60px;height: 60px;float: left;padding-left: 5px;box-shadow: 1px 1px 4px #fff;}
+.foo li img {width: 50px;height: 50px;}
+#foo_p_01 {color: white;}
+
+footer {background-color: #393c41;height:400px;margin-top: 40px;}
+.footer_link p {color: #fff;}
+.footer_link img {width: 250px;height: 100px;}
+.foo_01 img{width: 150px;margin-left: 10px;margin-top: 20px;}
+.foo_02{color: #fff;margin-left: 10px;}
+.foo_03{color: #fff;margin-left: 10px;}
+.foo_04{width: 250px; height: 100px;float: right;margin-right: 10px;}
+.foo_04 p {font-size: 15px;color: #fff;}
 
     </style>
      <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -213,7 +242,7 @@ margin-left: 5px;}
         <li><label for="lstCall" class="closeBtn"></label></li>
     </ul>
     <ul class="mainItem">
-        <li><a href="#about">Visit us</a></li>
+        <li><a href="#about">About us</a></li>
         <li><a href="#service">Exhibitions</a></li>
         <li><a href="#news">Event</a></li>
         <li><a href="#contact">Menber ship</a></li>
@@ -399,27 +428,62 @@ margin-left: 5px;}
    
 </div>
 
+<div class="member">
+        <p id="mem_01">Member ship</p>
+        <img src="image/main/member_01.png" alt="">
+    <div class="join">
+        <p id="mem_02">Join</p>
+        <p id="mem_03">Login</p>
+    </div>
+</div>
 
 
+<footer class="footer">
+        <footer_link class="footer_link">
+                <div class="foot">
+                    <p>Join the conversation</p>
+                <ul class="foo">
+                    <li class="fo_01"><a href=""><img src="image/main/facebook.PNG" alt=""></a></li>
+                    <li class="fo_02"><a href=""><img src="image/main/tube.PNG" alt=""></a></li>
+                    <li class="fo_03"><a href=""><img src="image/main/twitter.PNG" alt=""></a></li>
+                    <li class="fo_04"><a href=""><img src="image/main/insta.PNG" alt=""></a></li> 
+                </ul>
+                </div>
+               
+                </footer_link>
+    <ul>
+        <li class="foo_01"><img src="image/main/top_logo.png" alt=""></li> <br>
+        <li class="foo_02"> Square <br>
+                London
+                WC2N 5DN</p></li>
+        <li class="foo_03"><a href="mailto:information@ng-london.org.uk" onfocus="this.blur()">information@ng-london.org.uk</a></li>
+        <li class="foo_04"><img src="image/main/footer_logo.png" alt="" class="footer_img_02"><p>The National Gallery © 2019</p></li>
+     
 
 
-
+    </ul>
+</footer>
 
 
 
 
 
 <!--
-<div class="service">
-    <ul class="servi">
-        <li class="ser1"><a href=""><img src="image/main/service_01.PNG" alt=""></a></li>
-        <li class="ser2"><a href=""><img src="image/main/service_02.PNG" alt=""></a></li>
-        <li class="ser3"><a href=""><img src="image/main/service_03.PNG" alt=""></a></li>
-        <li class="ser4"><a href=""><img src="image/main/service_04.PNG" alt=""></a></li>
-        <li class="ser5"><a href=""><img src="image/main/service_05.PNG" alt=""></a></li>
-    </ul>
-</div>
--->
+<footer class="footer">
+    <img src="image/main/top_logo.png" alt="" class="footer_img_01">
+    <p id="footer_p_01">Trafalgar Square <br>
+            London
+            WC2N 5DN</p>
+            <a href="" class="footer_a_01">information@ng-london.org.uk</a>
+            <img src="image/main/footer_logo.png" alt="" class="footer_img_02"> -->
+</footer>
+
+
+
+
+
+
+
     </div>
 </body>
 </html>
