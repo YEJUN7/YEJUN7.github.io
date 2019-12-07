@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+     <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon16.png">
+    <!-- 신형 브라우저와 안드로이드 폰 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon32.png">
+    <!-- 아이폰3 이하 -->
+    <link rel="apple-touch-icon" size="48x48" href="./img/favicon48.png">
+    <!-- 아이패드 -->
+    <link rel="apple-touch-icon" size="72x72" href="./img/favicon72.png">
+    <!-- 아이폰4 이상 -->
+    <link rel="apple-touch-icon" size="114x114" href="./img/favicon114.png">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="icon.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Playfair+Display&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>member ship </title>
+    <style>
+        body,html{position: relative;}
+       .content_01{ width: 80%;height: auto; border: 1px #393c41 solid;text-align: center;margin-left: 10%;border-radius: 10px;
+    margin-top: 100px;box-shadow: 1px 1px 5px;} 
+    .content_01 img{border-radius: 10px;width: 100%;height: 250px;}
+    .content_01 p {font-size: 20px;min-height: 60px;}
+    #content_p_01{font-size: 35px;}
+    .mem_01 img {width: 100%;height: 250px;}
+     
+    /*login form */
+
+    form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #393c41;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+
+img.avatar {
+  width: 100%;
+
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+/* sign up */
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #393c41;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  width: 100%;}
+
+/* Add padding to container elements */
+
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+/*footer*/
+
+
+    </style>
+    </head>
+            <body onload="initialize()">
+                    <div class="wrap">
+                <input type="checkbox" id="lstCall" class="ckItem">
+                <input type="radio" name="raItem" id="closeRa" class="raItem" checked>
+                <input type="radio" name="raItem" id="searchRa" class="raItem">
+                <input type="radio" name="raItem" id="loginRa" class="raItem">
+                <div id="search">
+                    <form action="" name="searchFrm">
+                        <label for="closeRa" class="closeBtn"></label>
+                        <div class="searchBox">
+                            <input type="text" name="kewyword" placeholder="검색할 단어를 입력합니다" class="inputItem">
+                            <button type="submit" class="searchBtn">
+                                <i class="ki-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <nav id="gnb">
+                    <ul class="lbItem">
+                        <li><label for="" class="langBtn"></label></li>
+                        <li>
+                            <label for="searchRa"><i class="ki-search"></i></label>
+                        </li>
+                        <li>
+                            <label for="loginRa"><i class="ki-user-o"></i></label>
+                        </li>
+                        <li></li>
+                        <li><label for="lstCall" class="closeBtn"></label></li>
+                    </ul>
+                    <ul class="mainItem">
+                        <li><a href="contect_us.html">Contect Us</a></li>
+                        <li><a href="exhibitions.html">Exhibitions</a></li>
+                        <li><a href="event.html">Event</a></li>
+                        <li><a href="member.html">Menber ship</a></li>
+                    </ul>
+                </nav>
+                    <header id="hd">
+                        <a href="index.html" class="logo"></a>
+                        <label for="lstCall" class="lstBtn">
+                            <span class="lst1"></span>
+                            <span class="lst2"></span>    
+                            <span class="lst3"></span>
+                        </label>
+</header>
+<content>
+        <div class="content_01">
+            <a href=""><img src="image/member/memver_01.PNG" alt=""></a>
+            <p id="content_p_01">  National Gallery Membership  </p><br>
+                <p>Discover a year of inspiring art <br>
+                    See our fantastic exhibition programme for free <br> from just £58 a year<br><br>
+                  
+              <p style="font-size:25px;">Join today and start enjoying all the benefits included in our Membership</p> 
+                     <p>
+                            Visit as many times as you like and for free to all exhibitions
+
+                            See all exhibitions first at Member Preview Days
+                            
+                            Experience the Gallery outside of normal opening hours at Members-only viewings
+                            
+                            Book public events before they sell out with priority access
+                            
+                            Enjoy discounts in our shops, café and restaurants
+                            
+                            Gain exclusive access to Members’  <br> specific events</p>
+                   
+        </div>
+     <style>
+     .member {border: 1px solid #393c41; box-sizing: border-box;}
+     </style>
+    </content>
+    <content2>
+        <div class="member">
+            <ul class="member_01">
+                <li class="mem_01">
+                 
+                    <div class="login">
+                           
+
+                        <form action="/action_page.php" method="post">
+                            <div class="imgcontainer">
+                                <img src="/image/member/member_02.PNG" alt="Avatar" class="avatar"
+                                style="white-space: 80%;height: 375px;left: 50% auto;right: 50% auto;">
+                            </div>
+                            
+                            <div class="container">
+                                <label for="uname"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="uname" required>
+                            
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw" required>
+                                    
+                                <button type="submit">Login</button>
+                                <label>
+                                  <input type="checkbox" checked="checked" name="remember"> Remember me
+                                </label>
+                            </div>
+                        </form>
+
+                    </div>
+                </li>   
+            </ul>
+            <ul class="member_02">
+                    <form action="/action_page.php" style="border:1px solid #ccc">
+                        <div class="container">
+                            <img src="/image/member/member_03.PNG" alt="">
+                                <label for="name"><b>name</b></label>
+                                <input type="text" placeholder="Enter name" name="email" required>
+                                <label for="phone"><b>phone</b></label>
+                                <input type="text" placeholder="Enter phone" name="email" required>
+                                <label for="address"><b>address</b></label>
+                                <input type="text" placeholder="Enter Email" name="email" required>
+                          <label for="email"><b>Email</b></label>
+                          <input type="text" placeholder="Enter Email" name="email" required>
+                      
+                          <label for="psw"><b>Password</b></label>
+                          <input type="password" placeholder="Enter Password" name="psw" required>
+                      
+                          <label for="psw-repeat"><b>Repeat Password</b></label>
+                          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                          
+                          <label>
+                            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                          </label>
+                          
+                          <div class="clearfix">
+                           
+                            <button type="submit" class="signupbtn">Sign Up</button>
+                          </div>
+                        </div>
+                      </form>
+            </ul>
+        </div>
+    </content2>
+
+                        <footer class="footer">
+                                <footer_link class="footer_link">
+                                        <div class="foot">
+                                            <p>Join the conversation</p>
+                                        <ul class="foo">
+                                            <li class="fo_01"><a href=""><img src="image/main/facebook.PNG" alt=""></a></li>
+                                            <li class="fo_02"><a href=""><img src="image/main/tube.PNG" alt=""></a></li>
+                                            <li class="fo_03"><a href=""><img src="image/main/twitter.PNG" alt=""></a></li>
+                                            <li class="fo_04"><a href=""><img src="image/main/insta.PNG" alt=""></a></li> 
+                                        </ul>
+                                        </div>
+                                       
+                                        </footer_link>
+                                        <br>
+                                        <ul>
+                                
+                                <li class="foo_01"><img src="image/main/top_logo.png" alt=""></li> <br>
+                                <li class="foo_02"> Square <br>
+                                        London
+                                        WC2N 5DN <br>
+                                        +44 (0)20 7747 2885 </p></li>
+                                    
+                                <li class="foo_04"><img src="image/main/footer_logo.png" alt="" class="footer_img_02"><p>The National Gallery © 2019</p></li>
+                             
+                        
+                        
+                            </ul>
+                        </footer>
+
+    
+    </body>
+</html>

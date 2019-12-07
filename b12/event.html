@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>The National Gallery </title>
+     <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+     <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon16.png">
+    <!-- 신형 브라우저와 안드로이드 폰 -->
+    <link rel="shortcut icon" type="image/x-icon" href="./img/favicon32.png">
+    <!-- 아이폰3 이하 -->
+    <link rel="apple-touch-icon" size="48x48" href="./img/favicon48.png">
+    <!-- 아이패드 -->
+    <link rel="apple-touch-icon" size="72x72" href="./img/favicon72.png">
+    <!-- 아이폰4 이상 -->
+    <link rel="apple-touch-icon" size="114x114" href="./img/favicon114.png">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="icon.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Playfair+Display&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>event</title>
+    <style>
+    /*content*/
+    .content_01{ width: 80%;height: auto; border: 1px #393c41 solid;text-align: center;margin-left: 10%;border-radius: 10px;
+    margin-top: 100px;box-shadow: 1px 1px 5px;} 
+    .content_01 img{border-radius: 10px;width: 100%;height: 250px;}
+    .content_01 p {font-size: 20px;min-height: 60px;}
+    #content_p_01{font-size: 35px;}
+
+    .content_02{ width: 80%;height: auto; border: 1px #393c41 solid;text-align: center;margin-left: 10%;border-radius: 10px;
+    margin-top: 100px;box-shadow: 1px 1px 5px;} 
+    .content_02 img{border-radius: 10px;width: 100%;height: 250px;}
+    .content_02 p {font-size: 20px;min-height: 60px;}
+    #content_p_01{font-size: 35px;}
+
+    .content_03{ width: 80%;height: auto; border: 1px #393c41 solid;text-align: center;margin-left: 10%;border-radius: 10px;
+    margin-top: 100px;box-shadow: 1px 1px 5px;} 
+    .content_03 img{border-radius: 10px;width: 100%;height: 250px;}
+    .content_03 p {font-size: 20px;min-height: 60px;}
+    #content_p_01{font-size: 35px;}
+
+    .content_04{ width: 80%;height: auto; border: 1px #393c41 solid;text-align: center;margin-left: 10%;border-radius: 10px;
+    margin-top: 100px;box-shadow: 1px 1px 5px;} 
+    .content_04 img{border-radius: 10px;width: 100%;height: 250px;}
+    .content_04 p {font-size: 20px;min-height: 60px;}
+    #content_p_01{font-size: 35px;}
+
+    .content_05{ width: 80%;height: auto; border: 1px #393c41 solid;text-align: center;margin-left: 10%;border-radius: 10px;
+    margin-top: 100px;box-shadow: 1px 1px 5px;} 
+    .content_05 img{border-radius: 10px;width: 100%;height: 250px;}
+    .content_05 p {font-size: 20px;min-height: 60px;}
+    #content_p_01{font-size: 35px;}
+    </style>
+</head>
+<body onload="initialize()">
+    <div class="wrap">
+<input type="checkbox" id="lstCall" class="ckItem">
+<input type="radio" name="raItem" id="closeRa" class="raItem" checked>
+<input type="radio" name="raItem" id="searchRa" class="raItem">
+<input type="radio" name="raItem" id="loginRa" class="raItem">
+<div id="search">
+    <form action="" name="searchFrm">
+        <label for="closeRa" class="closeBtn"></label>
+        <div class="searchBox">
+            <input type="text" name="kewyword" placeholder="검색할 단어를 입력합니다" class="inputItem">
+            <button type="submit" class="searchBtn">
+                <i class="ki-search"></i>
+            </button>
+        </div>
+    </form>
+</div>
+
+<nav id="gnb">
+    <ul class="lbItem">
+        <li><label for="" class="langBtn"></label></li>
+        <li>
+            <label for="searchRa"><i class="ki-search"></i></label>
+        </li>
+        <li>
+            <label for="loginRa"><i class="ki-user-o"></i></label>
+        </li>
+        <li></li>
+        <li><label for="lstCall" class="closeBtn"></label></li>
+    </ul>
+    <ul class="mainItem">
+        <li><a href="contect_us.html">Contect Us</a></li>
+        <li><a href="exhibitions.html">Exhibitions</a></li>
+        <li><a href="event.html">Event</a></li>
+        <li><a href="member.html">Menber ship</a></li>
+    </ul>
+</nav>
+    <header id="hd">
+        <a href="index.html" class="logo"></a>
+        <label for="lstCall" class="lstBtn">
+            <span class="lst1"></span>
+            <span class="lst2"></span>    
+            <span class="lst3"></span>
+        </label>
+    </header>
+    <content>
+        <div class="content_01">
+            <a href=""><img src="image/event/event_01.PNG" alt=""></a>
+            <p id="content_p_01"> Gauguin in Tahiti  </p>
+                <p>Saturday, 7 December 2019 <br>
+                    11 am - 4 pm <br>
+                    Sainsbury Wing Theatre <br>
+                    Explore the myth and reality of Tahiti for Gauguin </p> <br>
+              <p style="font-size:30px;">About </p> 
+                     <p>
+                In the late 19th century, Tahiti embodied Western ideas of an earthly paradise.
+                 But could the real Tahiti live up to the Eden of popular imagination?
+                
+                Experts discuss the realities of colonial Tahiti, and reflect on how Gauguin 
+                both wrestled with the elusiveness of paradise and perpetuated the myth in his art.
+                 We will also consider how Tahitians feel about Gauguin today. 
+                
+                Image: Detail from Paul Gauguin, 'The Ancestors of Tehamana or Tehamana Has Many
+                 Parents (Merahi metua no Tehamana)', 1893. The Art Institute of Chicago. Gift of Mr.
+                  and Mrs. Charles Deering McCormick 1980.613 © The Art Institute of Chicago</p>
+                   
+        </div>
+    </content>
+    <content2>
+            <div class="content_02">
+                <a href=""><img src="image/event/event_02.PNG" alt=""></a>
+                <p id="content_p_01"> Sketchbook tour
+                        December  </p>
+                    <p>Saturday, 7 December 2019 <br>       
+                        1 - 2.30 pm<br>
+                        Sainsbury Wing Foyer <br>
+                        Take inspiration from our collection</p> <br>
+                  <p style="font-size:30px;">About </p> 
+                         <p>
+                                To join the tour, please collect a sticker 
+                                from the Sainsbury Wing Information Desk on 
+                                the day of the event. Bring your own sketchbook
+                                 and preferred pencils, collect a stool, and set
+                                  off into the Galleries for 90 minutes of looking
+                                   at paintings and working in your own sketchbook. </p>
+                       
+            </div>
+        </content2>
+        <content3>
+                <div class="content_03">
+                    <a href=""><img src="image/event/event_03.PNG" alt=""></a>
+                    <p id="content_p_01">Sunday storytelling </p>
+                        <p>Every Sunday <br>
+                            10.30 - 11 am
+                            11.30 am - 12 pm <br>
+                            12.30 - 1 pm<br>
+                            Explore the myth and reality of Tahiti for Gauguin <br>
+                            Fly away on our magic carpet to find a painting and discover its story
+                             </p> <br>
+                      <p style="font-size:30px;">About </p> 
+                             <p>
+                        In the late 19th century, Tahiti embodied Western ideas of an earthly paradise.
+                         But could the real Tahiti live up to the Eden of popular imagination?
+                        
+                        Experts discuss the realities of colonial Tahiti, and reflect on how Gauguin 
+                        both wrestled with the elusiveness of paradise and perpetuated the myth in his art.
+                         We will also consider how Tahitians feel about Gauguin today. 
+                        
+                        Image: Detail from Paul Gauguin, 'The Ancestors of Tehamana or Tehamana Has Many
+                         Parents (Merahi metua no Tehamana)', 1893. The Art Institute of Chicago. Gift of Mr.
+                          and Mrs. Charles Deering McCormick 1980.613 © The Art Institute of Chicago</p>
+                           
+                </div>
+            </content3>
+            <content4>
+                    <div class="content_04">
+                        <a href=""><img src="image/event/event_04.PNG" alt=""></a>
+                        <p id="content_p_01"> 
+                                Daily guided tour </p>
+                            <p>
+                                    Mondays - Fridays <br>
+                                     (excluding public holidays) <br>
+                                    2 - 3 pm <br>
+                                    Sainsbury Wing Foyer <br>
+                                    Experience a 60-minute taster tour of the collection </p> <br>
+                          <p style="font-size:30px;">About </p> 
+                                 <p>Individuals and small groups (of up to four people) 
+                                     are welcome to join these 60-minute taster tours of
+                                      the collection.</p>
+                               
+                    </div>
+                </content4>
+                <content5>
+                        <div class="content_05">
+                            <a href=""><img src="image/event/event_05.PNG" alt=""></a>
+                            <p id="content_p_01"> 
+                                    December 2019 10-minute talks </p>
+                                <p>Mondays - Fridays <br>
+                                    4 - 4.10 pm <br>
+                                    A quick insight into one painting <br>
+                                    Join us for the festive season.
+    `                               Image: Detail from Jacopo di Cione and workshop,
+                                     'The Adoration of the Kings: Upper Tier Panel', 1370-1 </p> <br>
+                              <p style="font-size:30px;">About </p> 
+                                     <p>
+                                In the late 19th century, Tahiti embodied Western ideas of an earthly paradise.
+                                 But could the real Tahiti live up to the Eden of popular imagination?
+                                
+                                Experts discuss the realities of colonial Tahiti, and reflect on how Gauguin 
+                                both wrestled with the elusiveness of paradise and perpetuated the myth in his art.
+                                 We will also consider how Tahitians feel about Gauguin today. 
+                                
+                                Image: Detail from Paul Gauguin, 'The Ancestors of Tehamana or Tehamana Has Many
+                                 Parents (Merahi metua no Tehamana)', 1893. The Art Institute of Chicago. Gift of Mr.
+                                  and Mrs. Charles Deering McCormick 1980.613 © The Art Institute of Chicago</p>
+                                   
+                        </div>
+                    </content5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <footer_link class="footer_link">
+                <div class="foot">
+                    <p>Join the conversation</p>
+                <ul class="foo">
+                    <li class="fo_01"><a href=""><img src="image/main/facebook.PNG" alt=""></a></li>
+                    <li class="fo_02"><a href=""><img src="image/main/tube.PNG" alt=""></a></li>
+                    <li class="fo_03"><a href=""><img src="image/main/twitter.PNG" alt=""></a></li>
+                    <li class="fo_04"><a href=""><img src="image/main/insta.PNG" alt=""></a></li> 
+                </ul>
+                </div>
+               
+                </footer_link>
+                <br>
+                <ul>
+        
+        <li class="foo_01"><img src="image/main/top_logo.png" alt=""></li> <br>
+        <li class="foo_02"> Square <br>
+                London
+                WC2N 5DN <br>
+                +44 (0)20 7747 2885 </p></li>
+            
+        <li class="foo_04"><img src="image/main/footer_logo.png" alt="" class="footer_img_02"><p>The National Gallery © 2019</p></li>
+     
+
+
+    </ul>
+</footer>
+</body>
+</html>

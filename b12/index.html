@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>The National Gallery </title>
      <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon16.png">
     <!-- 신형 브라우저와 안드로이드 폰 -->
     <link rel="shortcut icon" type="image/x-icon" href="./img/favicon32.png">
@@ -24,7 +25,7 @@
 font-family: 'Bree Serif', serif; font-weight:400; overflow-x: hidden;position: relative;
 background-color:whitesmoke;background-repeat: no-repeat;}
     ul { list-style: none; }    
-    a { text-decoration:none;display: block; }  
+    a { text-decoration:none;display: block; user-select: none;}  
     img {width: 100%;display: block;}
     p {text-align: center; font-size: 20px;}  
     button, label, input { outline: 0; border:0; background:transparent; }
@@ -169,16 +170,17 @@ margin-left: auto;margin-right: auto;border-radius: 15px;}
 
 /*footer*/
 .foo{font-size: 25px;margin-left: 68px;background-color:#393c41;}
-.foo li {width:60px;height: 60px;float: left;padding-left: 5px;box-shadow: 1px 1px 4px #fff;}
+.foo li {width:60px;height: 60px;float: left;padding-left: 5px;box-shadow: 3px 3px 3px #fff;}
 .foo li img {width: 50px;height: 50px;}
 #foo_p_01 {color: white;}
 
 footer {background-color: #393c41;height:400px;margin-top: 40px;}
 .footer_link p {color: #fff;}
 .footer_link img {width: 250px;height: 100px;}
-.foo_01 img{width: 150px;margin-left: 10px;margin-top: 20px;}
-.foo_02{color: #fff;margin-left: 10px;}
-.foo_03{color: #fff;margin-left: 10px;}
+.foo_01 {margin-top: 30px;}
+.foo_01 img{width: 150px;margin-left: 10px;margin-top: 50px;}
+.foo_02{color: #fff;margin-left: 10px;font-size: 20px;}
+.foo_03{color: #fff;margin-left: 10px;size: 30px;}
 .foo_04{width: 250px; height: 100px;float: right;margin-right: 10px;}
 .foo_04 p {font-size: 15px;color: #fff;}
 
@@ -243,15 +245,15 @@ footer {background-color: #393c41;height:400px;margin-top: 40px;}
         <li><label for="lstCall" class="closeBtn"></label></li>
     </ul>
     <ul class="mainItem">
-        <li><a href="#about">About us</a></li>
-        <li><a href="#service">Exhibitions</a></li>
-        <li><a href="#news">Event</a></li>
-        <li><a href="#contact">Menber ship</a></li>
+        <li><a href="contect_us.html">Contect Us</a></li>
+        <li><a href="exhibitions.html">Exhibitions</a></li>
+        <li><a href="event.html">Event</a></li>
+        <li><a href="member.html">Member ship</a></li>
     </ul>
 </nav>
 <main id="container">
     <header id="hd">
-        <a href="" class="logo"></a>
+        <a href="index.html" class="logo"></a>
         <label for="lstCall" class="lstBtn">
             <span class="lst1"></span>
             <span class="lst2"></span>    
@@ -452,12 +454,15 @@ footer {background-color: #393c41;height:400px;margin-top: 40px;}
                 </div>
                
                 </footer_link>
-    <ul>
+                <br>
+                <ul>
+        
         <li class="foo_01"><img src="image/main/top_logo.png" alt=""></li> <br>
         <li class="foo_02"> Square <br>
                 London
-                WC2N 5DN</p></li>
-        <li class="foo_03"><a href="mailto:information@ng-london.org.uk" onfocus="this.blur()">information@ng-london.org.uk</a></li>
+                WC2N 5DN <br>
+                +44 (0)20 7747 2885 </p></li>
+            
         <li class="foo_04"><img src="image/main/footer_logo.png" alt="" class="footer_img_02"><p>The National Gallery © 2019</p></li>
      
 
@@ -469,15 +474,7 @@ footer {background-color: #393c41;height:400px;margin-top: 40px;}
 
 
 
-<!--
-<footer class="footer">
-    <img src="image/main/top_logo.png" alt="" class="footer_img_01">
-    <p id="footer_p_01">Trafalgar Square <br>
-            London
-            WC2N 5DN</p>
-            <a href="" class="footer_a_01">information@ng-london.org.uk</a>
-            <img src="image/main/footer_logo.png" alt="" class="footer_img_02"> -->
-</footer>
+
 
 
 
