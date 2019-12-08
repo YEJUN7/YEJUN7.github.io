@@ -12,9 +12,9 @@
     <style>
         *{margin: 0;padding: 0;}
         img{border: 0;}
-        body,html{width: 100%;height: 100%;;overflow-x: hidden;
+        body,html{width: 100%;height:100%;overflow-x: hidden auto; position: relative;
         font-family:'adobegothicstd-bold' ,sans-serif;background-color: #f5f5f5;}   
-        body{width: 1920px;height: 2200px;}    
+        body{width: 1920px;}    
         a{text-decoration: none;color: black}
         ul{list-style: none;}
         button,a,input{border: 0;outline: 0;}
@@ -58,12 +58,7 @@
     transition:0.5s;
 }
 
-/*
-.gnb li:hover .sub {
-    visibility:visible;
-    opacity: 1;
-}
-*/
+
 .gnb:hover li .sub {
     visibility:visible;
     opacity: 1;
@@ -90,19 +85,11 @@
 
 .ban_box {position: relative;;margin-left: 360px;bottom: 1100px;}
 .ban_box img {border-radius: 25%;width: 300px;height: 250px;padding-left: 10px;float: left;}
-        .pop_box{position:;left: 1820px}
+        .pop_box{left: 1820px}
         .pop1 {position:absolute;margin-top: 500px;margin-left: 1700px}
         .pop2 {position: absolute;}  
      
-
-
-
 /*이미지 슬라이드*/
-
-/* 각 구역 서식 설정 */
-
-
-
 
 /* 헤더 구역 서식 설정 */
 .top_link {position: fixed;left: 1600px;top: 30px;z-index: 4;}
@@ -121,14 +108,16 @@ text-align:center; text-shadow:2px 2px 2px #0066ad, -2px -2px 2px #0066ad; line-
 .prev button { left:20px; }
 .next button { right:20px; }    
 .login {position: fixed;z-index: 5;left: 1400px;top: 43px;}
-.login1 {border: 1px black solid;}
-.login2 {border: 1px black solid;}
+.login a {margin-left: 15px;}
+
+.login1 { box-shadow: 1px 1px 1px; border: 1px solid #333;font-size: 15px;}
+.login2 {box-shadow:  1px 1px 1px;border: 1px solid #333;font-size: 15px;}
 /*검색창*/
    
     
-    #frm1 { border: 2px solid #4271e5;width: 1100px; height: 80px; margin:0 auto;margin-top: 100px; background-color }  
+    #frm1 { border: 2px solid #4271e5;width: 1100px; height: 80px; margin:0 auto;margin-top: 100px; }  
     #keyword {display:block; height: 70px; width:910px; font-size:18px; text-indent:24px; 
-    margin: 5px;;float:left; opacity:0.6; transition:0.5s;  } 
+    margin: 5px;float:left ; opacity:0.6; transition:0.5s;  } 
     #search { display:block; width: 70px; height: 70px; float:right; margin: 5px; 
 
         ; background-color:#4271e5 ;background-image:url("image/search.png"); text-indent:-9999px;
@@ -138,9 +127,9 @@ text-align:center; text-shadow:2px 2px 2px #0066ad, -2px -2px 2px #0066ad; line-
 
 
 .menu_icon{position: relative;left: 400px;}
-.menu_icon img {float: left;widows: 170px;height: 170px;padding: 10px;margin-top: 
- px;border-radius: 300px;float:}
- 
+.menu_icon img {float: left;widows: 170px;height: 170px;padding: 10px;border-radius: 300px;float:}
+ .menu_icon img:hover{box-shadow:10px 5px 10px #4271e5;transition: 0.7s;}
+ .pub_wrap img:hover {transform: scale(1.1, 1.1);box-shadow: 2px 2px 20px; transition:0.7s;}
           
 /*라디오탭*/
 con_box li.item { float:left; }
@@ -245,36 +234,27 @@ border-top:2px solid #333; display:none;  }
     .bx.sq23:hover .com { margin-left:0; }    
     
 
-    /*푸터 링크*/
+    /*푸터 링크*/   
+    .footer_site {position: relative;width: 1920px;height: 80px;margin-top: 330px; background-color:#e3e3e3;}
+    .footer_site ul {width: 1920px;height: 150px;margin-left: 320px;}
+    .footer_site li {float: left;padding-left: 10px;}
+    .footer_site img {width: 250px;height: 70px;line-height: 70px;padding-top: 5px;}
 
 
-.ft_link { width:1300px; margin:6px auto; height:28px; }
+
+
+/* footer */
+.ft {width: 1920px;height: 70px;position: relative;top: 10px;text-align:center; top:x;}
+.ft_link { width:1100px; margin:6px auto; height:50px; padding-left:400px;}
 .ft_link li { float:left; padding:0px 8px; }
-.ft_link li a { font-size:14px; color:#333333; font-weight:bold;}
-.ft_link li.item1 a:after { content:"|"; padding-left:16px; }
-.ft_link li.item2 a:after { content:"|"; padding-left:16px; }
-.ft_link li.item3 a:after { content:"|"; padding-left:16px; }
-.ft_link li.item4 a:after { content:"|"; padding-left:16px; }
-.ft_link li.item5 a:after { content:"|"; padding-left:16px; }
-.ft_link li.item5 a:after { content:"|"; padding-left:16px; }
+
+.ft_link li a { font-size:16px; color:#333333; font-weight:bold;}
+.ft_link li a:after { content:"|"; padding-left:16px; }
 .ft_link li.item6 a:after { content:""; }
-.ft_link li a:hover { color:#5b9bd5; }
+.ft_link li a:hover { color:#4271e5; }
 .ft_link li a:hover::after { color:#333; }
-.cr {position: relative;}
-.copyright {margin-left: 800px;font-size:16px;font-weight: bold; color:#333333;display: block;width: 600px; }
-.copyright2 { margin-left: 765px;font-size:16px;font-weight: bold ;color:#333333;display: block;width: 600px; }
-.copyright3 {display: block;margin-left: 900px;bottom: 100px;float: left;}
-.family_box { width:200px; height:100px; position:absolute; 
-right:0; bottom:0; }
-#family { display:block; line-height:96px; width:200px; font-size:14px;
- border:1px solid #333333; position:absolute; right:0; top:32px; }
-#family option { display:block; line-height: 40px; }
-.hr { width:100%; height:2px; background:#333; clear:both; margin-top: 10px; }
-.ft {width: 1920px;height:200px;position: relative;bottom: 548px;}
-.ftnav{position: relative;top: 330px;}
-.ft_link{position: relative;bottom: 1000px;}
-.fnb{position: relative;margin-top: 770px;}
-.ftnav2{bottom: 700px;}
+
+.copyright {width: 1920px; font-size:15px;text-align: center; color:#333333;font-weight: bold;line-height: 30px; }
 
 </style>
 </head>
@@ -298,7 +278,7 @@ right:0; bottom:0; }
                     <li>
                         <a href="#" class="dp1">업무안내</a>
                         <ul class="sub">
-                            <li><a href="#">R&D</a></li>
+                            <li><a href="menu2-1.html">R&D</a></li>
                             <li><a href="#">ICT</a></li>
                         </ul>
                     </li>
@@ -386,7 +366,7 @@ right:0; bottom:0; }
                             <h3 class="tit">소식</h3>
                             <p class="com">한-아세안 특별정상회의</p>
                             <p class="lnk_box"><a href="" class="more">MORE</a></p>
-                        </div>     
+                        </div>      
                     </li>
                     <li class="bx sq23">
                         <div class="img_box"><img src="image/main/box33.png" alt="롤오버이미지"></div>
@@ -402,32 +382,46 @@ right:0; bottom:0; }
                             <h3 class="tit">소식</h3>
                             <p class="com">최신정보를 알려드립니다.</p>
                             <p class="lnk_box"><a href="" class="more">MORE</a></p>
-                        </div> 
-                        
-                        
-
-
-
-
-
-                    </li>
+                        </div>      </li>
                 </ul>       
               </content3>
+              
+              <div class="footer_site">
+                  <ul>
+                      <li><a href=""><img src="image/main/footer-site01.png" alt=""></a></li>
+                      <li><a href=""><img src="image/main/footer-site02.png" alt=""></a></li>
+                      <li><a href=""><img src="image/main/footer-site03.png" alt=""></a></li>
+                      <li><a href=""><img src="image/main/footer-site04.png" alt=""></a></li>
+                      <li><a href=""><img src="image/main/footer-site05.png" alt=""></a></li>
+                  </ul>
+              </div>
 
-       
-   
-     
-     
-<footer class="ft">
-<p>dsfsdfdsfsdf</p>
-<p>dsfsdfdsfsdf</p>
-<p>dsfsdfdsfsdf</p>
-<p>dsfsdfdsfsdf</p>
- 
-        </footer>    
+        <div class="ft">
+        <div class="hr"></div>
+        <div class="ft_link">
+            <nav class="fnb">
+                
+                <ul>
+                    <li class="item1"><a href="#">이용안내</a></li>
+                    <li class="item2"><a href="#">소식지신청</a></li>
+                    <li class="item3"><a href="#">개인정보 처리방침</a></li>
+                    <li class="item4"><a href="#">저작권정책</a></li>
+                    <li class="item5"><a href="#">RSS이용안내</a></li>
+                    <li class="item6"><a href="#">찾아오시는길</a></li>
+                </ul>
+            </nav>
+        </div>
+        
              
    </div>
- 
+   <div copy>
+  <hr>
+   <p class="copyright">(30121) 세종특별자치시 가름로 194(어진동) 대표전화 : 
+        국번없이 (유료)1335(정부민원 110) / 야간 : 044-202-4180~1 / FAX : 02-2110-0671
+       <br> Copyright © Ministry of Science and ICT. All Rights Reserved.
+    </p> 
+</div>  
+ </div>
     
     
         

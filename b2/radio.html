@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        ul{list-style: none}
+        a{text-decoration: none}
+       con_box li.item { float:left; }
+.con_box li.nt { width:450px; }
+.rdo { display:none; }
+.con_box li.ban { 
+    width:360px;
+    margin-left: 14px; 
+}
+.con_box li.sht { 
+    width:360px; 
+    margin-left:14px; 
+}
+.con_box .nt_tit { 
+    display:block; 
+    font-size:16px; 
+    color:#333; 
+    width:120px; 
+    line-height:36px; 
+    font-weight:600; 
+    text-indent:14px;
+}
+.con_box li.nt .nt_tit { 
+    float:left; 
+    cursor:pointer;
+    text-align:center; 
+    text-indent:0;
+    border-radius:10px 10px 0px 0px;
+}
+con_box li.ban .nt_tit, .con_box li.sht .nt_tit {
+    width:auto;
+    background:#e0e0e0;
+    border-radius:10px 10px 0px 0px;
+}
+.con_box li.nt .item_box { clear:both;
+border-top:2px solid #333; display:none;  }
+#ra1:checked ~ .nt_hd .lb1 {
+    background:#333;
+    color:#fff;
+}
+#ra2:checked ~ .nt_hd .lb2 {
+    background:#333;
+    color:#fff;
+}
+#ra1:checked ~ #notice {
+    display:block;
+}
+#ra2:checked ~ #gallery {
+    display:block;
+}
+ 
+        
+    </style>
+</head>
+<body>
+        <!--라디오 버튼으로 탭 만들기-->
+        <main class="content">
+            <ul class="con_box">
+                <li class="item nt">
+                    <div class="nt_wrap">
+                        <input type="radio" name="rdo_item" class="rdo" id="ra1" checked>
+                        <input type="radio" name="rdo_item" class="rdo" id="ra2">
+                        <div class="nt_hd">
+                            <label for="ra1" class="nt_tit lb1">공지사항</label>
+                            <label for="ra2" class="nt_tit lb2">갤러리</label>
+                        </div>
+                        <div class="item_box" id="notice">
+                           <h2>즐기자~</h2>
+                        </div>
+                        <div class="item_box" id="gallery">
+                           <h2>행복한 삶~~</h2>
+                        </div>
+                    </div>
+                </li>
+              
+            </ul></main>
+                    
+</body>
+</html>

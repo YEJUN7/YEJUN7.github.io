@@ -1,0 +1,176 @@
+*{margin: 0;padding: 0;}
+img{border: 0;}
+body,html{width: 100%;height: 100%;;overflow-x: hidden;
+font-family:'adobegothicstd-bold' ,sans-serif;background-color: #f5f5f5;}   
+body{width: 1920px;height: 2200px;}    
+a{text-decoration: none;color: black}
+ul{list-style: none;}
+button,a,input{border: 0;outline: 0;}
+.lst.sq6{left: 70px;}
+
+.logo {float: left;display: block;z-index: 3;top: 20px;width: 400px;height: 100px;
+position:fixed;z-index: 1;}
+.logo img{width: 400px;height: 80px;}
+.line2{top: 0;}
+.line1{top: 0;}
+.line1 {position: fixed;z-index: 5;;width: 1905px;height: 20px;background:#4271e5;}
+.line2 {position: fixed;width: 1900px;;height: 100px;background: #f5f5f5;border:2px solid #4271e5 ;
+z-index: 1;}
+.gnb {position: fixed;left: 550px;top: 20px;background:#f5f5f5 ;
+width:1000px;
+height:80px;z-index:2;
+}
+.gnb li { float:left; margin-top: 15px;
+width: 200px; 
+height: 40px;
+position:relative;
+}
+.gnb li a { 
+display:block;
+width: 200px; 
+height: 40px;
+line-height:40px;
+text-align:center; 
+color:#333;
+font-weight:600;
+}
+.gnb li .sub {
+width: 200px;
+height: 170px;
+background:#fff;
+border-top:3px solid #ccc;
+position:absolute;
+top: 40px;
+left: 0;
+z-index:999;
+visibility: hidden;
+opacity:0;
+transition:0.5s;
+}
+
+/*
+.gnb li:hover .sub {
+visibility:visible;
+opacity: 1;
+}
+*/
+.gnb:hover li .sub {
+visibility:visible;
+opacity: 1;
+}
+.gnb li a.dp1 {
+font-size:16px;     
+
+border-bottom:1px solid #4171e5;
+}
+.gnb li:hover a.dp1 {
+background:#4171e5;
+color:#fff;
+}
+.gnb li .sub a {
+font-size:14px;
+}
+.gnb li .sub a:hover {
+background:#4171e5;
+color:#fff;
+}
+.top_image {position: relative;;top: 100px;}
+
+
+
+.ban_box {position: relative;;margin-left: 360px;bottom: 1100px;}
+.ban_box img {border-radius: 25%;width: 300px;height: 250px;padding-left: 10px;float: left;}
+.pop_box{position:;left: 1820px}
+.pop1 {position:absolute;margin-top: 500px;margin-left: 1700px}
+.pop2 {position: absolute;}  
+
+
+
+
+/*이미지 슬라이드*/
+
+/* 각 구역 서식 설정 */
+
+
+
+
+/* 헤더 구역 서식 설정 */
+.top_link {position: fixed;left: 1600px;top: 30px;z-index: 4;}
+.top_link ul li{float: left;}
+.img_box { width:2400px; height:350px; }
+.img_box li { width:800px; height:350px; float:left;  transition:0.8s; transition-timing-function:ease-in; }
+.img_box li.on {  transition-timing-function:ease-out; }
+.img_box li a, .img_box li img { display:block; width:1200px; height: 350px; } 
+.img_box li a { position:relative; }
+.img_box li .vs_title { position:absolute; top:120px; left:0; color:#fff; font-size:24px; 
+text-align:center; text-shadow:2px 2px 2px #0066ad, -2px -2px 2px #0066ad; line-height:800px; width:800px; transition:0.8s; }
+.img_box li.on .vs_title { line-height:60px;  }
+.prev button, .next button { position:absolute; top:120px; z-index:20; display:block; 
+font-size:36px; text-align:center; width:80px; height:80px; 
+line-height:76px; cursor: pointer; color:#0066ad; border:2px solid #ffffff; border-radius:54px; }    
+.prev button { left:20px; }
+.next button { right:20px; }    
+.login {position: fixed;z-index: 5;left: 1400px;top: 43px;}
+.login a {margin-left: 15px;}
+
+.login1 { box-shadow: 1px 1px 1px; border: 1px solid #333;font-size: 15px;}
+.login2 {box-shadow:  1px 1px 1px;border: 1px solid #333;font-size: 15px;}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.home:after{content:"";display:inline-block;background: url("iconset.png") 
+no-repeat -30px -156px; width: 10px; height: 10px;margin:0 15px;}
+
+
+
+
+
+
+/*푸터 링크*/   
+.footer_site {position: relative;width: 1920px;height: 80px;margin-top: 330px; background-color:#e3e3e3;}
+.footer_site ul {width: 1920px;height: 150px;margin-left: 320px;}
+.footer_site li {float: left;padding-left: 10px;}
+.footer_site img {width: 250px;height: 70px;line-height: 70px;padding-top: 5px;}
+
+
+
+
+/* footer */
+.ft {width: 1920px;height: 70px;position: relative;top: 10px;text-align:center; top:x;}
+.ft_link { width:1100px; margin:6px auto; height:50px; padding-left:400px;}
+.ft_link li { float:left; padding:0px 8px; }
+
+.ft_link li a { font-size:16px; color:#333333; font-weight:bold;}
+.ft_link li a:after { content:"|"; padding-left:16px; }
+.ft_link li.item6 a:after { content:""; }
+.ft_link li a:hover { color:#4271e5; }
+.ft_link li a:hover::after { color:#333; }
+
+.copyright {width: 1920px; font-size:15px;text-align: center; color:#333333;font-weight: bold;line-height: 30px; }
+
+
