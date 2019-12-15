@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
+    <title>은행선화동 주민센터</title>
+    <style>
+    * { margin: 0; padding: 0; }
+    ul { list-style:none; }
+    a { text-decoration: none; }
+    body, html { width: 100%; height: 100%; font-family: 'Gothic A1', sans-serif;}
+    .hd, .ft {  text-align:center; clear:both; 
+    padding: 30px; }
+    /*header*/
+    
+  
+    .logo {z-index: 10;}
+    .hd {background-color: #fff;top: 0;left: 0;}
+    .top_nav {background-color: #50586b;width: 100%;height: 40px;}
+   
+        
+    /* 메뉴*/
+      
+    #gnb li { width:25%; margin:1rem 0px; }
+    #gnb li a { color:#fff; background-color:#31457a; line-height:3; }
+    #gnb li {background-color: yellow;}
+ 
+    #gnb li a:nth-child(1):hover {background-color:#e7cc4d;color: #50586b;font-weight: bold;}
+    #tnb li a:nth-child(1):hover {background-color:#e7cc4d;color: #50586b;font-weight: bold;}
+    #tnb { position:absolute; top:35px;height: 40px; left:calc(100% - 400px);
+    background-color: #50586b; }
+    .menu li { float:left; margin: 1rem; height: 40px;} 
+    .menu li a { display:block; text-align:center; color:#fff; font-size:16px; }
+    .page { clear:both; }
+    .page:after { content:""; display:table; clear:both; }
+    .page_wrap { width:90%; margin:0 auto; }
+    .page_tit { font-size:32px; text-align:center; color:#333; padding-top: 28px; }
+    .lst li { float:left; margin:10px; }
+    .lst li a { display:block; }
+    .lst li a img { display:block; max-width:100%; height:auto; }
+    #page1 img{width: 380px;height: 300px;}
+/*content 본문내용 */ 
+    .conten {width: 50%;}
+    .conten p {width: 50%;margin-left: 300px;}
+    .conten p:first-child {font-size: 40px;color: #50586b;}
+
+    /*footer*/
+    .ft {background-color: #50586b;}
+    .ft p {color:#fff;left: 0;bottom: 0;}
+    </style>
+</head>
+<body>
+<main class="wrap">
+     <header class="hd">
+        <a href="index.html" class="logo"><img src="image/main/logo.png" alt=""></a>
+        <nav id="tnb">
+                <ul class="menu">
+                    <li><a href="">로그인</a></li>
+                    <li><a href="">회원가입</a></li>
+                    <li><a href="https://www.djjunggu.go.kr"><img src="image/f_logo.gif" alt=""></a></li>
+                </ul>
+            </nav>
+        <nav id="gnb">
+            <ul class="menu">
+                <li><a href="menu_01.html">우리동현황</a></li>
+                <li><a href="">직원안내</a></li>
+                <li><a href="">오시는길</a></li>
+                <li><a href="">공지사항</a></li>
+            </ul>
+        </nav>  
+    </header>
+    <section class="con">
+        <div class="page" id="page1">
+            <div class="page_wrap">
+                <h2 class="page_tit">우리동네 핫 이슈</h2>
+                <ul class="lst">
+                    <li><a href=""><img src="image/menu_01/menu1_04.PNG" alt=""></a></li>
+                    <li><a href=""><img src="image/menu_01/menu1_01.PNG" alt=""></a></li>
+                    <li><a href=""><img src="image/menu_01/menu1_02.PNG" alt=""></a></li>
+                    <li><a href=""><img src="image/menu_01/menu1_03.PNG" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+        <content class="conten">
+            <ul>
+                <li>
+                   <img src="image/menu_01/flower.png" alt=""> <p>은행선화동은<img src="image/menu_01/home.PNG" alt=""></p>
+                    <p>대전 중구의 중앙부 위쪽에 위치한 중구에서 두 번째로 큰 동으로, 문화와 교통의 중심 지역이며, 성심당․중앙로 지하상가․스카이로드․으능정이 문화거리․선화동 전문음식 특화거리 등 볼거리․살거리․먹거리 등이 많은 상업의 중심 지역이다.
+                            스카이로드와 함께 매년 대제로 커플존 토요문화마당을 개최하여 많은 젊은이들이 찾는 쇼핑과 패션의 중심지가 되고 있으며 칼국수와 두부두루치기 등이 유명한 30년이 넘는 어머니 손맛과 추억을 같이 하는 곳이다.
+                            또한 옛 충남도청은 대전의 근대문화 유산으로 영화와 드라마 촬영장소로 각광을 받고 있다.</p>
+                    <p></p>
+                    <p></p>
+                </li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </content>
+    </section>
+    <footer class="ft">
+        <p>(우)34939, 대전광역시 중구 중앙로 100(대흥동) | 대표전화 042-606-6114 | 대표팩스 042-606-7999
+            COPYRIGHT (C) 2014 DAEJEON JUNG-GU DISTRICT. ALL RIGHTS RESERVED.</p>
+    </footer>
+</main>
+</body>
+</html>

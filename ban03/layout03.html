@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>은행선화동주민센터</title>
+    <style>
+    * { margin: 0; padding: 0; }
+    ul { list-style:none; }
+    a { text-decoration:none; }
+    body, html { width: 100%; height: 100%; }
+    .hd { clear:both; height:100px; background:#fff; border-bottom:3px solid #f1f1f1; 
+    position:relative; overflow:hidden; }
+    .menu li { float:left; margin:10px; }
+    .menu li a { display:block; line-height: 36px; color:#333; }
+    .logo { display:block; width: 120px; height: 40px; margin:10px auto; }
+    .lst_btn { display:block; width: 40px; height: 40px; background:#333; color:#fff; 
+    text-align:center; line-height: 40px; position:absolute; top:15px; right:calc(360px - 99vw)}
+    #gnb { position:absolute; top:60px; right:calc(100% - 768px); }
+    #tnb { position:absolute; top:35px; left:calc(100% - 1200px); }
+    .con { clear:both; padding: 28px; min-height:90vh; background:#333; color:#fff; }
+    .con:after { content:""; display:table; clear:both; }
+    .ft { clear:both; background:deepskyblue; color:#fff; text-align:center; padding: 28px;} 
+    </style>
+</head>
+<body>
+    <header class="hd">
+        <label for="opener" class="lst_btn">목록</label>
+        <nav id="tnb">
+            <ul class="menu">
+                <li><a href="">상단메뉴1</a></li>
+                <li><a href="">상단메뉴2</a></li>
+                <li><a href="">상단메뉴3</a></li>
+            </ul>
+        </nav>
+        <nav id="gnb">1
+            <ul class="menu">
+                <li><a href="">메인메뉴1</a></li>
+                <li><a href="">메인메뉴2</a></li>
+                <li><a href="">메인메뉴3</a></li>
+                <li><a href="">메인메뉴4</a></li>
+            </ul>   
+        </nav>
+        <a href="" class="logo"><img src="https://placehold.it/120x40" alt=""></a>
+    </header>
+    <main class="con">
+        여기는 콘텐츠 영역입니다.
+    </main>
+    <footer class="ft">
+        여기는 푸터 영역입니다.
+    </footer>
+</body>
+</html>
