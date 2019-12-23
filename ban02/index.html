@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>워너 브라더스</title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
+    <style>
+    * { margin:0; padding:0; }
+    body, html { font-family:'Nanum Square', sans-serif; width:100%; height:100%;
+     overflow-x:hidden; }
+    ul { list-style: none; }
+    a { text-decoration: none; }
+    button, input, label, a { border: 0; outline: 0;  }
+    img { border:0; }    
+    #left { width:200px; height:100%; position:fixed; top:0; left:0; background:#111111;
+     z-index:10; background-image:url("bg1.png"); background-size:4px 4px; }
+    .logo { display:block; width:120px; height:100px; margin:10px auto; }
+    .logo img {width: 120px;height: 100px;}
+    #gnb { clear:both; margin-top:25px; }    
+    #gnb li { line-height:42px; }
+    #gnb li a { display:block; color:#fff; line-height:42px; 
+        text-align:center; }
+    #ft { width:200px; position:fixed; bottom:0px; left:0; z-index:11; }
+    #fnb { clear:both; border-top:1px solid #ececec; }
+    #fnb li { float:left; width:33.3333%; line-height:40px; }
+    #fnb li a { display:block; line-height:40px; color:#ececec; text-align:center; }
+    .copyright { padding:15px; color:#fff; font-size:0.8rem; }
+    .copy { padding-top:35px; }
+
+    #content { width:calc(100% - 220px); float:right; margin-right: 10px; }
+    #content:after { content:""; display:table; clear:both; }
+    .conWrap { clear:both; padding-bottom: 50px;  }
+    .conWrap li { height:auto; clear:both; margin-bottom: 40px; position:relative; }
+    .conWrap li:last-child { margin-bottom: 0; }    
+        
+    .pageTit, .vs { column-span:all; }
+    .pageTit { line-height:2.4; }
+    .vs { position:relative; margin-bottom:20px; }
+    .vs img { display:block; width:100%;border-radius: 300px; } 
+    .more { position:absolute; z-index:12; bottom:20px; left:calc(50% - 75px); 
+    display:block; width:150px; line-height:48px; color:#fff; background:#1c9; 
+    border-radius:35px; text-align:center; } 
+    .proLst img {  display:block; width:100%; margin:0px auto;  }
+    .proTit { line-height:2.8; text-indent:15px; color:#fff;  position:absolute; 
+    left:0; top: 20px;}
+    .proCom { padding:15px; color:#fff; position:absolute; left: 0; top: 90px; }
+    .blank { display:block;  }   
+    .blank_02 {display: block;}
+    @media screen and (max-width:767px) {
+        .conWrap { column-count:1; }
+        #left { width: 110px; }
+        #content { width:calc(100% - 125px); }
+        #ft { width:110px; }
+    }
+    @media screen and (min-width:768px) and (max-width:959px){
+        .conWrap { column-count:2; }
+        #left { width: 150px; }
+        #content { width:calc(100% - 175px); }
+        #ft { width:150px; }
+    }
+    @media screen and (min-width:960px) and (max-width:1279px){
+        .conWrap { column-count:3; }
+        #left { width: 190px; }
+        #content { width:calc(100% - 205px); }
+        #ft { width:190px; }
+    }
+    @media screen and (min-width:1280px) {
+        .conWrap { column-count:4; }
+        #left { width: 220px; }
+        #content { width:calc(100% - 245px); }
+        #ft { width:220px; }
+    }
+    .col li {width: 350px;height: 350px;}
+    .col li:first-child{height: 320px;}
+    .col img {height: 350px;border-radius: 20px;box-shadow: 10px 10px 20px gray;}
+   .vs {margin-bottom: 50px;}
+   .vs span {float: left;}
+    .blank {width: 300px; height: 400px;}
+    
+    </style>
+</head> 
+<body>
+<aside id="left">
+    <a href="index.html" class="logo">
+        <img src="image/main/logo.png" alt="">
+    </a>
+    <nav id="gnb">
+        <ul>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="tvshow.html">TV show</a></li>
+            <li><a href="">Game&Apps</a></li>
+            <li><a href="">Brand</a></li>
+            <li><a href="">Collections</a></li>
+        </ul>
+    </nav>
+</aside>
+<main id="content">
+    <section class="conWrap">
+        
+        <figure class="vs">
+            <img src="image/main/main_01.jpg" alt="">
+            <a href="" class="more">더보기</a>
+        </figure>
+      
+        <ul class="proLst">
+            <li class="col"><a href="">
+                    <img src="image/main/main_02.jpg" id="main_image_02" alt="">
+                    <h3 class="proTit">MOTHERLESS BROOKLYN</h3>
+                    <p class="proCom">박스 설명1</p>
+                </a></li>
+                
+            <li class="col"><a href="">
+                    <img src="image/main/main_03.jpg" alt="">
+                    <h3 class="proTit">박스제목2</h3>
+                    <p class="proCom">박스 설명2</p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="image/main/main_04.png" alt="">
+                    <h3 class="proTit">박스제목3</h3>
+                    <p class="proCom">박스 설명3</p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="image/main/main_05.jpg" alt="">
+                    <h3 class="proTit">박스제목4</h3>
+                    <p class="proCom">박스 설명4</p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="image/main/main_06.jpg" alt="">
+                    <h3 class="proTit">박스제목5</h3>
+                    <p class="proCom">박스 설명5</p>
+                </a></li>
+               
+                <li class="blank"></li>    
+           
+                 
+            <li class="col"><a href="">
+                    <img src="image/main/main_07.jpg" alt="">
+                    <h3 class="proTit">박스제목7</h3>
+                    <p class="proCom">박스 설명7</p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="image/main/main_08.jpg" alt="">
+                    <h3 class="proTit">박스제목8</h3>
+                    <p class="proCom">박스 설명8</p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="image/main/main_09.jpg" alt="">
+                    <h3 class="proTit">박스제목9</h3>
+                    <p class="proCom">박스 설명9</p>
+                </a></li>
+            <li class="col"><a href="">
+                    <img src="image/main/main_10.jpg" alt="">
+                    <h3 class="proTit">박스제목10</h3>
+                    <p class="proCom">박스 설명10</p>
+                </a></li>
+                <li class="col"><a href="">
+                        <img src="image/main/main_10.jpg" alt="">
+                        <h3 class="proTit">박스제목10</h3>
+                        <p class="proCom">박스 설명10</p>
+                    </a></li>
+                    <li class="col"><a href="">
+                            <img src="image/main/main_10.jpg" alt="">
+                            <h3 class="proTit">박스제목10</h3>
+                            <p class="proCom">박스 설명10</p>
+                        </a></li>
+                        <li class="col"><a href="">
+                                <img src="image/main/main_10.jpg" alt="">
+                                <h3 class="proTit">박스제목10</h3>
+                                <p class="proCom">박스 설명10</p>
+                            </a></li>
+                        
+                
+           
+        </ul>
+    </section>
+</main>
+<footer id="ft">
+    <nav id="fnb">
+      <ul>
+        <li><a href="">링크1</a></li><li><a href="">
+            링크2</a></li><li><a href="">링크3</a></li>
+      </ul>
+    </nav>
+    <div class="copyright">
+        <p class="copy">All copyrights by sample</p>
+    </div>
+</footer>    
+</body>
+</html>

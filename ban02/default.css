@@ -1,0 +1,13 @@
+@charset "utf-8";
+* { margin: 0; padding: 0; }
+body, html { width: 100%; height: 100%; }
+::-webkit-scrollbar { display:none; }
+html { overflow: hidden; }
+body { overflow:auto; }
+ul { list-style:none; }
+a { text-decoration: none; } 
+button, input { border:0; outline:0; background-color: transparent; } 
+.hd, .con, .ft { clear:both; width: 100vw; }
+.hd:after, .con:after { content:""; display:table; clear:both; }
+.con { min-height:500px; padding:28px; }
+.hd, .ft { color:#fff; text-align:center; }

@@ -1,0 +1,8 @@
+@charset "utf-8";
+.hd { width:200px; height:100vh; border:0; border-right:3px solid #fff; }
+.content { clear:none; float:right; width:calc(100vw - 220px); box-sizing:border-box; padding-top: 20px; }
+.page_wrap { width:calc(100vw - 220px); }
+.lrcon li {  width:50%; }
+.desk { display:block; }
+.mo { display:none; }
+.ft { position:absolute; bottom:0; left: 0; }
