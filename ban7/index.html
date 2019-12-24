@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="common.css">
+  <title>Document</title>
+  <style>
+   .con { clear:both; }
+    #visual { width:100vw; min-height:420px; background-image:url("./img/main_visual03.png"); background-size:100% auto; background-position:center bottom; }   
+    #visual .wrap { padding-top: 50px; padding-left:300px; position:relative;
+        box-sizing:border-box; }    
+    #login { position:absolute; right:0px; top:14px; z-index:20; 
+        width: 280px; height:315px; background:#fff; padding-top:16px; } 
+    .rd_item { display:none; } 
+    .login_box .box { display:none; }
+    #rd1:checked ~ .login_box .type1 { display:block; }    
+    #rd2:checked ~ .login_box .type2 { display:block; }  
+    .login_type { margin-top: 18px;  border:1px solid #333; width:242px; height:40px; margin:0 auto; }    
+    .login_type label { display:block; float:left; width:120px; text-align:center;
+        line-height:24px; color:#333; margin-top:8px; font-size:14px; font-weight:bold; 
+        cursor:pointer; }
+    .type_btn1 { border-right:1px solid #333; }  
+    #rd1:checked ~ .login_type .type_btn1 {color:deeppink; }   
+    #rd2:checked ~ .login_type .type_btn2 {color:deeppink; } 
+    
+    .gobtn { display:block; width: 240px; margin:10px auto; line-height: 38px;
+        height:38px; background:navy; color:#fff; text-align:center; font-weight:bold; 
+        font-size:14px;  }    
+    .inputfrm { display:block; width:238px; margin:10px auto; line-height: 38px; 
+        height:38px; border:1px solid #333; color:#333; text-indent:14px; 
+        font-weight:bold; }    
+    .log { display:block; width:240px; margin:10px auto; line-height:38px; text-align:right; font-size:13px; color:#666; padding-right:2px;  }  
+    .log_allim { width:240px; margin:5px auto; }  
+    .allimal { font-size:14px; }
+    .allimjang { font-size:12px; }    
+    .type1 .log_allim { box-sizing:border-box; padding:28px 8px 28px 90px; 
+        background-color:#3a85f1; background-image:url("./img/ico-login-infor2.png");
+        background-repeat:no-repeat; background-position:left bottom; border-radius:10px; position:relative; }   
+        
+    .type1 .log_allim:before { content:""; display:block; width: 57px; height: 20px; 
+        background-image:url("./img/ico-login-infor-arrow.png"); top:-20px; left:calc(50% - 30px); 
+        position:absolute; }   
+    .type1 .allimal { color:#eecc18; }
+    .type1 .allimjang { color:#fff; }   
+
+
+  </style>
+   <script>
+    $(document).ready(function(){
+        $(".vs li.item").eq(0).css({"left":"0px","z-index":"22"});
+        var cnt=$(".vs li.item").length;
+        var n=0;
+        var intv = setInterval(function(){
+            if(n<cnt){
+                vsAni(n); 
+                n++;  
+            } else {
+                n=0;  
+                vsAni(0);
+            }
+        }, 2500);
+        function vsAni(len){
+            $(".vs li.item").eq(len).siblings().css("z-index","20");
+            $(".vs li.item").eq(len).not(":animated").animate({"left":"0px","z-index":"22"}, 600,  function(){
+                $(".vs li.item").eq(len).siblings().css("left", "100vw");
+            });
+        }
+    });    
+    </script>
+    <script>
+    $(document).ready(function(){
+        var ht = parseInt($(window).height());
+        $(".to_top").css("display", "none");
+        $(window).scroll(function(){
+            var sc = parseInt($(window).scrollTop()); 
+            if(sc>=200){
+                $(".hd").slideDown(200, function(){
+                    $(".hd").addClass("on");
+                    $(".hd").slideDown(700);
+                });
+            } else {
+                $(".hd").slideDown(200, function(){
+                    $(".hd").removeClass("on");
+                    $(".hd").slideDown(700);
+                });
+            }
+            if(sc>=380){
+                $(".arrow").fadeOut();
+            } else {
+                $(".arrow").fadeIn();
+            }
+            if(sc>=ht){
+                $(".to_top").fadeIn();
+            } else {
+                $(".to_top").fadeOut();
+            }
+        });
+        $(".to_top").click(function(){
+            $("body, html").animate({scrollTop:"0px"}, 500); 
+        });
+    });    
+    </script>
+    <script>
+    $(document).ready(function(){
+        arrMov();
+        var intv_arr = setInterval(function(){ arrMov(); }, 1600);
+        function arrMov(){
+           $(".arrow").animate({"bottom":"-40px"}, 800, function(){
+               $(".arrow").animate({"bottom":"-80px"}, 800);
+           }); 
+        }
+    });    
+    </script>
+</head>
+<body>
+  <header class="hd">
+    <div class="hd_row" id="hd1">
+        <div class="wrap">
+            <ul class="tnb left">
+                <li><a href="">어린이</a></li>
+            </ul>
+            <ul class="tnb right">
+                <li><a href="">디지털원패스</a></li>
+                <li><a href="">로그인</a></li>
+                <li><a href="">회원가입</a></li>
+                <li><a href="">정부24소개</a></li>
+                <li><a href="">For Foreigners</a></li>
+                <li><a href="">사이트맵</a></li>
+                <li>화면크기 
+                    <button class="zoomin">+</button> 
+                    <span class="zoomtxt">100%</span>
+                    <button class="zoomout">-</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="hd_row" id="hd2">
+        <div class="wrap">
+            <a href="index.html" class="logo">
+                <img src="./img/img-gov-logo.png" alt="logo">
+            </a>
+            <nav id="gnb">
+                <ul class="menu">
+                    <li class="item1">
+                        <a href="" class="dep1">서비스</a>
+                        <ul class="sub">
+                            <li class="thumbnail">
+
+                            </li>
+                            <li class="submenu">
+                                <h3 class="thumb_tit">신청/확인/공유</h3>
+                                <ul class="menulst">
+                                    <li><a href="sub1.html">신청.조회.발급</a></li>
+                                    <li><a href="">사실/진위확인</a></li>
+                                    <li><a href="">공공자원 공유</a></li>
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                                <h3 class="thumb_tit">찾기/안내</h3>
+                                <ul class="menulst">
+                                    <li><a href="">생애주기/꾸러미 서비스</a></li>
+                                    <li><a href="">연령/대상별 서비스</a></li>
+                                    <li><a href="">분야별 서비스</a></li>
+                                    <li><a href="">키워드로 보는 서비스</a></li>
+                                    <li><a href="">기업단체 서비스</a></li>
+                                    <li><a href="">외국인 서비스</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item2">
+                        <a href="" class="dep1">정책정보</a>
+                        <ul class="sub">
+                            <li class="thumbnail">
+                            
+                            </li>
+                            <li class="submenu">
+                                <ul class="menulst">
+                                    <li><a href="">분야별 정책정보</a></li>
+                                    <li><a href="">정책뉴스</a></li>
+                                    <li><a href="">연구보고서</a></li>
+                                    <li><a href="">간행물</a></li>
+                                    <li><a href="">정책자료</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item3">
+                        <a href="" class="dep1">기관정보</a>
+                        <ul class="sub">
+                            <li class="thumbnail">
+
+                            </li>
+                            <li class="submenu">
+                                <ul class="menulst">
+                                    <li><a href="">정부/지자체 조직도</a></li>
+                                    <li><a href="">정부/지자체 운영사이트</a></li>
+                                    <li><a href="">지자체소식</a></li>
+                                    <li><a href="">지자체 축제/행사</a></li>
+                                    <li><a href="">공모전</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item4">
+                        <a href="" class="dep1">고객센터</a>
+                        <ul class="sub">
+                            <li class="thumbnail">
+
+                            </li>
+                            <li class="submenu">
+                                <ul class="menulst">
+                                    <li><a href="">정부24 이용방법</a></li>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">자료실</a></li>
+                                    <li><a href="">서비스지원</a></li>
+                                    <li><a href="">자주묻는질문(FAQ)</a></li>
+                                    <li><a href="">개선의견수렴</a></li>
+                                    <li><a href="">온라인 상담예약</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+       
+        </div>
+    </div>
+</header> 
+<figure class="vs">
+    <ul class="ban_box">
+        <li class="item">
+            <img src="./images/1920_main1.jpg" alt="비주얼이미지" class="vs_img">
+        </li>
+        <li class="item">
+            <img src="./images/1920_main2.jpg" alt="비주얼이미지" class="vs_img">
+        </li>
+        <li class="item">
+            <img src="./images/visual-brand-youngmill.jpg" alt="" class="vs_img">
+        </li>
+    </ul>
+    <button class="left_btn"></button>
+    <button class="right_btn"></button>
+    <div class="abs">
+            <h2 class="vs_tit">HAPPY FOOD <br>HAPPY WORLD</h2>
+    </div>
+</figure>
+</body>
+</html>
