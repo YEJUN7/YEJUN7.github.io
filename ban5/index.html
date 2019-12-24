@@ -70,6 +70,11 @@
     text-overflow:ellipsis; overflow:hidden; white-space: nowrap; }
     #ft { clear:both; padding: 2rem; min-height:80px; background:#333; color:#fff;
     text-align:center;position:relative; }
+    .ft_01 a {color: #fff;}
+    .ft_01 a::after{content: "|";color: #fff;}
+    .ft_01 a:nth-child(3)::after{content: "";}
+    
+
     @media screen and (max-width:767px){
         .mo { display:block; }
         .desk { display:none; }
@@ -119,9 +124,7 @@
             @media screen and (min-color:4) { } */
             .logo img {width: 150px;height: 100px;}
             .item_lst img{width: 234px;height: 235px;}
-            #ft li {float: left;position: relative;}
-            #ft li:nth-child(1){width: 20%;height: 100px; border: 2px solid red;}
-            #ft li:nth-child(2){width: 70%;height: 100px; border: 2px solid red;}
+           
     </style>
 </head>
 <body>
@@ -137,9 +140,10 @@
     <a href="index.html" class="logo"><img src="image/main/logo.png" alt=""></a> 
     <nav id="tnb">
         <ul class="menu">
-            <li><a href="">전체메뉴</a></li>
-            <li><a href="">중구정신건강복지센터</a></li>
-            <li><a href="">중구청홈페이지</a></li>
+            <li><a href="">로그인</a></li>
+            <li><a href="">회원가입</a></li>
+            <li><a href="http://www.djjunggu.go.kr/html/mental/" target="_blank">중구정신건강복지센터</a></li>
+            <li><a href="http://www.djjunggu.go.kr/html/kr/" target="_blank">중구청홈페이지</a></li>
         </ul>
     </nav>
     <nav id="gnb">
@@ -153,10 +157,10 @@
 </header>
 <nav id="collap_menu">
     <ul class="menu">
-        <li><a href="">메인메뉴1</a></li>
-        <li><a href="">메인메뉴2</a></li>
-        <li><a href="">메인메뉴3</a></li>
-        <li><a href="">메인메뉴4</a></li>
+        <li><a href="">진료안내</a></li>
+        <li><a href="">주요업무안내</a></li>
+        <li><a href="">민원안내</a></li>
+        <li><a href="">보건소소개</a></li>
     </ul>
 </nav>   
 <div class="wrap">
@@ -168,37 +172,37 @@
         <ul class="item_lst">
             <li>
                 <a href="">
-                    <img src="image/main/main_02.PNG" class="item_pic" alt="이미지1">
-                    <h2 class="item_tit">항목제목1</h2>
-                    <p class="item_com">항목설명1</p>
+                    <img src="image/main/main_02.jpg" class="item_pic" alt="이미지1">
+                    <h2 class="item_tit">내과진료안내</h2>
+                    <p class="item_com">진료과목:내과</p>
                 </a>
             </li>
             <li>
                 <a href="">
-                    <img src="image/main/main_03.PNG" class="item_pic" alt="이미지2">
-                    <h2 class="item_tit">항목제목2</h2>
-                    <p class="item_com">항목설명2</p>
+                    <img src="image/main/main_03.jpg" class="item_pic" alt="이미지2">
+                    <h2 class="item_tit">한방진료안내</h2>
+                    <p class="item_com">한방진료및상담</p>
                 </a>
             </li>
             <li>
                 <a href="">
-                    <img src="image/main/main_04.PNG" class="item_pic" alt="이미지3">
-                    <h2 class="item_tit">항목제목3</h2>
-                    <p class="item_com">항목설명3</p>
+                    <img src="image/main/main_04.jpg" class="item_pic" alt="이미지3">
+                    <h2 class="item_tit">검사안내</h2>
+                    <p class="item_com">의사처방에 의한 검사</p>
                 </a>
             </li>
             <li>
                 <a href="">
-                    <img src="image/main/main_05.PNG" class="item_pic" alt="이미지4">
-                    <h2 class="item_tit">항목제목4</h2>
-                    <p class="item_com">항목설명4</p>
+                    <img src="image/main/main_05.jpg" class="item_pic" alt="이미지4">
+                    <h2 class="item_tit">물리치료실</h2>
+                    <p class="item_com">전기치료, 운동치료 등</p>
                 </a>
             </li>
             <li>
                 <a href="">
-                    <img src="image/main/main_06.PNG" class="item_pic" alt="이미지4">
-                    <h2 class="item_tit">항목제목4</h2>
-                    <p class="item_com">항목설명4</p>
+                    <img src="image/main/main_06.jpg" class="item_pic" alt="이미지4">
+                    <h2 class="item_tit" style="line-height: 1em";>방사선촬영<br> 안내</h2>
+                    <p class="item_com">흉부 X-선 촬영(직촬)</p>
                 </a>
             </li>
         </ul>
@@ -206,7 +210,9 @@
 </div>
 <footer id="ft">
   <ul>
-      <li><img src="image/main/f_logo.gif" alt=""> </li>
+      <li class="ft_01"><a href="">개인정보처리방침</a>
+      <a href="">이메일무단수집거부</a>
+      <a href="">뷰어다운로드</a></li>
       <li><p>[35011]대전광역시 중구 산성로 63 (문화동) | 전화 : 042) 288-8000 | 팩스 042) 288 - 8971
         메일 djjunggu@korea.kr | 트위터 http://twitter.com/lovejunggu <br>
         Copyright© 2012 daejeon jung-gu district. All rights reserved.</p> </li>  
