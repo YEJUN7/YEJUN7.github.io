@@ -5,8 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="common.css">
-  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <link rel="stylesheet" href="css/com.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/main.css"> 
+  <!-- 구형 브라우저 -->
+  <link rel="shortcut icon" type="image/x-icon" href="./ico/favicon16.ico">
+  <!-- 신형 브라우저와 안드로이드 폰 -->
+  <link rel="shortcut icon" type="image/x-icon" href="./ico/favicon32.png">
+  <!-- 아이폰3 이하 -->
+  <link rel="apple-touch-icon" size="57x57" href="./ico/favicon57.png">
+  <!-- 아이패드 -->
+  <link rel="apple-touch-icon" size="72x72" href="./ico/favicon72.png">
+  <!-- 아이폰4 이상 -->
+  <link rel="apple-touch-icon" size="114x114" href="./ico/favicon114.png">
+  <!-- IE10 이상 -->
+  <meta name="msapplication-TileColor" content="#FFFFFF"> 
+  <meta name="msapplication-TileImage" content="./ico/favicon-144.png">
+
+  <!-- 메타데이터 개발 공통 사항 -->
+  <!-- 데스크탑에서 IE로 웹 문서를 열 때 가장 최신 버전으로 실행 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  
+  <!-- 앱(웹 사이트)의 이름 -->
+  <meta name="application-name" content="SRC hospital Site">
+  <!-- 웹 사이트 저작자의 이름 -->
+  <meta name="author" content="kitae Kim">
+  <!-- 현재 문서의 설명 -->
+  <meta name="description" content="SRC hospital Site Mainpage"> 
+  <!-- 현재 문서의 저작도구 -->
+  <meta name="generator" content="Brackts">
+  <!-- 검색엔진에서 검색되게할 키워드 -->
+  <meta name="keywords" content="SRC 병원, 건강관리, 휴양">
+  
+  <!-- 반응형, 모바일, 태블릿 사이트 일 경우 뷰포트 설정 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Noto+Serif+KR" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Jua|Noto+Sans+KR|Noto+Serif+KR" rel="stylesheet">
+  <link rel="stylesheet" href="com.css">
+  <link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="main.css">
+  <title>식품의약품안전처</title>
   <style>
+/*옆으로 슬라이드*/
+
+    body,html {position: relative;}
+    a { text-decoration: none;}
+    ul,li {list-style: none;}
+    .logo {width: 200px;height: 50px;}
+    body, html { -ms-overflow-style:none; }
+    ::-webkit-scrollbar { display:none; }    
+    ::-o-scrollbar { display:none; } 
+    ::-moz-scrollbar { display:none; }     
+    
+
+
+
+
+
+
    .con { clear:both; }
     #visual { width:100vw; min-height:420px; background-image:url("./img/main_visual03.png"); background-size:100% auto; background-position:center bottom; }   
     #visual .wrap { padding-top: 50px; padding-left:300px; position:relative;
@@ -44,78 +103,99 @@
         position:absolute; }   
     .type1 .allimal { color:#eecc18; }
     .type1 .allimjang { color:#fff; }   
+/*슬라이드 */
 
+button, input { border:0; outline:0; background-color:transparent; }
+figure {margin-left: 0;}
+	#vis { width:100vw; height:600px; margin:15px auto;
+	 overflow:hidden; clear:both; }
+	.img_box { width:100vw; height:600px; }
+	#vis li { display:block; float:left; position:relative; }
+    #vis a { display:block; }
+	#vis img { display:block; width:100vw; height:600px; }
+    .num { display:block; color:black;	background:#fff; border-radius:20px; width:40px; height:40px;
+         position:absolute;  z-index:10; top:20px; left:20px; text-align:center;	line-height: 40px; }
+    .ac_box { clear:both; width: 300px; margin:0 auto; }
+
+	#btn_box { width:150px; height:50px; margin:0px auto; float:left;margin-top: 610px;position: absolute;margin-left: 120px; }
+	#btn_box button { display:block; width:50px; height:50px; cursor:pointer; }
+	#btn_box .left { float:left; }
+    #btn_box .right { float:right; }
+    #vis {width: 100vw;height: 600px;}
+    #vis img {width: 100vw;height: 600px;}
+  
 
   </style>
+
+
+   <script src="./js/jquery-1.11.1.js"></script>
+    
    <script>
-    $(document).ready(function(){
-        $(".vs li.item").eq(0).css({"left":"0px","z-index":"22"});
-        var cnt=$(".vs li.item").length;
-        var n=0;
-        var intv = setInterval(function(){
-            if(n<cnt){
-                vsAni(n); 
-                n++;  
-            } else {
-                n=0;  
-                vsAni(0);
-            }
-        }, 2500);
-        function vsAni(len){
-            $(".vs li.item").eq(len).siblings().css("z-index","20");
-            $(".vs li.item").eq(len).not(":animated").animate({"left":"0px","z-index":"22"}, 600,  function(){
-                $(".vs li.item").eq(len).siblings().css("left", "100vw");
-            });
-        }
-    });    
-    </script>
-    <script>
-    $(document).ready(function(){
-        var ht = parseInt($(window).height());
-        $(".to_top").css("display", "none");
-        $(window).scroll(function(){
-            var sc = parseInt($(window).scrollTop()); 
-            if(sc>=200){
-                $(".hd").slideDown(200, function(){
-                    $(".hd").addClass("on");
-                    $(".hd").slideDown(700);
-                });
-            } else {
-                $(".hd").slideDown(200, function(){
-                    $(".hd").removeClass("on");
-                    $(".hd").slideDown(700);
-                });
-            }
-            if(sc>=380){
-                $(".arrow").fadeOut();
-            } else {
-                $(".arrow").fadeIn();
-            }
-            if(sc>=ht){
-                $(".to_top").fadeIn();
-            } else {
-                $(".to_top").fadeOut();
-            }
-        });
-        $(".to_top").click(function(){
-            $("body, html").animate({scrollTop:"0px"}, 500); 
-        });
-    });    
-    </script>
-    <script>
-    $(document).ready(function(){
-        arrMov();
-        var intv_arr = setInterval(function(){ arrMov(); }, 1600);
-        function arrMov(){
-           $(".arrow").animate({"bottom":"-40px"}, 800, function(){
-               $(".arrow").animate({"bottom":"-80px"}, 800);
-           }); 
-        }
-    });    
-    </script>
+   /* 여기가 스크립트 처리 구간 */    
+   $(function(){
+       var intv = setInterval(function(){ lAni(); }, 3000);
+       function lAni(){
+           $(".imgBox").not(":animated").animate({"margin-left":"-510px"}, 800, function(){
+               $(".imgBox li").eq(0).appendTo($(".imgBox"));
+               $(".imgBox").css("margin-left", "0px");
+           });
+           
+       }
+       $(window).scroll(function(){
+           var scTop = $("body, html").scrollTop();
+           if(scTop>=100){
+               $(".hdFrame, #gnb a, .lstBtn span").addClass("on");
+           } else {
+               $(".hdFrame, #gnb a, .lstBtn span").removeClass("on");
+           }
+       });
+   });    
+   </script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcG6XLlvSL0DQtg1G38wiT_r8BYN3RbWQ&callback=initMap"></script> -->
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpo7PlmFhN57HAxDlD8MTLI4DT1bL9VFY&callback=initMap"></script>-->
+<!--
+1) 구글 지도 api key 발급 사이트로 이동하여 지도 API 서비스 신청
+2) https://console.cloud.google.com/getting-started?pli=1
+3) [API 및 서비스] -> [사용자 인증 정보] -> 인증 키 발급
+-->
+
+
+
+
+  <script>
+  $(document).ready(function() {
+      var cnt = $(".img_box li").length;
+      var wd = parseInt($("#visual").width());
+      var itv = setInterval(function(){ rAni(); }, 3000);
+      function rAni(){
+          $(".img_box").not(":animated").animate({ "margin-left": "-" + wd + "px" }, 500, function () {
+              $(".img_box li").eq(0).appendTo($(".img_box"));
+              $(".img_box").css("margin-left", "0px");
+          });
+      }
+      function lAni(){
+          $(".img_box li").eq(cnt - 1).prependTo($(".img_box"));
+          $(".img_box").css("margin-left", "-" + wd + "px");
+          $(".img_box").not(":animated").animate({ "margin-left": "0px" }, 500);
+      }
+      $("#btn_box .right").on("click", function() {
+          clearInterval(itv);
+          rAni();
+          itv = setInterval(function () { rAni(); }, 3000);
+      });
+      $("#btn_box .left").on("click", function() {
+          clearInterval(itv);
+          lAni();
+          itv = setInterval(function () { rAni(); }, 3000);
+      });
+  });
+  </script>
 </head>
 <body>
+   
   <header class="hd">
+
     <div class="hd_row" id="hd1">
         <div class="wrap">
             <ul class="tnb left">
@@ -136,116 +216,266 @@
             </ul>
         </div>
     </div>
+    <style>
+        .wrap li{float: left;}
+        .wrap li:nth-child(3) {margin-top: 20px;margin-left: 20px;}
+        .serch {margin-top: 30px;margin-left: 30px;width: 700px;}
+        #gnb {width:50vw}
+    </style>
     <div class="hd_row" id="hd2">
         <div class="wrap">
-            <a href="index.html" class="logo">
-                <img src="./img/img-gov-logo.png" alt="logo">
-            </a>
+            <li>
+           <a href="index.html" class="logo">
+                <img src="image/main/logo.jpg" alt="logo">   
+            </a></li>
+            <li>
+            <input type="text" name="headerQuery" id="serch" value="" placeholder="검색어를 입력해주세요" 
+            title="검색어를 입력해주세요" class="serch" onkeydown="return doEnter()" autocomplete="off">
+            </li>
+            <li>
+                <img src="image/main/banner_01.jpg" alt="">
+            </li>
             <nav id="gnb">
                 <ul class="menu">
                     <li class="item1">
-                        <a href="" class="dep1">서비스</a>
+                        <a href="" class="dep1">국민소통</a>
                         <ul class="sub">
                             <li class="thumbnail">
-
+                                <img src="image/main/sub_menu_01.gif" alt="">
                             </li>
                             <li class="submenu">
-                                <h3 class="thumb_tit">신청/확인/공유</h3>
+                                <h3 class="thumb_tit">여론광장</h3>
                                 <ul class="menulst">
-                                    <li><a href="sub1.html">신청.조회.발급</a></li>
-                                    <li><a href="">사실/진위확인</a></li>
-                                    <li><a href="">공공자원 공유</a></li>
-                                </ul>
+                                    <li><a href="sub1.html">식품의약품안전열린포럼</a></li>
+                                    <li><a href="">국민참여프로그램</a></li>
+                                    <li><a href="">자유게시판</a></li>
+                                    <li><a href="">일본수출규제대응</a></li>
+                                </ul>   
                             </li>
                             <li class="submenu">
-                                <h3 class="thumb_tit">찾기/안내</h3>
+                                <h3 class="thumb_tit">신고센터</h3>
                                 <ul class="menulst">
-                                    <li><a href="">생애주기/꾸러미 서비스</a></li>
-                                    <li><a href="">연령/대상별 서비스</a></li>
-                                    <li><a href="">분야별 서비스</a></li>
-                                    <li><a href="">키워드로 보는 서비스</a></li>
-                                    <li><a href="">기업단체 서비스</a></li>
-                                    <li><a href="">외국인 서비스</a></li>
+                                    <li><a href="">국민심문고</a></li>
+                                    <li><a href="">부패공익신고 상담</a></li>
+                                    <li><a href="">식품안전소비자신고</a></li>
+                                    <li><a href="">온라인 불법유통 신고</a></li>
+                                  
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li class="item2">
-                        <a href="" class="dep1">정책정보</a>
+                        <a href="" class="dep1">공지/공고</a>
                         <ul class="sub">
                             <li class="thumbnail">
                             
                             </li>
                             <li class="submenu">
                                 <ul class="menulst">
-                                    <li><a href="">분야별 정책정보</a></li>
-                                    <li><a href="">정책뉴스</a></li>
-                                    <li><a href="">연구보고서</a></li>
-                                    <li><a href="">간행물</a></li>
-                                    <li><a href="">정책자료</a></li>
+                                    <li><a href="">공지</a></li>
+                                    <li><a href="">공고</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li class="item3">
-                        <a href="" class="dep1">기관정보</a>
+                        <a href="" class="dep1">정책정보</a>
                         <ul class="sub">
                             <li class="thumbnail">
 
                             </li>
                             <li class="submenu">
+                                <h3 class="thumb_tit">위해정보</h3>
                                 <ul class="menulst">
-                                    <li><a href="">정부/지자체 조직도</a></li>
-                                    <li><a href="">정부/지자체 운영사이트</a></li>
-                                    <li><a href="">지자체소식</a></li>
-                                    <li><a href="">지자체 축제/행사</a></li>
-                                    <li><a href="">공모전</a></li>
+                                    <li><a href="">식품위해정보</a></li>
+                                    <li><a href="">의약품등위해정보</a></li>
+                                    <li><a href="">화장품위해정보</a></li>
+                                    <li><a href="">의료기기위해정보</a></li>
+                                  
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                                <h3 class="thumb_tit">시험검사기관</h3>
+                                <ul class="menulst">
+                                    <li><a href="">시험검사기관관련규정</a></li>
+                                    <li><a href="">시험검사기관지정현황</a></li>
+                                    <li><a href="">식품분야검사수수료정보</a></li>
+                                    <li><a href="">검사기관교육</a></li>
+                                  
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li class="item4">
-                        <a href="" class="dep1">고객센터</a>
+                        <a href="" class="dep1">식약처소개</a>
                         <ul class="sub">
                             <li class="thumbnail">
 
                             </li>
                             <li class="submenu">
+                                <h3 class="thumb_tit">소개</h3>
                                 <ul class="menulst">
-                                    <li><a href="">정부24 이용방법</a></li>
-                                    <li><a href="">공지사항</a></li>
-                                    <li><a href="">자료실</a></li>
-                                    <li><a href="">서비스지원</a></li>
-                                    <li><a href="">자주묻는질문(FAQ)</a></li>
-                                    <li><a href="">개선의견수렴</a></li>
-                                    <li><a href="">온라인 상담예약</a></li>
+                                    <li><a href="">업무안내</a></li>
+                                    <li><a href="">찾아오시는길</a></li>
+                                    <li><a href="">비전</a></li>
+                                    <li><a href="">연혁</a></li>
+                                  
+                                </ul>
+                            </li>
+                            <li class="submenu">
+                                <h3 class="thumb_tit">신고센터</h3>
+                                <ul class="menulst">
+                                    <li><a href="">국민심문고</a></li>
+                                    <li><a href="">부패공익신고 상담</a></li>
+                                    <li><a href="">식품안전소비자신고</a></li>
+                                    <li><a href="">온라인 불법유통 신고</a></li>
+                                  
                                 </ul>
                             </li>
                         </ul>
                     </li>
+                    <style>
+                    
+                    </style>
+                    <ul style="float: left;margin-left: 100px;">
+                        <li style="background: #369;" ><a href=""><img src="image/main/quick_icon1.jpg" alt=""></a></li>
+                            <li style="background: #369;" ><a href=""><img src="image/main/quick_icon2.jpg" alt=""></a></li>
+                                <li style="background: #369;" ><a href=""><img src="image/main/quick_icon3.jpg" alt=""></a></li>
+                                    <li style="background: #369;" ><a href=""><img src="image/main/quick_icon4.jpg" alt=""></a></li>
                 </ul>
+                  
+                </ul>
+           
             </nav>
        
         </div>
     </div>
 </header> 
+
 <figure class="vs">
-    <ul class="ban_box">
-        <li class="item">
-            <img src="./images/1920_main1.jpg" alt="비주얼이미지" class="vs_img">
-        </li>
-        <li class="item">
-            <img src="./images/1920_main2.jpg" alt="비주얼이미지" class="vs_img">
-        </li>
-        <li class="item">
-            <img src="./images/visual-brand-youngmill.jpg" alt="" class="vs_img">
-        </li>
-    </ul>
-    <button class="left_btn"></button>
-    <button class="right_btn"></button>
-    <div class="abs">
-            <h2 class="vs_tit">HAPPY FOOD <br>HAPPY WORLD</h2>
+    <div class="ac_box">
+        <div id="btn_box">
+            <button class="left">◀</button><button class="right">▶</button>
+        </div>
+    </div>    
+	<div id="vis">
+		<ul class="img_box">
+            <li>
+                <a href="">
+                    <img src="image/main/slide_01.jpg" alt="">
+                    <span class="num">1</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/main/slide_02.png" alt="">
+                    <span class="num">2</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="image/main/slide_03.jpg" alt="">
+                    <span class="num">3</span>
+                </a>
+            </li>
+         
+		</ul>
     </div>
-</figure>
+</figure>    
+</div>
+<style>
+.column{
+	-webkit-transform: translateX(0);
+}
+
+.column:before{
+	content: '';
+	position: absolute;
+	width: 90%;
+	top: 100%;
+	left: 5%;
+	height: 10px;
+	background: -webkit-radial-gradient(
+		center, ellipse,
+		rgba(0,0,0,0.30) 0%,
+		rgba(0,0,0,0) 80%);
+	-webkit-transition-duration: 0.5s;
+	opacity: 0;
+}
+
+.column:hover{
+	-webkit-transform: translateY(-5px);	
+}
+.column:hover:before{
+	-webkit-transform: translateY(5px);
+    opacity: 1;
+}
+.column a {border-radius: 30px;}
+</style>
+<div class="row column text-center">
+<h3 style="text-align: left;font-size:17px;">알림 사항</h3>
+</div>
+<div class="row small-up-2 large-up-4" id="back_03">
+<div class="column">
+<a href=""><img id="ban" class="thumbnail" src="image/main/noti_01.PNG"></a>
+<a href="#" class="button expanded">달걀 안심 제도</a>
+</div>
+<div class="column" >
+    <a href=""><img id="ban" class="thumbnail" src="image/main/noti_02.PNG"></a>
+
+
+<a href="#" class="button expanded">방사능 안전관리</a>
+</div>
+<div class="column" >
+    <a href=""><img id="ban" class="thumbnail" src="image/main/noti_03.PNG"></a>   
+
+
+<a href="#" class="button expanded">규제 개선 현황</a>
+</div>
+<div class="column">
+<img id="ban" class="thumbnail" src="image/main/noti_04.PNG">
+
+
+<a href="#" class="button expanded">온라인 단속 결과문</a>
+</div>
+</div>
+
+<!--배너 왼쪽으로 슬라이드 -->
+
+<div class="page" id="page1">
+    <aside class="page1_side">
+        <h1 class="pageTitle">SRC</h1>
+        <p class="pageComent">관악구 내 유일한 SRC병원 부설의원 
+소아 낮병동만의 장점을 소개합니다.</p>
+        <a href="ward.html#page1" class="detail">
+            <span class="hvTxt"></span>
+            <span>소아 낮병동 바로가기</span>
+        </a>
+    </aside>
+    <div class="banBox2">
+        <ul class="imgBox">
+            <li class="item1">
+            
+                <h2 class="banTitle">소아 중심 독립적 치료실</h2>
+                <img src="./img/img_benefit01.jpg" alt="소아병동 썸네일">
+            </li>
+            <li class="item2">
+         
+                <h2 class="banTitle">소아 전담 치료진</h2>
+                <img src="./img/img_benefit02.jpg" alt="소아 전담 썸네일">
+            </li>
+            <li class="item3">
+             
+                <h2 class="banTitle">쾌적하고 위생적인 입원환경</h2>
+                <img src="./img/img_benefit03.jpg" alt="입원환경 썸네일">
+            </li>
+            <li class="item4">
+              
+                <h2 class="banTitle">ALL IN ONE SERVIES</h2>
+                <img src="./img/img_benefit04.jpg" alt="원서비스 썸네일">
+            </li>
+        </ul>
+    </div>
+</div>
 </body>
 </html>
