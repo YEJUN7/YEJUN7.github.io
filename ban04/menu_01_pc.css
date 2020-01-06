@@ -1,0 +1,132 @@
+/* PC용 CSS */
+
+
+.nav a::after {
+    background-color: #6559bc;	
+    content: "";
+    width: 0;
+    height: 4px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: width 500ms ease;
+  }
+  
+  .nav a:hover::after {
+    width: 100%;
+  }
+
+
+#wrap{
+    display:flex;
+    flex-flow:column nowrap;
+    width:80%;
+    margin:0 auto;
+    max-width:1200px;
+    }
+
+    
+@media all and (min-width:960px){
+    /* 기본 CSS */
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main {margin-top: 150px;}     
+    .row { clear:both; }   
+    .row::after { content:""; display:table; clear:both; } 
+    .bread { padding-left:25%; }   
+    .col { float:left; padding:10px; }    
+    .side { width: 25%; } 
+    .con { width: 75%; border-left:5px solid #eee; }  
+
+    /*반응형 가져옴*/
+    #container { background-color:bisque; border:2px solid #aaa; }
+    #content { margin-top: 10px; border:1px solid #999; background-color:deepskyblue; 
+    text-align:center; min-height:80vh; }
+    #aside { margin-top: 10px; border:1px solid #999; background-color:deeppink; 
+    text-align:center;  min-height:80vh; }
+
+    #wrap { width:auto; position:relative; }
+    #container { padding-right:200px; } /* 절대 폭 지정 x, 오른쪽 패딩 사이드바 너비만큼 */
+    #container:after { content:""; display:block; clear:both; }
+    #content { float:right; width: 100%; margin-right:-200px;   }
+    /* 왼쪽 박스는 폭을 100%로 하고, 음수 오른쪽 마진을 그 다음 올 콘텐츠의 너비 만큼 한다.  */
+    #aside { float:left; position:relative; width: 180px; left:5px;   }
+    /* 오른쪽 박스는 float:right로 하고, position:relative, 오른쪽 밖으로 빼고 싶은 만큼의 양을 left 값으로 조절  */
+
+    
+    /*메뉴 호버시 언더라인 */
+.nav a:hover::after {
+    width: 100%;
+  }
+  .nav ul {
+  margin:0;
+      padding:0;
+      text-align:center;}
+      .nav li{
+      list-style:none;
+      display:inline-block;
+      margin: 15px 25px;
+  }
+  .nav li a{
+      position: relative;
+      display: inline-block;
+      outline: none;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+  }
+  .nav a:hover,
+  .nav a:focus {
+      outline: none;
+  }
+  .info_list li:hover{font-weight: bold;color: #369;font-size: 1.1em;}
+
+
+
+    #wrap{
+    position:relative;
+    width:90%;
+    }
+    
+    /* 인포메이션 영역 CSS */
+    .info_section{
+    order:3;
+    position:absolute;
+    top:30px;
+    top:1.875rem;
+    right:30px;
+    right:1.875rem;
+    z-index:30;
+    width:auto;
+    border-bottom:0;
+    }
+    
+    .info_list li{
+    width:auto;
+    margin-left:15px;
+    margin-left:0.625rem;
+    }
+    
+    .info_list li a{
+    padding:0;
+    }
+    
+    
+    
+    /* 푸터 영역 CSS */
+    .footer{
+    order:9;
+    }
+    
+    .footer p{
+    padding-left:3.125%;
+    /* 30px ÷ 960px */
+    text-align:left;
+    }
+    .footer {background-color: #f2f2f3;text-align: center;line-height: 25px;border-top: 1px solid gray;font-size: 1em;}
+    .footer li {font-size: 0.9em;}
+    .footer a::after {content: " |";}
+    .footer a:nth-child(7)::after{content: "";}
+    address {font-size: 0.9em;font-style: normal;}
+    address span{color: #0079ca;font-weight: bold;}      
+    }           

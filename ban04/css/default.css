@@ -13,13 +13,48 @@ max-width:1200px;
 #wrap section{
 box-sizing:border-box;
 }
+a,p {color: #191919;}
+.nav a::after {
+  background-color: #6559bc;	
+  content: "";
+  width: 0;
+  height: 4px;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  transition: width 500ms ease;
+}
+/*메뉴 호버시 언더라인 */
+.nav a:hover::after {
+  width: 100%;
+}
+.nav ul {
+margin:0;
+	padding:0;
+	text-align:center;}
+	.nav li{
+	list-style:none;
+	display:inline-block;
+	margin: 15px 25px;
+}
+.nav li a{
+	position: relative;
+	display: inline-block;
+	outline: none;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.nav a:hover,
+.nav a:focus {
+	outline: none;
+}
+.info_list li:hover{font-weight: bold;color: #369;font-size: 1.1em;}
 
 /* 인포메이션 영역 CSS */
 .info_section{
 order:1;
 width:100%;
-background:#2ecc71;
-border-bottom:1px solid #39d67c;
 }
 
 .info_list{
@@ -71,7 +106,7 @@ display:none;
 
 .gnb li{
 display:flex;
-background:#2c3e50;
+background:;
 }
 
 .gnb li a{
@@ -111,15 +146,15 @@ cursor:pointer;
 
 /* 슬라이더 영역 CSS */
 .slider_section{
-display:flex;
-justify-content:space-between;
-align-items:center;
-order:3;
-width:100%;
-height:300px;
-height:18.750rem;
-background:url(../image/main/main_01.jpg) center center no-repeat;
-}
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	order:3;
+	width:100%;
+	height:300px;
+	height:18.750rem;
+	background:url(../image/main/main_01.jpg) center center no-repeat;
+	}
 
 .slider_section span{
 width:34px;
@@ -146,20 +181,25 @@ background-position:-34px 0;
 /* 최근 글 영역, 인기 글 영역 CSS */
 .latest_post_section{
 order:4;
-background:#fff;border: 2px solid #005aab;
+background:#fff;border-top:  1px solid gray;
+border-right:  1px solid gray;
+border-bottom:  0.1px solid gray;
+border-left:  1px solid gray;
+
 color: #333; }
 .latest_post_list li:nth-child(1)::before {content: "[동남청]";color:red;}
-			.latest_post_list li:nth-child(2)::before {content: "[순천]";color:red;}
-			.latest_post_list li:nth-child(3)::before {content: "[본청]";color:red;}
-			.latest_post_list li:nth-child(4)::before {content: "[본청]";color:red;}
-			.latest_post_list li:nth-child(5)::before {content: "[호남청]";color:red;}
+.latest_post_list li:nth-child(2)::before {content: "[순천]";color:red;}
+.latest_post_list li:nth-child(3)::before {content: "[본청]";color:red;}
+.latest_post_list li:nth-child(4)::before {content: "[본청]";color:red;}
+.latest_post_list li:nth-child(5)::before {content: "[호남청]";color:red;}
 
 
 .popular_post_section{
 order:5;
-border-top:  2px solid gray;
-border-right:  2px solid gray;
-border-bottom:  2px solid gray;
+border-top:  1px solid gray;
+border-right:  1px solid gray;
+border-bottom:  0.1px solid gray;
+border-left:  1px solid gray;
 
 }
 
@@ -199,10 +239,13 @@ order:6;
 padding:50px 12.5%;
 padding:3.125rem 12.5%;
 /* 40px ÷ 320px */
-text-align:center;background: #fff;border-top:  2px solid #005aab;border-left:  2px solid #005aab;
-border-bottom: 2px solid #005aab;
+text-align:center;background: #fff;
+border-top:  1px solid gray;
+border-right:  1px solid gray;
+border-bottom:  1px solid gray;
+border-left:  0.5px solid gray;
 
-}
+} 
 
 .gallery_section img{
 width:100%;
@@ -231,8 +274,11 @@ order:7;
 padding:40px 12.5%;
 padding:2.500rem 12.5%;
 /* 40px ÷ 320px */
-border:  2px solid #1974ba;
-text-shadow: 0px 1px 1px #1974ba;
+border-top:  1px solid gray;
+border-right:  1px solid gray;
+border-bottom:  1px solid gray;
+border-left:  0.5px solid gray;
+
 }
 
 .rankup_list{
@@ -267,8 +313,11 @@ border-radius:5px;
 .banner_section{
 order:8;
 background:#f2f2f3;
-border-right: 2px solid #005aab;
-border-bottom: 2px solid #005aab;
+border-top:  1px solid gray;
+border-right:  1px solid gray;
+border-bottom:  1px solid gray;
+border-left:  1px solid gray;
+
 }
 
 .banner_box_01{
@@ -282,9 +331,6 @@ padding:1.875rem 0;
 text-align:center;
 }
 
-.banner_box_02{
-background:;
-}
 
 .banner_list{
 display:flex;
@@ -301,6 +347,8 @@ padding:24px 12.5%;
 padding:1.500rem 12.5%;
 /* 40px ÷ 320px */
 background:#fff;
+border-right:  1px solid gray;
+border-left:  1px solid gray;
 }
 
 .social_list{
@@ -696,4 +744,9 @@ padding-left:3.125%;
 /* 30px ÷ 960px */
 text-align:left;
 }
-}
+.footer {background-color: #f2f2f3;text-align: center;line-height: 25px;border-top: 1px solid gray;font-size: 1em;}
+.footer li {font-size: 0.9em;}
+.footer a::after {content: " |";}
+.footer a:nth-child(7)::after{content: "";}
+address {font-size: 0.9em;font-style: normal;}
+address span{color: #0079ca;font-weight: bold;}
