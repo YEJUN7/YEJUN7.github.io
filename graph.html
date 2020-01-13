@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>:: jQuery 프로그래스 바 ::</title>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+<style type="text/css">
+
+    // CSS의 position 속성을 이용하여 두개의 DIV 레이아웃을 겹친다.
+
+    .u.i-progressbar { position:relative; }
+    .progressbar {width: 200px;}    
+    .progress-label {
+        position:absolute;
+        left:50%;
+        top:8px;
+        font-weight:bold;
+        margin-left:-40px;
+    }
+</style>
+<script type="text/JavaScript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/JavaScript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+       
+        var barProgress = jQuery(".progressbar");
+
+        barProgress.eq(0).progressbar({value:100});
+        barProgress.eq(0).find(".ui-progressbar-value").css({"background":"#333"});
+       
+    });
+</script>
+</head>
+<body> 
+    <div class="progressbar"><div class="progress-label">25%</div></div>
+ 
+   
+</body>
+</html> 

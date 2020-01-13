@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+   <script src="http://code.jquery.com/jquery-latest.js"></script>
     <title>이예준 포트폴리오</title>
     <style>
     * { margin: 0; padding: 0; }
@@ -32,14 +33,14 @@
     transition:0.2s;background-color:#333;text-align: center;}
     .lst.on .page_m { margin-top: 0; opacity:1; }
 
-    .lst .m2_01{ transition-delay:0.1s;}  
+    .lst .m2_01{ transition-delay:0.2s; }  
     .lst .m2_02{ transition-delay:0.2s; }  
-    .lst .m2_03{ transition-delay:0.3s; }  
-    .lst .m2_04{ transition-delay:0.4s; }  
-    .lst .m2_05{ transition-delay:0.5s; }  
-    .lst .m2_06{ transition-delay:0.6s; }  
-    .lst .m2_07{ transition-delay:0.7s; }  
-    .lst .m2_08{ transition-delay:0.8s; }  
+    .lst .m2_03{ transition-delay:0.2s; }  
+    .lst .m2_04{ transition-delay:0.2s; }  
+    .lst .m2_05{ transition-delay:0.2s; }  
+    .lst .m2_06{ transition-delay:0.2s; }  
+    .lst .m2_07{ transition-delay:0.2s; }  
+    .lst .m2_08{ transition-delay:0.2s; }  
      
  
 
@@ -197,8 +198,26 @@
     color: rgba(255, 255, 255, 0.4);
     letter-spacing: 2px;
   }
-    </style>
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
+ 
+.graph_01 {width: 200px;height: 30px;border: 1px solid #333;;margin-left: 20px;}
+.graph_01_2 {width: 160px;height: 30px;background-color:#333;}
+.graph_02 {width: 200px;height: 30px;border: 1px solid #333;;margin-left: 20px;position: relative;}
+.graph_02_2 {width: 160px;height: 30px;background-color:#333;}
+.graph_03 {width: 200px;height: 30px;border: 1px solid #333;;margin-left: 20px;}
+.graph_03_2 {width: 80px;height: 30px;background-color:#333;}
+.graph_04 {width: 200px;height: 30px;border: 1px solid #333;;margin-left: 20px;}
+.graph_04_2 {width: 140px;height: 30px;background-color:#333;}
+.graph_05 {width: 200px;height: 30px;border: 1px solid #333;;margin-left: 20px;}
+.graph_05_2 {width: 140px;height: 30px;background-color:#333;}
+.graph_06 {width: 200px;height: 30px;border: 1px solid #333;;margin-left: 20px;}
+.graph_06_2 {width: 140px;height: 30px;background-color:#333;}
+.graph_07 {width: 200px;height: 30px;border: 1px solid #333;;margin-left: 20px;}
+.graph_07_2 {width: 140px;height: 30px;background-color:#333;}
+.graph_08 {width: 200px;height: 30px;border: 1px solid #333;;margin-left: 20px;}
+.graph_08_2 {width: 140px;height: 30px;background-color:#333;}
+
+</style>
+ 
   <script>
   $(document).on('click',nextSlide);
   
@@ -269,43 +288,43 @@
 
   .text_on_01 {display: none;}
   .m2_01:hover .text_on_01 {display: block;transition-duration: 1s;color: #333;}
-  .m2_01:hover {background-color: #3333;background-image: url("image/html5-ok.png");}
+  .m2_01:hover {background-color: orange;background-image: url("image/html5-ok.pn");}
  .m2_01:hover .m2_01_text1 {display: none;transition: 0.5s;}
 
   .text_on_02 {display: none;}
   .m2_02:hover .text_on_02 {display: block;transition-duration: 1s;color: #333;}
-  .m2_02:hover {background-color: #3333;background-image: url("image/css3-ok.png");}
+  .m2_02:hover {background-color: orange;background-image: url("image/css3-ok.pn");}
  .m2_02:hover .m2_02_text1 {display: none;transition: 0.5s;}
 
  .text_on_03 {display: none;}
   .m2_03:hover .text_on_03 {display: block;transition-duration: 1s;color: #333;}
-  .m2_03:hover {background-color: #3333;background-image: url("image/js-ok.pn");}
+  .m2_03:hover {background-color: orange;background-image: url("image/js-ok.pn");}
  .m2_03:hover .m2_03_text1 {display: none;transition: 0.5s;}
 
  .text_on_04 {display: none;}
   .m2_04:hover .text_on_04 {display: block;transition-duration: 1s;color: #333;}
-  .m2_04:hover {background-color: #3333;background-image: url("image/ps-ok.png");}
+  .m2_04:hover {background-color: orange;background-image: url("image/ps-ok.pn");}
  .m2_04:hover .m2_04_text1 {display: none;transition: 0.5s;}
 
  .text_on_05 {display: none;}
   .m2_05:hover .text_on_05 {display: block;transition-duration: 1s;color: #333;}
-  .m2_05:hover {background-color: #3333;background-image: url("image/ai-ok.png");}
+  .m2_05:hover {background-color: orange;background-image: url("image/ai-ok.pn");}
  .m2_05:hover .m2_05_text1 {display: none;transition: 0.5s;}
 
  .text_on_06 {display: none;}
   .m2_06:hover .text_on_06 {display: block;transition-duration: 1s;color: #333;}
-  .m2_06:hover {background-color: #3333;}
- .m2_06:hover .m2_06_text1 {display: none;transition: s;}
+  .m2_06:hover {background-color: orange;}
+ .m2_06:hover .m2_06_text1 {display: none;transition: 0.5s;}
 
  .text_on_07 {display: none;}
   .m2_07:hover .text_on_07 {display: block;transition-duration: 1s;color: #333;}
-  .m2_07:hover {background-color: #3333;}
- .m2_07:hover .m2_07_text1 {display: none;transition: 0s;}
+  .m2_07:hover {background-color: orange;}
+ .m2_07:hover .m2_07_text1 {display: none;transition: 0.5s;}
 
  .text_on_08 {display: none;}
-  .m2_08:hover .text_on_08 {display: block;transition-duration: 0.3s;color: #333;}
-  .m2_08:hover {background-color: #3333;}
- .m2_08:hover .m2_08_text1 {display: none;transition: 0;}
+  .m2_08:hover .text_on_08 {display: block;transition-duration: 1s;color: #333;}
+  .m2_08:hover {background-color: orange;}
+ .m2_08:hover .m2_08_text1 {display: none;transition: 0.5;}
  
 .mock_image a{color: #fff;}
   </style>
@@ -339,6 +358,7 @@
               </div>
               <div class="center">
              <h1>About Me YEJUN?</h1>
+             <p>Click!</p>
             
               </div>
             </div>
@@ -349,6 +369,7 @@
               </div>
               <div class="center">
                 <h1>Always Is New!</h1>
+                <p>Click!</p>
               </div>
             </div>
             <div class="slide"> 
@@ -358,6 +379,7 @@
               </div>
               <div class="center">
                 <h1>I try to develop me today too.</h1>
+                <p>Click!</p>
 
               </div>
             </div>
@@ -368,6 +390,11 @@
               </div>
               <div class="center">
                 <h1>혈액형 O</h1>
+                <p>Scroll down ↓</p>
+              <!-- <h1 style="font-size: 40px;">이제 스마트웹콘텐츠과정을 수료예정중입니다. <br> 
+                  아직 실무적인 경험은 많이 부족하지만 <br> 열정과 노력으로 <br> 
+                  새로운 일에 도전하며 배우길 마다하지 않는 <br> 인재가 되고 싶습니다. <br>
+                  꾸준히 성장하는 모습 보여드릴 것을 약속합니다.</h1> -->
               </div>
             </div>
           </div>
@@ -385,6 +412,11 @@
                 <div class="text_on_01">
                 <h3 style="text-decoration: underline;">HTML5</h3>
                 <p style="font-size: 20px;">메인페이지 설계,서브페이지 설계,네비게이션 설계, 위젯 설계   </p>
+                <p style="font-size: 20px;margin-top: 100px;">활용가능도 80%</p>
+             <div class="graph_01">
+                <div class="graph_01_2">               
+                </div>
+             </div>
                 </div>     
               </div>
             </li>
@@ -393,10 +425,13 @@
                 <h1 class="m2_02_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1>
                 <div class="text_on_02">
                 <h3 style="text-decoration: underline;">CSS3</h3>
-                <p style="font-size: 20px;">모바일/태블릿/데스크탑 레이아웃,<br>
-                   기업형 레이아웃, 브랜드 레이아웃,<br>
-                    기타 각 종 레이아웃 구현,<br> 
+                <p style="font-size: 20px;">모바일/태블릿/데스크탑 레이아웃,
+                   기업형 레이아웃, 브랜드 레이아웃,
+                    기타 각 종 레이아웃 구현, 
                     위젯 구현, 각 종 메인 및 서브페이지 구현 등 <br></p>
+                    <p style="font-size: 20px;margin-top: 20px;">활용가능도 80%</p>
+                    <div class="graph_02">
+                       <div class="graph_02_2">
                 </div>     
               </div>
           </li>
@@ -404,8 +439,11 @@
             <div class="page_m m2_03">
               <h1 class="m2_03_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1>
               <div class="text_on_03">
-              <h3 style="text-decoration: underline;">javascript+jQuery</h3>
+              <h3 style="text-decoration: underline;">javascript+ <br> jQuery</h3>
               <p style="font-size: 20px;">문서 탐색 및 선택, 이벤트 처리, 효과 적용, 각 종 위젯 제작 및 구현 등</p>
+              <p style="font-size: 20px;margin-top: 50px;">활용가능도 40%</p>
+              <div class="graph_03">
+                 <div class="graph_03_2">
               </div>     
             </div>
         </li>
@@ -415,6 +453,9 @@
             <div class="text_on_04">
             <h3 style="text-decoration: underline;">Photo shop</h3>
             <p style="font-size: 20px;">이미지 편집, 시안 제작, 패턴 제작, 배너 제작, 위젯 요소 제작 등</p>
+            <p style="font-size: 20px;margin-top: 100px;">활용가능도 70%</p>
+            <div class="graph_04">
+               <div class="graph_04_2">
             </div>     
           </div>
       </li>
@@ -422,8 +463,11 @@
         <div class="page_m m2_05">
           <h1 class="m2_05_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1> 
           <div class="text_on_05">
-          <h3 style="text-decoration: underline;">Illustrator</h3>
+          <h3 style="text-decoration: underline;">illustrator</h3>
           <p style="font-size: 20px;">로고, 심볼, 앰블럼, 패턴, 캐릭터, 시안 레이아웃 제작, 메타포 제작 등</p>
+          <p style="font-size: 20px;margin-top: 100px;">활용가능도 70%</p>
+          <div class="graph_05">
+             <div class="graph_05_2">
           </div>     
         </div>
     </li>
@@ -433,6 +477,9 @@
         <div class="text_on_06">
         <h3 style="text-decoration: underline;">기타프리프로세서</h3>
         <p style="font-size: 20px;">markdown, emmet, scss</p>
+        <p style="font-size: 20px;margin-top: 100px;">활용가능도 70%</p>
+        <div class="graph_06">
+           <div class="graph_06_2">
         </div>     
       </div>
   </li>
@@ -442,6 +489,9 @@
       <div class="text_on_07">
       <h3 style="text-decoration: underline;">css 프레임 워크</h3>
       <p style="font-size: 20px;">bootstrap, foundation, pure, bulma 등</p>
+      <p style="font-size: 20px;margin-top: 70px;">활용가능도 70%</p>
+      <div class="graph_07">
+         <div class="graph_07_2">
       </div>     
     </div>
 </li>
@@ -452,6 +502,9 @@
     <h3 style="text-decoration: underline;">기타 툴</h3>
     <p style="font-size: 20px;">프로토타입툴(oven),공유 및 버전관리툴(깃허브,트렐로,드롭박스),서버(아파치),
       서버용언어(php)DB(my-sql)</p>
+      <p style="font-size: 20px;margin-top: 45px;">활용가능도 70%</p>
+      <div class="graph_08">
+         <div class="graph_08_2">
     </div>     
   </div>
 </li>
@@ -464,9 +517,10 @@
 
 <div class="page" id="page3" style="background:#333;">
     <div class="page_wrap">
-        <h2 class="page_title" style="text-align: center;font-size: 80px;">MY SITE</h2>
+        <h2 class="page_title" style="text-align: center;font-size: 80px;">My SITE</h2>
         <figure class="page_pic_02">
                 <ul class="lst">
+                
                   <div class="mock_image">
                     <li><a href=""><img src="image/web_mock-ok.png" alt="">WEB 사이트</a></li>
                     <li><a href=""><img src="image/mo-ok.png" alt="">Mobile 사이트</a></li>
@@ -474,6 +528,26 @@
                     </div>
                 </ul>
         </figure>
+        <style>
+        .mock_image  {  position:relative; }
+.mock_image li { overflow:visible; position:relative; 
+ text-align:center; }
+.mock_image li a { position:relative; margin:0 auto; }
+.mock_image li a  { text-align:center;
+box-sizing:border-box; display:block; clear:both;
+margin:0 auto;}
+.mock_image li a:before { clear:both; content:""; display:block; height:5px; background:orange; transition:0.5s; width:0; margin:0 auto; }
+
+
+.mock_image li a:hover::before { background:#1c87dc; 
+width:400px; }
+.mock_image li a:after { clear:both; content:""; display:block; height:5px; background:orange; transition:0.5s; width:0; margin:0px auto;  }
+.mock_image li a:hover::after { background:#1c87dc; 
+width:400px; }
+
+        </style>
+
+
     </div>
 </div>
 
