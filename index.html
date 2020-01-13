@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이예준 포트폴리오</title>
+    <style>
+    * { margin: 0; padding: 0; }
+    ul { list-style:none; }
+    a { text-decoration:none; }
+    body, html { width: 100%; -ms-scroll-style:none; }
+    ::-webkit-scrollbar { display:none; } 
+    html { overflow:hidden; }
+    body { overflow:auto; }   
+    .page { clear:both; background-repeat: no-repeat; background-size:cover;
+        background-position: center center;  overflow:hidden;
+    box-sizing:border-box; }    
+    .page_wrap { width:94%; height:100vh; margin:0 auto; overflow:hidden;
+    box-sizing:border-box; } 
+        
+    #page1 { background-image:url("image/my/top_back.jpg") }
+    #page2 { background-image:url("image/my/IMG_5728.JPG"); }
+    #page3 { background-image:url("img3.jpg"); }    
+    #page4 { background-image:url("img4.jpg"); }  
+    #page2 .page_wrap { height: 100vh; }
+
+    .lst { width: 1400px; margin:0 auto; margin-top: 60px; }
+    .lst li { float:left; margin:15px 30px; }
+    .lst li a { display:block; }
+    .lst li a img { display:block; max-width:100%; margin:0 auto; margin-top:100%; opacity:0; 
+    transition:0.2s; }
+    .lst .page_m {display:block; max-width:100%; margin:0 auto; margin-top:100%; opacity:0; 
+    transition:0.2s;background-color:#333;text-align: center;}
+    .lst.on .page_m { margin-top: 0; opacity:1; }
+
+    .lst .m2_01{ transition-delay:0.1s;}  
+    .lst .m2_02{ transition-delay:0.2s; }  
+    .lst .m2_03{ transition-delay:0.3s; }  
+    .lst .m2_04{ transition-delay:0.4s; }  
+    .lst .m2_05{ transition-delay:0.5s; }  
+    .lst .m2_06{ transition-delay:0.6s; }  
+    .lst .m2_07{ transition-delay:0.7s; }  
+    .lst .m2_08{ transition-delay:0.8s; }  
+     
+ 
+
+    .lst.on li a img { margin-top: 0; opacity:1; }
+    .lst li:nth-child(1) a img { transition-delay:0.1s; }
+    .lst li:nth-child(2) a img { transition-delay:0.2s; }
+    .lst li:nth-child(3) a img { transition-delay:0.3s; }
+    .lst li:nth-child(4) a img { transition-delay:0.4s; }
+    .lst li:nth-child(5) a img { transition-delay:0.5s; }
+    .lst li:nth-child(6) a img { transition-delay:0.6s; }
+    .lst li:nth-child(7) a img { transition-delay:0.7s; }
+    .lst li:nth-child(8) a img { transition-delay:0.8s; }
+
+    #ft { clear:both; height: 90px; padding: 20px; background:#333; color:#fff;
+    font-size:20px; text-align:center; }
+    .page_top_btn { position:fixed; right:30px; bottom:120px; z-index:999;
+        color:#fff; background:#333; width:48px; height: 48px; border-radius:25px; 
+        line-height: 48px; font-size:20px; text-align:center; }    
+.page_pic {margin-left: 250px;}
+ .page_wrap {  height: 100vh;
+  width: 100vw;
+  font-family: "Average Sans", sans-serif;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;}
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .slide:nth-child(1) .panel > * {
+    background: #636fee;
+    color: #7594f0;
+  }
+  .slide:nth-child(2) .panel > * {
+    background: #a8cb86;
+    color: #bdd194;
+  }
+  .slide:nth-child(3) .panel > * {
+    background: #63afee;
+    color: #75cdf0;
+  }
+  .slide:nth-child(4) .panel > * {
+    background: gold;
+    color: #369  ;
+  }
+  .slide .center {
+    opacity: 0;
+    transition: opacity linear 300ms;
+  }
+  .slide .panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .slide .top, .slide .bottom {
+    content: attr(data-back);
+    position: absolute;
+    font-size: 35vh;
+    font-weight: 800;
+    height: 50vh;
+    width: 100vw;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: -webkit-transform 600ms cubic-bezier(1, 0.005, 0.57, 0.865);
+    transition: transform 600ms cubic-bezier(1, 0.005, 0.57, 0.865);
+    transition: transform 600ms cubic-bezier(1, 0.005, 0.57, 0.865), -webkit-transform 600ms cubic-bezier(1, 0.005, 0.57, 0.865);
+  }
+  .slide .top:after, .slide .bottom:after {
+    position: relative;
+    display: inline-block;
+    transition: -webkit-transform 600ms cubic-bezier(1, 0.005, 0.57, 0.865);
+    transition: transform 600ms cubic-bezier(1, 0.005, 0.57, 0.865);
+    transition: transform 600ms cubic-bezier(1, 0.005, 0.57, 0.865), -webkit-transform 600ms cubic-bezier(1, 0.005, 0.57, 0.865);
+    content: attr(data-back);
+    font-family: "BenchNine", sans-serif;
+  }
+  .slide .top {
+    line-height: 100vh;
+    -webkit-transform: translatey(-50vh);
+            transform: translatey(-50vh);
+  }
+  .slide .top:after {
+    -webkit-transform: translatey(50vh);
+            transform: translatey(50vh);
+  }
+  .slide .bottom {
+    bottom: 0;
+    line-height: 0vh;
+    -webkit-transform: translatey(50vh);
+            transform: translatey(50vh);
+  }
+  .slide .bottom:after {
+    -webkit-transform: translatey(-50vh);
+            transform: translatey(-50vh);
+  }
+  .slide.active .center {
+    opacity: 1;
+    transition: opacity linear 300ms;
+    transition-delay: 600ms;
+  }
+  .slide.active .top, .slide.active .bottom {
+    transition: none;
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+    z-index: -1;
+  }
+  .slide.active .top:after, .slide.active .bottom:after {
+    transition: -webkit-transform cubic-bezier(0.23, 1, 0.32, 1) 1200ms;
+    transition: transform cubic-bezier(0.23, 1, 0.32, 1) 1200ms;
+    transition: transform cubic-bezier(0.23, 1, 0.32, 1) 1200ms, -webkit-transform cubic-bezier(0.23, 1, 0.32, 1) 1200ms;
+    -webkit-transform: translatey(0);
+            transform: translatey(0);
+  }
+  
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+    z-index: 2;
+    text-align: center;
+  }
+  .center h1 {
+    font-size: 10vh;
+    line-height: 1;
+    font-family: "BenchNine", sans-serif;
+  }
+  
+  .sig {
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 2px;
+  }
+    </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script>
+  $(document).on('click',nextSlide);
+  
+  function nextSlide(){
+    console.log($('.active + .slide').length);
+    if ($('.active + .slide').length > 0){
+      $('.active + .slide').addClass('active');
+      $($('.active')[0]).removeClass('active');
+    } else{
+      $('.active').removeClass('active');
+      $('.slide:nth-child(1)').addClass('active');
+    }
+  }
+  </script>
+    <script>
+    $(document).ready(function(){
+        var p = $(".page");
+        p.each(function (index) {  // .page의 개별적으로 Wheel 이벤트 적용
+            $(this).on("mousewheel DOMMouseScroll", function (e) {
+                e.preventDefault();
+                var delta = 0;
+                if (!event) event = window.event;
+                if (event.wheelDelta) {
+                    delta = event.wheelDelta / 120;
+                    if (window.opera) { delta = -delta;  }  //오페라의 낮은 버전의 경우 역으로
+                } else if (event.detail) {
+                    delta = -event.detail / 3;  //휠의 스크롤양 미동적인 3px 보완
+                }    
+                var moveTop = $(window).scrollTop();
+                var sel = $(".page").eq(index);
+                if (delta < 0) {  // 마우스휠을 위에서 아래로
+                    if ($(sel).next() != undefined) {
+                        try { moveTop = $(sel).next().offset().top; } catch(e) {}
+                        
+                    }
+                } else { // 마우스휠을 아래에서 위로
+                    if ($(sel).prev() != undefined) {
+                        try { moveTop = $(sel).prev().offset().top; } catch(e) {}
+                    }
+                }
+                $("html, body").not(":animated").animate({ scrollTop: moveTop+"px"}, 800);
+            });
+        });
+        p.mouseover(function(){
+            $(this).find(".lst").addClass("on");
+        });
+    });    
+    </script>
+</head>
+<body>
+  <style>
+    .top_image {margin-left: 300px;}
+  .top_image img {border-radius: 100px;}
+  .top_image li {float: left;position: relative;margin-left: 100px;left: 150px;}
+  #page2 {background-color: #1fc8db;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);}
+  .top01 {width: 200px;
+  height: 200px;
+  border:5px solid #fff;
+  border-radius: 100px;
+  box-shadow: 5px 5px 5px rgb(56, 25, 25);
+  margin-top: 100px;
+  }
+  .c1_01 {background-image: url(image/my/top_01.png)} 
+  .c1_02 {background-image: url(image/my/top_02.png)} 
+  .c1_03 {background-image: url(image/my/top_03.png)} 
+  .page_m {width: 240px;height: 300px;border: 1px solid #fff;border-radius: 10%;}
+
+  .text_on_01 {display: none;}
+  .m2_01:hover .text_on_01 {display: block;transition-duration: 1s;color: #333;}
+  .m2_01:hover {background-color: #3333;background-image: url("image/html5-ok.png");}
+ .m2_01:hover .m2_01_text1 {display: none;transition: 0.5s;}
+
+  .text_on_02 {display: none;}
+  .m2_02:hover .text_on_02 {display: block;transition-duration: 1s;color: #333;}
+  .m2_02:hover {background-color: #3333;background-image: url("image/css3-ok.png");}
+ .m2_02:hover .m2_02_text1 {display: none;transition: 0.5s;}
+
+ .text_on_03 {display: none;}
+  .m2_03:hover .text_on_03 {display: block;transition-duration: 1s;color: #333;}
+  .m2_03:hover {background-color: #3333;background-image: url("image/js-ok.pn");}
+ .m2_03:hover .m2_03_text1 {display: none;transition: 0.5s;}
+
+ .text_on_04 {display: none;}
+  .m2_04:hover .text_on_04 {display: block;transition-duration: 1s;color: #333;}
+  .m2_04:hover {background-color: #3333;background-image: url("image/ps-ok.png");}
+ .m2_04:hover .m2_04_text1 {display: none;transition: 0.5s;}
+
+ .text_on_05 {display: none;}
+  .m2_05:hover .text_on_05 {display: block;transition-duration: 1s;color: #333;}
+  .m2_05:hover {background-color: #3333;background-image: url("image/ai-ok.png");}
+ .m2_05:hover .m2_05_text1 {display: none;transition: 0.5s;}
+
+ .text_on_06 {display: none;}
+  .m2_06:hover .text_on_06 {display: block;transition-duration: 1s;color: #333;}
+  .m2_06:hover {background-color: #3333;}
+ .m2_06:hover .m2_06_text1 {display: none;transition: s;}
+
+ .text_on_07 {display: none;}
+  .m2_07:hover .text_on_07 {display: block;transition-duration: 1s;color: #333;}
+  .m2_07:hover {background-color: #3333;}
+ .m2_07:hover .m2_07_text1 {display: none;transition: 0s;}
+
+ .text_on_08 {display: none;}
+  .m2_08:hover .text_on_08 {display: block;transition-duration: 0.3s;color: #333;}
+  .m2_08:hover {background-color: #3333;}
+ .m2_08:hover .m2_08_text1 {display: none;transition: 0;}
+ 
+.mock_image a{color: #fff;}
+  </style>
+<div class="page" id="page1">
+    <div class="page_wrap">
+        <div class="top_image">
+        <ul>
+          <li>
+              <div class="top01 c1_01">
+              </div>
+          </li>
+          <li>
+            <div class="top01 c1_02">
+         
+            </div>
+        </li>
+        <li>
+          <div class="top01 c1_03">
+         
+          </div>
+      </li>
+
+       </ul>
+    </div>
+        <div class=text_wrap>
+        <div class="slider">
+            <div class="slide active">
+              <div class="panel">
+                <div class="top" data-back="LEE YEJUN"></div>
+                <div class="bottom" data-back="LEE YEJUN"></div>
+              </div>
+              <div class="center">
+             <h1>About Me YEJUN?</h1>
+            
+              </div>
+            </div>
+            <div class="slide">
+              <div class="panel">
+                <div class="top" data-back="POTFOLIO"></div>
+                <div class="bottom" data-back="POTFOLIO"></div>
+              </div>
+              <div class="center">
+                <h1>Always Is New!</h1>
+              </div>
+            </div>
+            <div class="slide"> 
+              <div class="panel">
+                <div class="top" data-back="Profile"></div>
+                <div class="bottom" data-back="Profile"></div>
+              </div>
+              <div class="center">
+                <h1>I try to develop me today too.</h1>
+
+              </div>
+            </div>
+            <div class="slide">
+              <div class="panel">
+                <div class="top" data-back="LEE YEJUN"></div>
+                <div class="bottom" data-back="LEE YEJUN"></div>
+              </div>
+              <div class="center">
+                <h1>혈액형 O</h1>
+              </div>
+            </div>
+          </div>
+    </div>
+    </div>
+</div>
+<div class="page" id="page2">
+    <div class="page_wrap">
+        <h2 class="page_title" style="text-align: center;font-size: 80px;">My SKILLS!</h2>
+        <figure class="page_pic">
+            <ul class="lst">
+              <li>
+                <div class="page_m m2_01">
+                  <h1 class="m2_01_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1>
+                <div class="text_on_01">
+                <h3 style="text-decoration: underline;">HTML5</h3>
+                <p style="font-size: 20px;">메인페이지 설계,서브페이지 설계,네비게이션 설계, 위젯 설계   </p>
+                </div>     
+              </div>
+            </li>
+            <li>
+              <div class="page_m m2_02">
+                <h1 class="m2_02_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1>
+                <div class="text_on_02">
+                <h3 style="text-decoration: underline;">CSS3</h3>
+                <p style="font-size: 20px;">모바일/태블릿/데스크탑 레이아웃,<br>
+                   기업형 레이아웃, 브랜드 레이아웃,<br>
+                    기타 각 종 레이아웃 구현,<br> 
+                    위젯 구현, 각 종 메인 및 서브페이지 구현 등 <br></p>
+                </div>     
+              </div>
+          </li>
+          <li>
+            <div class="page_m m2_03">
+              <h1 class="m2_03_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1>
+              <div class="text_on_03">
+              <h3 style="text-decoration: underline;">javascript+jQuery</h3>
+              <p style="font-size: 20px;">문서 탐색 및 선택, 이벤트 처리, 효과 적용, 각 종 위젯 제작 및 구현 등</p>
+              </div>     
+            </div>
+        </li>
+        <li>
+          <div class="page_m m2_04">
+            <h1 class="m2_04_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1> 
+            <div class="text_on_04">
+            <h3 style="text-decoration: underline;">Photo shop</h3>
+            <p style="font-size: 20px;">이미지 편집, 시안 제작, 패턴 제작, 배너 제작, 위젯 요소 제작 등</p>
+            </div>     
+          </div>
+      </li>
+      <li>
+        <div class="page_m m2_05">
+          <h1 class="m2_05_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1> 
+          <div class="text_on_05">
+          <h3 style="text-decoration: underline;">Illustrator</h3>
+          <p style="font-size: 20px;">로고, 심볼, 앰블럼, 패턴, 캐릭터, 시안 레이아웃 제작, 메타포 제작 등</p>
+          </div>     
+        </div>
+    </li>
+    <li>
+      <div class="page_m m2_06">
+        <h1 class="m2_06_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1> 
+        <div class="text_on_06">
+        <h3 style="text-decoration: underline;">기타프리프로세서</h3>
+        <p style="font-size: 20px;">markdown, emmet, scss</p>
+        </div>     
+      </div>
+  </li>
+  <li>
+    <div class="page_m m2_07">
+      <h1 class="m2_07_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1>
+      <div class="text_on_07">
+      <h3 style="text-decoration: underline;">css 프레임 워크</h3>
+      <p style="font-size: 20px;">bootstrap, foundation, pure, bulma 등</p>
+      </div>     
+    </div>
+</li>
+<li>
+  <div class="page_m m2_08">
+    <h1 class="m2_08_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1>
+    <div class="text_on_08">
+    <h3 style="text-decoration: underline;">기타 툴</h3>
+    <p style="font-size: 20px;">프로토타입툴(oven),공유 및 버전관리툴(깃허브,트렐로,드롭박스),서버(아파치),
+      서버용언어(php)DB(my-sql)</p>
+    </div>     
+  </div>
+</li>
+      
+          
+            </ul>
+        </figure>
+    </div>
+</div>
+
+<div class="page" id="page3" style="background:#333;">
+    <div class="page_wrap">
+        <h2 class="page_title" style="text-align: center;font-size: 80px;">MY SITE</h2>
+        <figure class="page_pic_02">
+                <ul class="lst">
+                  <div class="mock_image">
+                    <li><a href=""><img src="image/web_mock-ok.png" alt="">WEB 사이트</a></li>
+                    <li><a href=""><img src="image/mo-ok.png" alt="">Mobile 사이트</a></li>
+                    <li><a href=""><img src="image/ban-ok.png" alt="">반응형 사이트</a></li>
+                    </div>
+                </ul>
+        </figure>
+    </div>
+</div>
+
+<div class="page" id="page4">
+    <div class="page_wrap">
+        <h2 class="page_title">페이지4</h2>
+        <figure class="page_pic"></figure>
+    </div>
+</div>
+<footer class="page" id="ft">
+    <div class="ft_wrap">여기는 푸터입니다.</div>
+</footer>
+<div class="page_top_btn">
+    <span class="txt">↑</span>
+</div>
+</body>
+</html>
