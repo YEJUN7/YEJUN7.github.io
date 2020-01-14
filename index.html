@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
    <script src="http://code.jquery.com/jquery-latest.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" />
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
     <title>이예준 포트폴리오</title>
     <style>
     * { margin: 0; padding: 0; }
@@ -19,11 +22,10 @@
     .page_wrap { width:94%; height:100vh; margin:0 auto; overflow:hidden;
     box-sizing:border-box; } 
         
-    #page1 { background-image:url("image/my/top_back.jpg") }
-    #page2 { background-image:url("image/my/IMG_5728.JPG");}
-    #page3 { background-image:url("img3.jpg"); }    
-    #page4 { background-image:url("img4.jpg"); }  
-    #page2 .page_wrap { height: 100vh; }
+    #page1 { background-image:url("image/my/top_back.jpg"); }
+    #page2 { background-image:url("image/my/IMG_5728.JPG");}    
+    #page4 { background-image:url("image/my/.JPG");background: #1c87dc; }  
+ 
 
     .lst { width: 1400px; margin:0 auto; margin-top: 60px; }
     .lst li { float:left; margin:15px 15px; }
@@ -200,21 +202,22 @@
     letter-spacing: 2px;
   }
  
-.graph_01 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;;margin-left: 20px;border-radius: 10px; }
+.graph_01 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;margin-left: 20px;border-radius: 10px; }
 .graph_01_2 {width: 160px;height: 15px;background-color:#333;border-radius: 10px 0px 0px 10px;}
-.graph_02 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;;margin-left: 20px;border-radius: 10px;position: relative;}
+.graph_02 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;margin-left: 20px;
+border-radius: 10px;position: relative;}
 .graph_02_2 {width: 160px;height: 15px;background-color:#333;border-radius: 10px 0px 0px 10px;}
-.graph_03 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;;margin-left: 20px;border-radius: 10px;}
-.graph_03_2 {width: 80px;height: 15px;background-color:#333;border-radius: 10px 0px 0px 10px;}
-.graph_04 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;;margin-left: 20px;border-radius: 10px;}
+.graph_03 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;margin-left: 20px;border-radius: 10px;}
+.graph_03_2 {width: 100px;height: 15px;background-color:#333;border-radius: 10px 0px 0px 10px;}
+.graph_04 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;margin-left: 20px;border-radius: 10px;}
 .graph_04_2 {width: 140px;height: 15px;background-color:#333;border-radius: 10px 0px 0px 10px;}
-.graph_05 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;;margin-left: 20px;border-radius: 10px;}
+.graph_05 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;margin-left: 20px;border-radius: 10px;}
 .graph_05_2 {width: 140px;height: 15px;background-color:#333;border-radius: 10px 0px 0px 10px;}
-.graph_06 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;;margin-left: 20px;border-radius: 10px;}
+.graph_06 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;margin-left: 20px;border-radius: 10px;}
 .graph_06_2 {width: 140px;height: 15px;background-color:#333;border-radius: 10px 0px 0px 10px;}
-.graph_07 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;;margin-left: 20px;border-radius: 10px;}
+.graph_07 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;margin-left: 20px;border-radius: 10px;}
 .graph_07_2 {width: 140px;height: 15px;background-color:#333;border-radius: 10px 0px 0px 10px;}
-.graph_08 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;;margin-left: 20px;border-radius: 10px;}
+.graph_08 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;margin-left: 20px;border-radius: 10px;}
 .graph_08_2 {width: 140px;height: 15px;background-color:#333;border-radius: 10px 0px 0px 10px;}
 
 </style>
@@ -270,9 +273,16 @@
 </head>
 <body>
   <style>
-    .top_image {margin-left: 300px;}
+   /*탑 이미지 3개숨김*/ 
+    .top_image {margin-left: 300px;display: none;}
   .top_image img {border-radius: 100px;}
   .top_image li {float: left;position: relative;margin-left: 100px;left: 150px;}
+  .c1_01 {background-image: url(image/my/top_01.png)} 
+  .c1_02 {background-image: url(image/my/top_02.png)} 
+  .c1_03 {background-image: url(image/my/top_03.png)} 
+
+  /*페이지별 스타일 */
+
   #page2 {background-color: #1fc8db;
     background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);}
   .top01 {width: 200px;
@@ -282,9 +292,7 @@
   box-shadow: 5px 5px 5px rgb(56, 25, 25);
   margin-top: 100px;
   }
-  .c1_01 {background-image: url(image/my/top_01.png)} 
-  .c1_02 {background-image: url(image/my/top_02.png)} 
-  .c1_03 {background-image: url(image/my/top_03.png)} 
+  
   .page_m {width: 240px;height: 300px;border: 1px solid #fff;border-radius: 10%;}
 
   .text_on_01 {display: none;}
@@ -358,7 +366,7 @@
                 <div class="bottom" data-back="LEE YEJUN"></div>
               </div>
               <div class="center">
-             <h1>About Me YEJUN?</h1>
+             <h1>About Me?</h1>
              <p>Click!</p>
             
               </div>
@@ -369,7 +377,7 @@
                 <div class="bottom" data-back="POTFOLIO"></div>
               </div>
               <div class="center">
-                <h1>Always Is New!</h1>
+                <h1 style="color:gold;">Always Is New!</h1>
                 <p>Click!</p>
               </div>
             </div>
@@ -390,8 +398,13 @@
                 <div class="bottom" data-back="LEE YEJUN"></div>
               </div>
               <div class="center">
-                <h1>혈액형 O</h1>
-                <p>Scroll down ↓</p>
+          <!--   <p><strong> 이 예 준</strong> <br>
+                   키: 169cm <br> 몸무게: 60kg <br> 생년월일 1986년1월14일 <br>
+                취미 : 드라마 , 음악 , 영화  </p> -->
+                
+                
+                <p>A life that develops every day, which is rewarding and fun. <br>
+                  Scroll down ↓</p>
               <!-- <h1 style="font-size: 40px;">이제 스마트웹콘텐츠과정을 수료예정중입니다. <br> 
                   아직 실무적인 경험은 많이 부족하지만 <br> 열정과 노력으로 <br> 
                   새로운 일에 도전하며 배우길 마다하지 않는 <br> 인재가 되고 싶습니다. <br>
@@ -442,7 +455,7 @@
               <div class="text_on_03">
               <h3 style="text-decoration: underline;">javascript+ <br> jQuery</h3>
               <p style="font-size: 20px;border-radius: 10px;">문서 탐색 및 선택, 이벤트 처리, 효과 적용, 각 종 위젯 제작 및 구현 등</p>
-              <p style="font-size: 20px;border-radius: 10px;margin-top: 50px;">활용가능도 40%</p>
+              <p style="font-size: 20px;border-radius: 10px;margin-top: 50px;">활용가능도 50%</p>
               <div class="graph_03">
                  <div class="graph_03_2">
               </div>     
@@ -474,7 +487,7 @@
     </li>
     <li>
       <div class="page_m m2_06">
-        <h1 class="m2_06_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1> 
+        <h1 class="m2_06_text1" style="font-size: 50px;text-align: center;">HOVER ME!</h1> 
         <div class="text_on_06">
         <h3 style="text-decoration: underline;">기타프리프로세서</h3>
         <p style="font-size: 20px;border-radius: 10px;">markdown, emmet, scss</p>
@@ -486,9 +499,9 @@
   </li>
   <li>
     <div class="page_m m2_07">
-      <h1 class="m2_07_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1>
+      <h1 class="m2_07_text1" style="font-size: 50px;text-align: center;">HOVER ME!</h1>
       <div class="text_on_07">
-      <h3 style="text-decoration: underline;">css 프레임 워크</h3>
+      <h3 style="text-decoration: underline;">CSS <br> 프레임 워크</h3>
       <p style="font-size: 20px;border-radius: 10px;">bootstrap, foundation, pure, bulma 등</p>
       <p style="font-size: 20px;border-radius: 10px;margin-top: 70px;">활용가능도 70%</p>
       <div class="graph_07">
@@ -498,7 +511,7 @@
 </li>
 <li>
   <div class="page_m m2_08">
-    <h1 class="m2_08_text1" style="font-size: 60px;text-align: center;">HOVER ME!</h1>
+    <h1 class="m2_08_text1" style="font-size: 50px;text-align: center;">HOVER ME!</h1>
     <div class="text_on_08">
     <h3 style="text-decoration: underline;">기타 툴</h3>
     <p style="font-size: 20px;border-radius: 10px;">프로토타입툴(oven),공유 및 버전관리툴(깃허브,트렐로,드롭박스),서버(아파치),
@@ -515,12 +528,6 @@
         </figure>
     </div>
 </div>
-
-
- 
-  
-
-
 <div class="page" id="page3" style="background:#333;border-radius: 10px 0px 0px 10px;">
     <div class="page_wrap">
         <h2 class="page_title" style="text-align: center;font-size: 80px;">My SITE</h2>
@@ -693,13 +700,6 @@
 </script>
 
         <style>
-
-   
-
-    
-
-
-
           /*web_fwadein */
 .mock_image {position: absolute;}
 .web_fadein,.mo_fadein_02, .ban_fadein_03 {position: absolute;}
@@ -724,19 +724,117 @@ width:200px; }
 
 
         </style>
-
-
     </div>
 </div>
 
 <div class="page" id="page4">
     <div class="page_wrap">
-        <h2 class="page_title">페이지4</h2>
-        <figure class="page_pic"></figure>
+
+      <section>
+        <article>			
+          <div class="bg bg1">		
+            <span>LEE YEJUN</span >
+          </div>			
+        </article>
+
+        <article>		
+          <div class="txt">
+      
+            <p style="font-size: 20px;">
+              <strong>꿈과 열정을 힘으로 노력하겠습니다!</strong><br/>
+              <em>이제 스마트웹콘텐츠과정을 수료예정중입니다. <br> 
+                아직 실무 경험은 많이 부족하지만 열정과 노력으로 
+                새로운 일에 도전하며  <br> 배우길 마다하지 않는  인재가 되고 싶습니다. <br>
+                꾸준히 성장하는 모습을 보여드릴 것을 약속합니다.</em>
+            </p>
+          </div>	
+        </article>
+        
+        <article>			
+          <div class="txt">	
+            <i class="fa fa-spin fa-refresh"></i>
+            <p><strong>무한 열정</strong></p>
+          </div>	
+        </article>
+        
+        <article>
+          <div class="bg bg2">
+            <span>끝 없는 도전</span>
+          </div>	
+        </article>
+        
+        <article>
+          <div class="bg bg3">
+            <span>호기심</span>
+          </div>	
+        </article>
+        
+        <article>	
+          <div class="txt">	
+           
+            <p style="font-size: 20px;">
+              <strong>이 예 준</strong><br/>
+             키: 168cm <br> 몸무게: 60kg <br> 생년월일: 1986년1월14일 <br>
+             취미 : 드라마 , 음악 , 영화  </p>
+            
+          </div>	
+        </article>
+        
+        <article>
+          <div class="bg bg4">
+            <span style="font-size: 40px;">포기하지 않는 정신</span>
+          </div>
+        </article>
+        
+        <article>	
+          <div class="txt">	
+         
+            <strong>World Wide</strong><br />
+            <p>세계로 나아갈 수 있는 사람이 되기 위해 <br />
+             </p>
+          </div>	
+        </article>
+        
+        <article>		
+          <div class="bg bg5">
+            <span>Diner</span>
+          </div>
+        </article>
+        
+        <article>	
+          <div class="bg bg6">
+            <span>Spa</span>
+          </div>	
+        </article>
+        
+        <article>
+          <div class="txt">	
+           
+            <p>
+              <strong>Thinking</strong><br />
+              <em>더 좋은 내일을 위해</em>
+            </p>
+          </div>	
+        </article>
+        
+        <article>	
+          <div class="bg bg7">
+            <span>Tour</span>
+          </div>		
+        </article>
+        
+      </section>
+     
     </div>
 </div>
+<div class="page" id="page5">
+  <div class="page_wrap">
+
+  </div>
+</div>
 <footer class="page" id="ft">
-    <div class="ft_wrap">여기는 푸터입니다.</div>
+    <div class="ft_wrap">  2020 All copyright © LEE YEJUN</div>
+    <img src="/image/my/self.jpg" alt="" style="height: 150px;">
 </footer>
 <div class="page_top_btn">
     <span class="txt">↑</span>
