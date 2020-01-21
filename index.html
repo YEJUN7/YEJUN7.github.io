@@ -339,6 +339,13 @@ border-radius: 10px;position: relative;}
 .mock_image a{color: #fff;}
 
 .lst li {margin-left: 50px;}
+
+            .txt ul {position: relative;left: 550px;bottom: 50px;}
+            .txt li {float: left;margin-left:30px}
+            .txt a{width: 60px;height: 60px;}
+            .txt img{width: 60px;height: 60px;border-radius: 20%;}
+            
+          
   </style>
 <div class="page" id="page1">
     <div class="page_wrap">
@@ -386,8 +393,8 @@ border-radius: 10px;position: relative;}
             </div>
             <div class="slide"> 
               <div class="panel">
-                <div class="top" data-back="WORKING"></div>
-                <div class="bottom" data-back="WORKING"></div>
+                <div class="top" data-back="NEW"></div>
+                <div class="bottom" data-back="NEW"></div>
               </div>
               <div class="center">
                 <h1>I try to develop me today too.</h1>
@@ -785,13 +792,7 @@ width:200px; }
         </article>
         
         <article>	
-          <style>
-            .txt ul {position: relative;left: 500px;bottom: 70px;}
-            .txt li {float: left;margin-left: 10px;}
-            .txt a{width: 60px;height: 60px;}
-            .txt img{width: 60px;height: 60px;}
-            
-            </style>
+     
           <div class="txt">	
            
             <p style="font-size: 20px;">
@@ -800,10 +801,20 @@ width:200px; }
              취미 : 드라마 , 음악 , 영화, 작곡  </p>
              <ul>
                <li>
-             <a href=""><img src="image/my/kakao.png" alt=""></a>
+             <a href="" onclick="my()" ><img src="image/my/kakao.png" alt=""></a>
+             <script>
+              function my() {
+                alert("카톡 아이디입니다.~! sikickpoce ");
+              }
+              </script>
              </li>
              <li>
-             <a href=""><img src="image/my/gmail-test.png" alt=""></a>
+             <a href="" onclick="my2()"><img src="image/my/gmail-test.png" alt=""></a>
+             <script>
+              function my2() {
+                alert("이메일 주소입니다! sikickpoce2@gmail.com ");
+              }
+              </script>
              </li>
              </ul>
 
