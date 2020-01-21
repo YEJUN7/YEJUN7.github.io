@@ -30,17 +30,11 @@ article:nth-child(12) { width:20%;	background:#222;}
 	100% { transform:scale(1); }
 }
 article>div { position:relative; width:100%; height:100%; overflow:hidden; cursor:pointer; }
-
-
-
-
-
-
 /* 배경이미지 삽입*/
-article .bg1 { background-image:url(/image/my/IMG_8728.JPG);}
+article .bg1 { background-image:url(/image/my/top_01-ok.png);}
 article .bg2 { background-image:url(/image/my/IMG-8465.JPG);}
 article .bg3 { background-image:url(/image//my/IMG_7473.JPG);}
-article .bg4 { background-image:url(/image//my/IMG_8729.JPG);}
+article .bg4 { background-image:url(/image//my/top_04-ok.png);}
 article .bg5 { background-image:url(/image//my/page4_06.JPG);}
 article .bg6 { background-image:url(/image/my/page4_08.JPG);}
 article .bg7 { background-image:url(/image/my/page4_07.JPG);}
