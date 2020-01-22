@@ -6,7 +6,7 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css" />
-	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+  <script type="text/javascript" src="js/prefixfree.min.js"></script>
     <title>이예준 포트폴리오</title>
     <style>
     * { margin: 0; padding: 0; }
@@ -27,6 +27,27 @@
     #page4 { background-image:url("image/my/.JPG");background: #1c87dc; }  
  
 
+ /* 페이지 1 */
+
+/* click 텍스트 애니 */ 
+ .click {   animation:txt 2s infinite 0s; font-size: 25px;margin-top: 30px;
+color: #f1ebe5;
+text-shadow: 0 8px 9px, 0px -2px 1px #fff; }        
+@keyframes txt {
+  0% { opacity:0.2; }
+50% {opacity: 0.5;}
+100% { opacity:1; }
+}
+
+.scroll_down {   animation:txt 2s infinite 0s; font-size: 25px;margin-top: 50px;
+color: #f1ebe5;
+text-shadow: 0 8px 9px, 0px -2px 1px #fff; }        
+@keyframes txt {
+0% { opacity:0.2; }
+50% {opacity: 0.5;}
+100% { opacity:1; }
+}
+
     .lst { width: 1400px; margin:0 auto; margin-top: 60px; }
     .lst li { float:left; margin:15px 15px; }
     .lst li a { display:block; }
@@ -43,7 +64,7 @@
     .lst .m2_05{ transition-delay:0.5s; }  
     .lst .m2_06{ transition-delay:0.4s; }  
     .lst .m2_07{ transition-delay:0.3s; }  
-    .lst .m2_08{ transition-delay:0.2 s; }  
+    .lst .m2_08{ transition-delay:0.2s; }  
      
  
 
@@ -220,6 +241,8 @@ border-radius: 10px;position: relative;}
 .graph_08 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;margin-left: 20px;border-radius: 10px;}
 .graph_08_2 {width: 140px;height: 15px;background-color:#333;border-radius: 10px 0px 0px 10px;}
 
+
+/*  페이지 4*/
 </style>
  
   <script>
@@ -377,9 +400,12 @@ border-radius: 10px;position: relative;}
               </div>
               <div class="center">
              <h1>About Me?</h1>
-             <p>Click!</p>
-            
-              </div>
+             <p class="click">Click!</p>
+             
+    
+             </style>
+             
+            </div>
             </div>
             <div class="slide">
               <div class="panel">
@@ -388,7 +414,7 @@ border-radius: 10px;position: relative;}
               </div>
               <div class="center">
                 <h1 style="color:gold;">Always Is New!</h1>
-                <p>Click!</p>
+                <p class="click">Click!</p>
               </div>
             </div>
             <div class="slide"> 
@@ -398,7 +424,7 @@ border-radius: 10px;position: relative;}
               </div>
               <div class="center">
                 <h1>I try to develop me today too.</h1>
-                <p>Click!</p>
+                <p class="click">Click!</p>
 
               </div>
             </div>
@@ -411,8 +437,8 @@ border-radius: 10px;position: relative;}
        
                 
                 
-                <p>A life that develops every day, which is rewarding and fun. <br>
-                  Scroll down ↓</p>
+                <p>A life that develops every day, which is rewarding and fun. </p>
+                <p class="scroll_down">  Scroll down ↓</p>
       
               </div>
             </div>
