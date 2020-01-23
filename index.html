@@ -19,15 +19,17 @@
     .page { clear:both; background-repeat: no-repeat; background-size:cover;
         background-position: center center;  overflow:hidden;
     box-sizing:border-box; }    
-    .page_wrap { width:94%; height:100vh; margin:0 auto; overflow:hidden;
+    .page_wrap { width:100%; height:100vh; margin:0 auto; overflow:hidden;
     box-sizing:border-box; } 
-        
     #page1 { background-image:url("image/my/top_back.jpg"); }
-    #page2 { background-image:url("image/my/IMG_5728.JPG");}    
-    #page4 { background-image:url("image/my/.JPG");background: #1c87dc; }  
- 
-
- /* 페이지 1 */
+    .page_wrap {  height: 100vh;
+  width: 100vw;
+  font-family: "Average Sans", sans-serif;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;}
+  
+ /* page1 */
 
 /* click 텍스트 애니 */ 
  .click {   animation:txt 2s infinite 0s; font-size: 25px;margin-top: 30px;
@@ -48,48 +50,6 @@ text-shadow: 0 8px 9px, 0px -2px 1px #fff; }
 100% { opacity:1; }
 }
 
-    .lst { width: 1400px; margin:0 auto; margin-top: 60px; }
-    .lst li { float:left; margin:15px 15px; }
-    .lst li a { display:block; }
-    .lst li a img { display:block; max-width:100%; margin:0 auto; margin-top:100%; opacity:0; 
-    transition:0.2s; }
-    .lst .page_m {display:block; max-width:100%; margin:0 auto; margin-top:100%; opacity:0; 
-    transition:0.2s;background-color:#333;border-radius: 10px 0px 0px 10px;text-align: center;}
-    .lst.on .page_m { margin-top: 0; opacity:1; }
-
-    .lst .m2_01{ transition-delay:0.1s; }  
-    .lst .m2_02{ transition-delay:0.2s; }  
-    .lst .m2_03{ transition-delay:0.3s; }  
-    .lst .m2_04{ transition-delay:0.4s; }  
-    .lst .m2_05{ transition-delay:0.5s; }  
-    .lst .m2_06{ transition-delay:0.4s; }  
-    .lst .m2_07{ transition-delay:0.3s; }  
-    .lst .m2_08{ transition-delay:0.2s; }  
-     
- 
-
-    .lst.on li a img { margin-top: 0; opacity:1; }
-    .lst li:nth-child(1) a img { transition-delay:0.1s; }
-    .lst li:nth-child(2) a img { transition-delay:0.2s; }
-    .lst li:nth-child(3) a img { transition-delay:0.3s; }
-    .lst li:nth-child(4) a img { transition-delay:0.4s; }
-    .lst li:nth-child(5) a img { transition-delay:0.5s; }
-    .lst li:nth-child(6) a img { transition-delay:0.6s; }
-    .lst li:nth-child(7) a img { transition-delay:0.7s; }
-    .lst li:nth-child(8) a img { transition-delay:0.8s; }
-
-    #ft { clear:both; height: 200px; padding: 20px;border-radius: 10px; background:#333;border-radius: 10px 0px 0px 10px; color:#fff;
-    font-size:20px;border-radius: 10px; text-align:center; }
-    .page_top_btn { position:fixed; right:15px; bottom:120px; z-index:999;
-        color:#fff; background:#333;border-radius: 10px 0px 0px 10px; width:48px; height: 48px; border-radius:25px; 
-        line-height: 48px; font-size:20px;border-radius: 10px; text-align:center; }    
-
- .page_wrap {  height: 100vh;
-  width: 100vw;
-  font-family: "Average Sans", sans-serif;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;}
 .slider {
     position: absolute;
     top: 0;
@@ -210,18 +170,39 @@ text-shadow: 0 8px 9px, 0px -2px 1px #fff; }
     line-height: 1;
     font-family: "BenchNine", sans-serif;
   }
+
+/* page2 */
+    .lst { width: 1400px; margin:0 auto; margin-top: 60px; }
+    .lst li { float:left; margin:15px 15px; }
+    .lst li a { display:block; }
+    .lst li a img { display:block; max-width:100%; margin:0 auto; margin-top:100%; opacity:0; 
+    transition:0.2s; }
+    .lst .page_m {display:block; max-width:100%; margin:0 auto; margin-top:100%; opacity:0; 
+    transition:0.2s;background-color:#333;border-radius: 10px 0px 0px 10px;text-align: center;}
+    .lst.on .page_m { margin-top: 0; opacity:1; }
+
+    .lst .m2_01{ transition-delay:0.1s; }  
+    .lst .m2_02{ transition-delay:0.2s; }  
+    .lst .m2_03{ transition-delay:0.3s; }  
+    .lst .m2_04{ transition-delay:0.4s; }  
+    .lst .m2_05{ transition-delay:0.5s; }  
+    .lst .m2_06{ transition-delay:0.4s; }  
+    .lst .m2_07{ transition-delay:0.3s; }  
+    .lst .m2_08{ transition-delay:0.2s; }  
+     
+    .lst.on li a img { margin-top: 0; opacity:1; }
+    .lst li:nth-child(1) a img { transition-delay:0.1s; }
+    .lst li:nth-child(2) a img { transition-delay:0.2s; }
+    .lst li:nth-child(3) a img { transition-delay:0.3s; }
+    .lst li:nth-child(4) a img { transition-delay:0.4s; }
+    .lst li:nth-child(5) a img { transition-delay:0.5s; }
+    .lst li:nth-child(6) a img { transition-delay:0.6s; }
+    .lst li:nth-child(7) a img { transition-delay:0.7s; }
+    .lst li:nth-child(8) a img { transition-delay:0.8s; }
+
+
   
-  .sig {
-    position: fixed;
-    bottom: 8px;
-    right: 8px;
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 100;
-    font-family: sans-serif;
-    color: rgba(255, 255, 255, 0.4);
-    letter-spacing: 2px;
-  }
+
  
 .graph_01 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;margin-left: 20px;border-radius: 10px; }
 .graph_01_2 {width: 160px;height: 15px;background-color:#333;border-radius: 10px 0px 0px 10px;}
@@ -294,8 +275,8 @@ border-radius: 10px;position: relative;}
     });    
     </script>
 </head>
-<body>
- <img src="" alt="">
+
+
   <style>
    /*탑 이미지 3개숨김*/ 
     .top_image {margin-left: 300px;display: none;}
@@ -370,6 +351,8 @@ border-radius: 10px;position: relative;}
             
           
   </style>
+
+<body>
 <div class="page" id="page1">
     <div class="page_wrap">
         <div class="top_image">
@@ -614,7 +597,7 @@ border-radius: 10px;position: relative;}
                       <li><div id="ban_fade5" style="width:200px;height:200px;display:none;background-color:red;background-image: url(image/ban6.png);">
                         <a href="https://yejun7.github.io/ban6/" target="_blank"><p style="margin-top:200px; font-size: 15px;" >Dole</p></a></div></li>
                         <li><div id="ban_fade6" style="width:200px;height:200px;display:none;background-color:red;background-image: url(image/ban02.png);">
-                          <a href="https://yejun7.github.io/ban02/" target="_blank"><p style="margin-top:200px; font-size: 15px;" >위너브라더스</p></a></div></li>
+                          <a href="https://yejun7.github.io/ban02/" target="_blank"><p style="margin-top:200px; font-size: 15px;" >워너브라더스</p></a></div></li>
                     </ul>
                    </div>
                     </div>
@@ -746,6 +729,7 @@ border-radius: 10px;position: relative;}
 </script>
 
         <style>
+          /* page3 */
           /* my site fade in */
 .mock_image {position: absolute;}
 .web_fadein,.mo_fadein_02, .ban_fadein_03 {position: absolute;}
@@ -771,8 +755,15 @@ width:200px; }
 .mock_image li a:hover::after { background:#1c87dc; width:200px; }
 
 
+
+
+/* footer */
+#ft { clear:both; height: 200px; padding: 20px;border-radius: 10px; background:#333;border-radius: 10px 0px 0px 10px; color:#fff;
+    font-size:20px;border-radius: 10px; text-align:center; }
         </style>
-    </div>
+    
+  
+  </div>
 </div>
 
 <div class="page" id="page4">
