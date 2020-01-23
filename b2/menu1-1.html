@@ -10,29 +10,6 @@
     <script src="http://code.jquery.com/jquery.js"></script>
        
     <style>
-      
-      .min{position: relative;top: 300px;}
-    
-    .min h1 {text-align: center;}
-    .con_box li.nt { width:450px; }
-
-.con_box li.ban { 
-    width:360px;
-    margin-left: 14px; 
-}
-.con_box li.sht { 
-    width:360px; 
-    margin-left:14px; 
-}
-.con_box .nt_tit { 
-    display:block; 
-    font-size:16px; 
-    color:#333; 
-    width:120px; 
-    line-height:36px; 
-    font-weight:600; 
-    text-indent:14px;
-}
 .con_box li.nt .nt_tit { 
     float:left; 
     cursor:pointer;
@@ -40,7 +17,7 @@
     text-indent:0;
     border-radius:10px 10px 0px 0px;
 }
-con_box li.ban .nt_tit, .con_box li.sht .nt_tit {
+.con_box li.ban .nt_tit, .con_box li.sht .nt_tit {
     width:auto;
     background:#e0e0e0;
     border-radius:10px 10px 0px 0px;
@@ -48,16 +25,14 @@ con_box li.ban .nt_tit, .con_box li.sht .nt_tit {
 .con_box li.nt .item_box { clear:both;
 border-top:2px solid #333; display:none;  }
 .nt_wrap {position: relative;margin-left: 910px;margin-top: 10px;}
-.nt_wrap input{float: left;}
-.nt_wrap input:checked{width: 40px;height: 40px;}
-.nt_wrap #ra3 {margin-top: 2px;width: 25px;height: 25px;}
+
+.nt_wrap input:checked{width: 20px;height: 20px;}
+
 .nt_wrap label{margin-left: 10px;font-size: 20px;font-weight: bold;}
 #area1,#area2{font-size: 18px;}
-.radio_box2{position: relative;margin-top: 10px;margin-left: 860px;}
-.radio_box2 input {width: 25px;height: 25px;margin-left: 40px;}
-.radio_box2 label{font-size: 20px;font-weight: bold;margin-left: 10px;}
+
 .voice {font-size: 20px;width: 1885px;height: 90px;border: 3px solid red;}
-input:checked{width: 30px;height: 30px;}
+
 
 .name_ck #text3{width: 200px;height: 50px;}
 #label3{font-size: 20px;}
@@ -182,15 +157,19 @@ input:checked{width: 30px;height: 30px;}
     4. 동의를 거부할 권리가 있다는 사실 및 동의 거부에 따른 불이익 내용(개인정보보호법 제16조)
                             
     민원 신청 시 수집하는 필요한 최소한의 정보 외의 개인정보 수집에 동의를 거부할 권리가 있으나 필수항목 개인정보 수집동의 거부 시에는 민원 신청 서비스가 제한됩니다.
-    
+                          
                     </textarea>
                     <div class="nt_wrap">
-                            <input type="radio" name="rdo_item2" class="rdo" id="ra3" >
-                          
-                            <div class="nt_hd">
-                                <label for="ra1" class="nt_tit lb1">동의함</label>
-                               
-                            </div>
+                        <label class="container">동의함
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="container">동의안함
+                            <input type="radio" name="radio" checked>
+                            <span class="checkmark"></span>
+                          </label>
+                        
+                      
                         </div>
                             <div class="nt_wrap2">
                                 <textarea name="" id="area2" cols="205" rows="20" style="margin-left:20px"  >
@@ -215,13 +194,10 @@ input:checked{width: 30px;height: 30px;}
                                        
     
                                 </textarea>
-                                <div class="radio_box2">
-                                    <input type="radio" name="rdo_item" class="rdo" id="ra1" checked>
-                                    <input type="radio" name="rdo_item" class="rdo" id="ra2" checked>
-                                    <div class="nt_hd">
-                                        <label for="ra1" class="nt_tit lb1">동의함</label>
-                                        <label for="ra2" class="nt_tit lb2">동의안함</label>
-                                    </div>
+
+                              
+
+
                                 </div>
                                 <div class="impor">
                                 <p class="voice">※ 국민신문고나 행정기관 누리집(홈페이지)로 민원신청을 유도한 후 금융정보(계좌번호, 카드번호, 비밀번호 등)를 요구하는 사기 전화(보이스 피싱) 사례가 발생하고 있습니다.<br>
