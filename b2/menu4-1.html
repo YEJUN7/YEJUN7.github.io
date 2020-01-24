@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>과학기술정보통신부</title>
+	<link rel="shortcut icon" href="image/main/pavi16x16.png">
+    <link rel="apple-touch-icon-precomposed" href="image/pavi180x180.png">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+       
+    <style>
+           body, html { -ms-overflow-style:none; }
+                    ::-webkit-scrollbar { display:none; }    
+                    ::-o-scrollbar { display:none; } 
+                    ::-moz-scrollbar { display:none; }    
+.subTable1 { width: 100%; border-top:2px solid #28b690; margin-top: 30px; }
+.subTable1 th, .subTable1 td { line-height:4; font-size:14px; 
+border-bottom:1px solid #ccc; }
+.subTable1 th { background:#fff; }
+.subTable1 td { text-indent: 30px; }
+.blank2 { clear:both; width: 100%;  height: 60px; }
+.imgFrame { width: 100%; height: auto; }
+.imgFrame img { display:block; width: 100%; height: auto; }
+.tdItem { display:block; width:60px; line-height:20px;
+color:#fff; border-radius:10px; float:left; margin-left: 25px; margin-top: 18px; font-size:12px; text-align:center; text-indent:0; }
+.data1 { background:#576615; }
+.data2 { background:#368d40; }
+.data3 { background:#2dba3a; }
+.data4 { background:#448cf0; }
+
+
+#label3{font-size: 20px;}
+.fnb {margin-left: 270px;}
+.fnb li{float: left;}
+</style>
+</head>
+
+<body onload="initialize()">
+        <header class="hd">
+                <div class="line1"></div>
+                <div class="line2"></div>
+         <a href="index.html" class="logo"><img src="./image/main/logo.PNG" alt=""></a>
+         <nav class="gnb">
+                        <ul>
+                            <li>
+                                <a href="menu1-1.html" class="dp1">소통광장</a>
+                                <ul class="sub">
+                                    <li><a href="menu1-1.html">민원신고</a></li>
+                                    <li><a href="menu1-2.html">민원확인</a></li>
+                                    <li><a href="#">국민제안</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="menu2-1.html" class="dp1">업무안내</a>
+                                <ul class="sub">
+                                    <li><a href="menu2-1.html">R&D</a></li>
+                                    <li><a href="#">ICT</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="menu3-1.html" class="dp1">정보공개</a>
+                                <ul class="sub">
+                                    <li><a href="menu3-1.html">정보목록</a></li>
+                                    <li><a href="#">공공데이터개방</a></li>
+                                    <li><a href="#">정보공개안내제도</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="dp1">기관소개</a>
+                                <ul class="sub">
+                                    <li><a href="#">업무계획예산</a></li>
+                                    <li><a href="#">찾아오시는길</a></li>
+                                    <li><a href="#">조직도/직원안내</a></li>
+                                </ul>
+                            </li>
+                               
+                        </ul>
+                    </nav>
+                    <div class="login">
+                     <a href="" class="login1">로그인</a>
+                     <a href="" class="login2">회원가입</a>
+        
+                    </div>
+                    <div class="top_link">
+                            <ul class="5set">
+                                <li><a href="https://www.facebook.com/withmsit"><img src="image/main/face.png" alt=""></a></li>
+                                <li><a href="https://blog.naver.com/with_msip"><img src="image/main/set2.png" alt=""></a></li>
+                                <li><a href="https://www.youtube.com/c/withmsit"><img src="image/main/set3.png" alt=""></a></li>
+                                <li><a href="https://twitter.com/withmsit/"><img src="image/main/set4.png" alt=""></a></li>
+                                <li><a href="https://www.instagram.com/withmsit/"><img src="image/main/set5.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                         
+                </header>
+
+                
+
+
+  
+                    
+                    <script>
+               
+                    $(function(){
+                        var intv = setInterval(function(){ lAni(); }, 3000);
+                        function lAni(){
+                            $(".imgBox").not(":animated").animate({"margin-left":"-510px"}, 800, function(){
+                                $(".imgBox li").eq(0).appendTo($(".imgBox"));
+                                $(".imgBox").css("margin-left", "0px");
+                            });
+                            
+                        }
+                    });    
+                    </script>
+                <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+                <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcG6XLlvSL0DQtg1G38wiT_r8BYN3RbWQ&callback=initMap"></script> -->
+                <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpo7PlmFhN57HAxDlD8MTLI4DT1bL9VFY&callback=initMap"></script>-->
+                <!--
+                1) 구글 지도 api key 발급 사이트로 이동하여 지도 API 서비스 신청
+                2) https://console.cloud.google.com/getting-started?pli=1
+                3) [API 및 서비스] -> [사용자 인증 정보] -> 인증 키 발급
+                -->
+                <script> 
+                //좌표 값을 바꿔서 입력 36.3491563,127.3776857
+                function initialize() {
+                  var myLatlng = new google.maps.LatLng(37.4931346, 126.92737779999993);
+                  var mapOptions = {
+                    zoom: 17,
+                    center: myLatlng
+                  }
+                
+                  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+                
+                  var marker = new google.maps.Marker({
+                      position: myLatlng,
+                      map: map,
+                      title: '과학기술정보통신부'	  //레이블을 바꿔서 입력
+                  });
+                }
+                
+                google.maps.event.addDomListener(window, 'load', initialize);
+                 </script>
+                <script>
+                $(function(){
+                //   setTimeout(function(){
+                //       $("#map_canvas > div:last-child").css("display", "none", "z-index", "-1");
+                //   }, 1000); 
+                });    
+                </script>
+                </head>
+                
+              
+                  
+                   
+                                    
+                                   
+                        
+                    <div class="page" id="page4">
+                        <a href="#page4" class="btn1 item4">오시는길</a>
+                        <div class="con">
+                            <h1 class="pageTitle">오시는길</h1>
+                            <ul class="btnFrame">
+                                <li class="col6"><a href="intro.html#page4" class="raBtn on">오시는 길</a></li>
+                                <li class="col6"><a href="https://map.naver.com/?searchCoord=650a0eeddda9946e625e70ed4b81ab2c8c96be43c52cd7e31dcfa36e130f5ae9&query=c3Jj7J6s7Zmc67OR7JuQ&menu=location&tab=1&lng=af21e2326a1901b6a8d34fc5bbd8b0bf&mapMode=0&mpx=3cc9e983bd6bbb47fefa95e84ba0e6c9c9f8fb80b80ec00784977e48f31a9687b332262e3105a015faae2022e7ceb6c3fe76b5a265540553cd96e2fb1466ec84&lat=a2d9dba19d4ab24e7ac7dc8c2b9a3cda&dlevel=12&enc=b64" class="raBtn" target="_blank">빠른 길 찾기</a></li>
+                            </ul>
+                            <div class="subBox" style="height:auto">
+                               
+                                <table class="subTable1">
+                                    <tr>
+                                        <th class="col2">주소안내</th>
+                                        <td class="col10">서울특별시 관악구 보라매로 44 SRC서울센터 (08709)</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col2">전화번호</th>
+                                        <td class="col10">02-871-3636</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col2">FAX</th>
+                                        <td class="col10">02-876-3202</td>
+                                    </tr>
+                                </table>
+                                <div class="blank2"></div>
+                                <div class="imgFrame" style="height:450px;">
+                                    <img src="./img/map2.png" alt="지도">
+                                </div>
+                            </div>
+                            <div class="subBox" style="height:auto">
+                                <h2 class="subTit">상세 교통편 안내</h2>
+                                <p class="subCom">
+                                패션 문화의 거리로 직진하셔서 당곡사거리 방향으로 오시면 보라매 공원이 보이며 맞은편 건물입니다. <br>
+                                신림역이나 신림사거리 정류장 하차 신림역 7번 출구 방면으로 300m 이동후 지선버스, 혹은 간선버스 이용후 1정거장 지나서 하차. <br>
+                                롯데관악점을 경우하는 지선버스는 2정거장 지나서 하차.</p>
+                                <table class="subTable1">
+                                    <tr>
+                                        <th class="col2">
+                                            <p>지하철</p>
+                                            <p>&nbsp;</p>
+                                        </th>
+                                        <td class="col10">
+                                            <p><span class="tdItem data1">7호선</span>7호선 신대방삼거리역 2번출구</p>
+                                            <p><span class="tdItem data2">2호선</span>2호선 신림역 7번 출구</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="col2">
+                                            <p>버스</p>
+                                            <p>&nbsp;</p>
+                                        </th>
+                                        <td class="col10">
+                                            <p><span class="tdItem data3">지선버스</span>5516. 5518, 5525, 5529, 5614,5711, 6513, 6514</p>
+                                            <p><span class="tdItem data4">간선버스</span>152, 500, 504, 461</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>            
+                        </div>
+                    </div>
+
+
+
+
+
+
+                <div class="footer_site">
+                        <ul>
+                            <li><a href=""><img src="image/main/footer-site01.png" alt=""></a></li>
+                            <li><a href=""><img src="image/main/footer-site02.png" alt=""></a></li>
+                            <li><a href=""><img src="image/main/footer-site03.png" alt=""></a></li>
+                            <li><a href=""><img src="image/main/footer-site04.png" alt=""></a></li>
+                            <li><a href=""><img src="image/main/footer-site05.png" alt=""></a></li>
+                        </ul>
+                    </div>
+
+                <div class="ft">
+                        <div class="hr"></div>
+                        <div class="ft_link">
+                            <nav class="fnb">
+                                
+                                <ul>
+                                    <li class="item1"><a href="#">이용안내</a></li>
+                                    <li class="item2"><a href="#">소식지신청</a></li>
+                                    <li class="item3"><a href="#">개인정보 처리방침</a></li>
+                                    <li class="item4"><a href="#">저작권정책</a></li>
+                                    <li class="item5"><a href="#">RSS이용안내</a></li>
+                                    <li class="item6"><a href="#">찾아오시는길</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        
+                             
+                   </div>
+                   <div copy>
+                  <hr>
+                   <p class="copyright">(30121) 세종특별자치시 가름로 194(어진동) 대표전화 : 
+                        국번없이 (유료)1335(정부민원 110) / 야간 : 044-202-4180~1 / FAX : 02-2110-0671
+                       <br> Copyright © Ministry of Science and ICT. All Rights Reserved.
+                    </p> 
+                </div>  
+
+</body>
