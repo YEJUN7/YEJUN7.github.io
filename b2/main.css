@@ -188,6 +188,7 @@ to {transform: rotateY(360deg);} */
 .pub li:hover .pub li img {width: 400px;height: 10px;;background-color: orange;}
 
 /*박스4개*/
+.sq6 p{text-align: center;}
 .css_tit { text-align:center; border-bottom:1px solid #333; }    
 .lst { clear:both; width:auto; position:relative;top: 50px;margin-left: 80px;}    
 .lst li { float:left; width: 300px; height: 300px;margin-left: 100px;  }
