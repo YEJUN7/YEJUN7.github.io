@@ -10,6 +10,12 @@
     <script src="http://code.jquery.com/jquery.js"></script>
        
     <style>
+
+/* header */
+.min {position: relative;top: 200px;}
+.min h1 {top: 100px;text-align: center;width: 220px;display: block;margin-left: 850px;margin-bottom: 50px;}
+        /* content */
+  
 .con_box li.nt .nt_tit { 
     float:left; 
     cursor:pointer;
@@ -24,11 +30,14 @@
 }
 .con_box li.nt .item_box { clear:both;
 border-top:2px solid #333; display:none;  }
-.nt_wrap {position: relative;margin-left: 910px;margin-top: 10px;}
+.nt_wrap,.nt_wrap3 {width: 220px;}
+.nt_wrap,.nt_wrap3 {position: relative;margin-left: 850px;margin-top: 10px;}
 
 .nt_wrap input:checked{width: 20px;height: 20px;}
+.nt_wrap3 input:checked{width: 20px;height: 20px;}
 
 .nt_wrap label{margin-left: 10px;font-size: 20px;font-weight: bold;}
+.nt_wrap3 label{margin-left: 10px;font-size: 20px;font-weight: bold;}
 #area1,#area2{font-size: 18px;}
 
 .voice {font-size: 20px;width: 1885px;height: 90px;border: 3px solid red;}
@@ -59,7 +68,7 @@ border-top:2px solid #333; display:none;  }
                             <li>
                                 <a href="#" class="dp1">업무안내</a>
                                 <ul class="sub">
-                                    <li><a href="#">R&D</a></li>
+                                    <li><a href="menu2-1.html">R&D</a></li>
                                     <li><a href="#">ICT</a></li>
                                 </ul>
                             </li>
@@ -101,7 +110,7 @@ border-top:2px solid #333; display:none;  }
 
                 <content class="min">
                         <h1>신청서 작성</h1>
-                    <textarea name="" id="area1" cols="205" rows="50" style="margin-left:20px" >
+                    <textarea name="" id="area1" cols="150" rows="50" style="margin-left:295px" >
     1. 개인정보의 수집 및 이용 목적(개인정보보호법 제15조)
     
     국민신문고는 관계법령 등에서 정하는 소관 업무의 수행을 위하여 다음과 같이 개인정보를 수집 및 이용합니다. 수집된 개인정보는 정해진 목적 이외의 용도로는 이용되지 않으며 수집
@@ -172,7 +181,7 @@ border-top:2px solid #333; display:none;  }
                       
                         </div>
                             <div class="nt_wrap2">
-                                <textarea name="" id="area2" cols="205" rows="20" style="margin-left:20px"  >
+                                <textarea name="" id="area2" cols="150" rows="20" style="margin-left:295px"  >
     - MVNO : SK텔링크, 한국케이블텔레콤(T플러스,KCT), 스마텔, ㈜유니컴즈(모빙), 큰사람, 한국정보통신, ㈜CJ헬로비전(헬로모바일), KT파워켈, 앤알커뮤니케이션(앤텔레콤),
                                         
     세종(온세)텔레콤, ㈜위너스텔, ㈜씨엔커뮤니케이션, ACN 코리아(유한), ㈜KTIS, KT텔레캅, ㈜미디어로그, 유모비(LG멀티미디어인터넷), 인스코비(프리티), 머천드코리아,
@@ -194,11 +203,23 @@ border-top:2px solid #333; display:none;  }
                                        
     
                                 </textarea>
+                            </div>
+                                  <div class="nt_wrap3">
+                        <label class="container">동의함
+                            <input type="radio" checked="checked" name="radio">
+                            <span class="checkmark"></span>
+                          </label>
+                          <label class="container">동의안함
+                            <input type="radio" name="radio" checked>
+                            <span class="checkmark"></span>
+                          </label>
+                        
+                      <style>
+                      .impor {width: 1360px;margin-left: 295px;}
+                      .voice {width: 1360px;text-align: center;}
 
-                              
-
-
-                                </div>
+                      </style>
+                        </div>
                                 <div class="impor">
                                 <p class="voice">※ 국민신문고나 행정기관 누리집(홈페이지)로 민원신청을 유도한 후 금융정보(계좌번호, 카드번호, 비밀번호 등)를 요구하는 사기 전화(보이스 피싱) 사례가 발생하고 있습니다.<br>
     
@@ -207,7 +228,7 @@ border-top:2px solid #333; display:none;  }
                                         <font color="red"><b></b>사기 전화(보이스 피싱) 피해</b></font>가 발생하지 않도록 주의하시기 바랍니다.</p>
                                    
                                 </div>    
-                                 <div class="name_ck">
+                           <!--      <div class="name_ck">
                                         
                                         <h1>신청인 본인인증</h1>
                                     <br>
@@ -237,7 +258,7 @@ border-top:2px solid #333; display:none;  }
                               <input type="text" name="text3" id="text3">
                            </td>
                                 </div>  </table>
-                           
+                            -->
                                     </content>
 
 
