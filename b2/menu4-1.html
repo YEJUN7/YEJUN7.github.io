@@ -37,6 +37,11 @@
 /* 전체박스 */
 .content_wrap {width: 1200px;height: auto;left: 360px;}
 
+/* 브래드크럼 */
+.navigation{margin-top: 120px;}
+.navigation .nav_01::after {content: '>';}
+.navigation .nav_02::after {content: '>';}
+span#nav_03{text-decoration: underline;}
 /* 공통 css */
 
            body, html { -ms-overflow-style:none; }
@@ -123,6 +128,13 @@ color:#fff; border-radius:10px; float:left; margin-left: 25px; margin-top: 18px;
                         </div>
                          
                 </header>     
+
+                <div class="navigation" style="top: 121px;position: relative;">
+                    <span class="nav_01"><a href="index.html">HOME</a></span>
+                    <span class="nav_02"><a href="menu4-1.html">기관 소개</a></span>
+                    <span class="nav_03" id="nav_03"><a href="menu4-1.html">찾아오시는길</a></span>
+                     <hr style="color: #4271e5; margin-top: 10px;">
+            </div>
                 
                     <div class="page" id="page4">
                        
