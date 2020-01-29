@@ -175,11 +175,13 @@ text-shadow: 0 8px 9px, 0px -2px 1px #fff; }
     .lst { width: 1400px; margin:0 auto; margin-top: 60px; }
     .lst li { float:left; margin:15px 15px; }
     .lst li a { display:block; }
-    .lst li a img { display:block; max-width:100%; margin:0 auto; margin-top:100%; opacity:0; 
+    .lst li a img { display:block; max-width:100%; margin:0 auto; margin-top:100%; 
     transition:0.2s; }
-    .lst .page_m {display:block; max-width:100%; margin:0 auto; margin-top:100%; opacity:0; 
-    transition:0.2s;background-color:#333;border-radius: 10px 0px 0px 10px;text-align: center;}
+    .page_m p {color:#333;font-weight: bold;}
+    .lst .page_m {display:block; width:240px; margin:0 auto; margin-top:100%; 
+    transition:0.2s;text-align: center;}
     .lst.on .page_m { margin-top: 0; opacity:1; }
+
 
     .lst .m2_01{ transition-delay:0.1s; }  
     .lst .m2_02{ transition-delay:0.2s; }  
@@ -297,46 +299,46 @@ border-radius: 10px;position: relative;}
   margin-top: 100px;
   }
   
-  .page_m {width: 240px;height: 300px;border: 1px solid #fff;border-radius: 50%;}
+  .page_m {width: 240px;height: 300px;border: 1px solid #fff;}
 
   .text_on_01 {display: none;}
   .m2_01:hover .text_on_01 {display: block;transition-duration: 1s;color: #333;border-radius: 10px 0px 0px 10px;}
-  .m2_01:hover {background: url(image/html5-ok.png);}
+  .m2_01:hover {background: url(image/5.png);}
  .m2_01:hover .m2_01_text1 {display: none;transition: 0.5s;}
 
   .text_on_02 {display: none;}
   .m2_02:hover .text_on_02 {display: block;transition-duration: 1s;color: #333;border-radius: 10px 0px 0px 10px;}
-  .m2_02:hover {background:url(image/css3-ok.png);}
+  .m2_02:hover {background:url(image/3.png);}
  .m2_02:hover .m2_02_text1 {display: none;transition: 0.5s;}
 
  .text_on_03 {display: none;}
   .m2_03:hover .text_on_03 {display: block;transition-duration: 1s;color: #333;border-radius: 10px 0px 0px 10px;}
-  .m2_03:hover {background:url(image/js-ok.png)}
+  .m2_03:hover {background:url(image/js.png)}
  .m2_03:hover .m2_03_text1 {display: none;transition: 0.5s;}
 
  .text_on_04 {display: none;}
   .m2_04:hover .text_on_04 {display: block;transition-duration: 1s;color: #333;border-radius: 10px 0px 0px 10px;}
-  .m2_04:hover {background-color: #fff;}
+  .m2_04:hover {background:url(image/ps3.png)}
  .m2_04:hover .m2_04_text1 {display: none;transition: 0.5s;}
 
  .text_on_05 {display: none;}
   .m2_05:hover .text_on_05 {display: block;transition-duration: 1s;color: #333;border-radius: 10px 0px 0px 10px;}
-  .m2_05:hover {background-color: #fff;}
+  .m2_05:hover {background: url(image/ai.png);}
  .m2_05:hover .m2_05_text1 {display: none;transition: 0.5s;}
 
  .text_on_06 {display: none;}
   .m2_06:hover .text_on_06 {display: block;transition-duration: 1s;color: #333;border-radius: 10px 0px 0px 10px;}
-  .m2_06:hover {background-color: #fff;}
+  .m2_06:hover {background:url(image/sa.png);}
  .m2_06:hover .m2_06_text1 {display: none;transition: 0.5s;}
 
  .text_on_07 {display: none;}
-  .m2_07:hover .text_on_07 {display: block;transition-duration: 1s;color: #333;border-radius: 10px 0px 0px 10px;}
-  .m2_07:hover {background-color: #fff;}
+  .m2_07:hover .text_on_07 {display: block;transition-duration: 1s;border-radius: 10px 0px 0px 10px;}
+  .m2_07:hover {background:url(image/b.png);}
  .m2_07:hover .m2_07_text1 {display: none;transition: 0.5s;}
 
  .text_on_08 {display: none;}
   .m2_08:hover .text_on_08 {display: block;transition-duration: 1s;color: #333;border-radius: 10px 0px 0px 10px;}
-  .m2_08:hover {background-color: #fff;}
+  .m2_08:hover {background:url(image/git33.png);background-color: #333;}
  .m2_08:hover .m2_08_text1 {display: none;transition: 0.5;}
  
 .mock_image a{color: #fff;}
@@ -370,6 +372,11 @@ border-radius: 10px;position: relative;}
 #gnb ul a:hover { background:#b9fb05; color:#333; }
 #gnb>li.on ul { opacity:0.8; left:205px; top:-10px; }
 #gnb li.on ul a { background:#444; opacity:0.7; } 
+/* sns 버튼 모음*/
+#sns { position:fixed; top:60px; right:50px;}
+#sns li { float:left; margin-right:30px;}
+#sns .fa { font-size:25px; color:#fff; opacity:0.5;	transform:scale(1); 	transition:all 0.5s;}
+#sns .fa:hover { opacity:1; transform:scale(1.4);}
   </style>
 
 <body>
@@ -394,6 +401,15 @@ border-radius: 10px;position: relative;}
   </header>
   <div class="side_color"></div> 
   <div class="side_color2"></div> 
+  
+
+  <!-- 클릭 후 제대로 눌려지면 다시 표시 예정
+  <ul id="sns">
+  	<li><a href="#"><img src="image/my/kakao.png" alt="" style="border-radius: 20%;width: 60px;height: auto;opacity: 0.8;"></a></li>
+		<li><a href="#"><img src="image/my/gmail-test.png" alt="" style="border-radius: 20%;width: 60px;height: auto;opacity: 0.8;"></a></li>
+  </ul>
+  
+-->
 <div class="page" id="page1">
     <div class="page_wrap">
         <div class="top_image">
@@ -478,9 +494,10 @@ border-radius: 10px;position: relative;}
             <ul class="lst" style="margin-left: 330px;">
               <li>
                 <div class="page_m m2_01">
+            
                   <h1 class="m2_01_text1" style="font-size: 30px;text-align: center;"></h1>
                 <div class="text_on_01"  style="" >
-                <h4 style="text-decoration: underline;">HTML5</h3>
+                <h4 style="text-decoration: underline;color: #fff;">HTML5</h3>
                 <p style="font-size: 15px;border-radius: 10px;">메인페이지 설계 가능<br> 서브페이지 설계 가능<br> 네비게이션 설계 가능<br> 위젯 설계 가능  </p>
                 <p style="font-size: 15px;border-radius: 10px;margin-top: 100px;opacity: 0.7;">활용가능도 80%</p>
              <div class="graph_01" style="border-radius: 10px; position: absolute;">
@@ -497,7 +514,7 @@ border-radius: 10px;position: relative;}
               <div class="page_m m2_02">
                 <h1 class="m2_02_text1" style="font-size: 30px;text-align: center;"></h1>
                 <div class="text_on_02">
-                <h4 style="text-decoration: underline;">CSS3</h4>
+                <h4 style="text-decoration: underline;color: #fff;">CSS3</h4>
                 <p style="font-size: 15px;border-radius: 10px;">모바일/태블릿/데스크탑 <br> 레이아웃 <br>
                    기업형 레이아웃 <br> 브랜드 레이아웃 <br>
                     기타 각 종 레이아웃 구현 <br> 
@@ -513,9 +530,9 @@ border-radius: 10px;position: relative;}
             <div class="page_m m2_03">
               <h1 class="m2_03_text1" style="font-size: 30px;text-align: center;"></h1>
               <div class="text_on_03">
-              <h4 style="text-decoration: underline;">javascript+ <br> jQuery</h4>
+              <h4 style="text-decoration: underline;color: #fff;">JS+jQuery</h4>
               <p style="font-size: 15px;border-radius: 10px;">문서 탐색 및 <br> 선택 이벤트 처리 <br> 효과 적용 <br> 각 종 위젯 제작 및 구현 등 가능</p>
-              <p style="font-size: 15px;border-radius: 10px;margin-top: 50px;opacity: 0.7;">활용가능도 50%</p>
+              <p style="font-size: 15px;border-radius: 10px;margin-top: 98px;opacity: 0.7;">활용가능도 50%</p>
               <div class="graph_03">
                  <div class="graph_03_2">
               </div>     
@@ -525,9 +542,9 @@ border-radius: 10px;position: relative;}
           <div class="page_m m2_04">
             <h1 class="m2_04_text1" style="font-size: 30px;text-align: center;"></h1> 
             <div class="text_on_04">
-            <h4 style="text-decoration: underline;">Photo shop</h4>
-            <p style="font-size: 15px;border-radius: 10px;">이미지 편집, 시안 제작 <br>  패턴 제작 <br> 배너 제작 <br> 위젯 요소 제작 등 가능</p>
-            <p style="font-size: 15px;border-radius: 10px;margin-top: 100px;opacity: 0.7;">활용가능도 70%</p>
+            <h4 style="text-decoration: underline;color: #fff;">Photo shop</h4>
+            <p style="font-size: 15px;border-radius: ;">이미지 편집, 시안 제작 <br>  패턴 제작 <br> 배너 제작 <br> 위젯 요소 제작 등 가능</p>
+            <p style="font-size: 15px;border-radius: px;margin-top: 100px;opacity: 0.7;">활용가능도 70%</p>
             <div class="graph_04">
                <div class="graph_04_2">
             </div>     
@@ -537,7 +554,7 @@ border-radius: 10px;position: relative;}
         <div class="page_m m2_05">
           <h1 class="m2_05_text1" style="font-size: 30px;text-align: center;"></h1> 
           <div class="text_on_05">
-          <h4 style="text-decoration: underline;">illustrator</h4>
+          <h4 style="text-decoration: underline;color: #fff;">illustrator</h4>
           <p style="font-size: 15px;border-radius: 10px;">로고, 심볼 <br> 앰블럼, 패턴 <br> 캐릭터 <br> 시안 레이아웃 제작 <br> 메타포 제작 등 가능</p>
           <p style="font-size: 15px;border-radius: 10px;position: relative;margin-top: 75px;opacity: 0.7;">활용가능도 70%</p>
           <div class="graph_05">
@@ -549,7 +566,7 @@ border-radius: 10px;position: relative;}
       <div class="page_m m2_06">
         <h1 class="m2_06_text1" style="font-size: 30px;text-align: center;"></h1> 
         <div class="text_on_06">
-        <h6 style="text-decoration: underline;">기타프리프로세서</h6>
+        <h6 style="text-decoration: underline;color: #333;">기타프리프로세서</h6>
         <p style="font-size: 20px;border-radius: 10px;">markdown <br> emmet <br> scss 사용가능</p>
         <p style="font-size: 15px;border-radius: 10px;margin-top: 116px;opacity: 0.7;">활용가능도 70%</p>
         <div class="graph_06">
@@ -558,11 +575,12 @@ border-radius: 10px;position: relative;}
       </div>
   </li>
   <li>
-    <div class="page_m m2_07">
+    <div class="page_m m2_07" style="opacity: 1;">
+     
       <h1 class="m2_07_text1" style="font-size: 30px;text-align: center;"></h1>
-      <div class="text_on_07">
-      <h6 style="text-decoration: underline;">CSS 프레임 워크</h6>
-      <p style="font-size: 20px;border-radius: 10px;">bootstrap <br> foundation <br> pure <br> bulma 등 사용가능</p>
+      <div class="text_on_07" style="">
+      <h6 style="text-decoration: underline;color: #fff;">CSS 프레임 워크</h6>
+      <p style="font-size: 20px;color: #333;">bootstrap <br> foundation <br> pure <br> bulma 등 사용가능</p>
       <p style="font-size: 15px;border-radius: 10px;margin-top: 85px;opacity: 0.7;">활용가능도 70%</p>
       <div class="graph_07">
          <div class="graph_07_2">
@@ -573,7 +591,7 @@ border-radius: 10px;position: relative;}
   <div class="page_m m2_08">
     <h1 class="m2_08_text1" style="font-size: 30px;text-align: center;"></h1>
     <div class="text_on_08">
-    <h6 style="text-decoration: underline;">기타 툴</h6>
+    <h6 style="text-decoration: underline;color: #fff;">기타 툴</h6>
     <p style="font-size: 15px;border-radius: 10px;">프로토타입툴(oven) <br> 공유 및 버전관리툴 <br> (깃허브,트렐로,드롭박스) <br> 서버(아파치) <br>
       서버용언어(php)DB(my-sql) <br> 사용가능 </p>
       <p style="font-size: 15px;border-radius: 10px;margin-top: 67px;opacity: 0.7;">활용가능도 70%</p>
