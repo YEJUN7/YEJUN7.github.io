@@ -288,8 +288,7 @@ border-radius: 10px;position: relative;}
 
   /*페이지별 스타일 */
 
-  #page2 {background-color: #1fc8db;
-    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);}
+  #page2 {background-color: #333;}
   .top01 {width: 200px;
   height: 200px;
   border:5px solid #fff;
@@ -349,10 +348,52 @@ border-radius: 10px;position: relative;}
             .txt a{width: 60px;height: 60px;}
             .txt img{width: 60px;height: 60px;border-radius: 20%;}
             
-          
+       /*header*/
+       header { width:400px; height:100%; position:fixed; top:0px; left:-400px; z-index: 30;opacity: 0.7;
+        background:skyblue; transform:skewX(-40deg); }   
+       .side_color { width:150px; height:120%; position:fixed; top:0px; left:2000px; opacity: 0.5;
+        background:skyblue; transform:skewX(-50deg); }   
+        .side_color2 { width:200px; height:120%; position:fixed; top:0px; left:2500px; opacity: 0.4;
+        background:skyblue; transform:skewX(50deg); }
+        /* 1depth*/
+#gnb { 	width:220px; position:absolute; top:10px; right:0px;}
+#gnb>li {position:relative; }
+#gnb>li>a { display:block; width:220px; height:50px; font:bold 18px/3 play; color:#222; box-sizing:border-box; padding-right:40px; text-align:right;}
+#gnb>li.on>a { background:#111; color:#fff;}
+#gnb>li:hover>a { background:#111; color:#fff;}
+#gnb em { display:inline-block; transform:skewX(40deg)!important; }
+#gnb em i { 	margin-right:20px;}
+/* 2depth */
+#gnb ul { position:absolute; left:0px;  top:0px; opacity:0; transition:all 0.4s;}
+#gnb>li:hover ul { opacity:0.8; left:205px; }
+#gnb ul a { display:block; width:150px; height:40px; background:#222; border-bottom:1px solid #b9fb05; font:bold 16px/2.5 arial; color:#fff; box-sizing:border-box; padding-left:50px; margin-bottom:3px; transition:all 0.5s; }
+#gnb ul a:hover { background:#b9fb05; color:#333; }
+#gnb>li.on ul { opacity:0.8; left:205px; top:-10px; }
+#gnb li.on ul a { background:#444; opacity:0.7; } 
   </style>
 
 <body>
+  <header>		
+		<ul id="gnb">
+			<li class="on">
+				<a href="#"><em>About YEJUN?</em></a>
+			</li>
+			<li>
+				<a href="#"><em>My SKILLS</em></a>				
+			</li>
+			<li>
+				<a href="#"><em>My SITE</em></a>
+			</li>
+			<li>
+				<a href="#"><em>PROFILE</em></a>
+			</li>
+			<li>				
+				<a href="#"><em>COPYRIGHT</em></a>
+			</li>	
+		</ul>
+  </header>
+  <div class="side_color"></div> 
+  <div class="side_color2"></div> 
 <div class="page" id="page1">
     <div class="page_wrap">
         <div class="top_image">
@@ -382,7 +423,7 @@ border-radius: 10px;position: relative;}
                 <div class="bottom" data-back="LEE YEJUN"></div>
               </div>
               <div class="center">
-             <h1>About Me?</h1>
+             <h1 style="font-size: 50px;">About YEJUN?</h1>
              <p class="click">Click!</p>
              
     
@@ -396,7 +437,7 @@ border-radius: 10px;position: relative;}
                 <div class="bottom" data-back="POTFOLIO"></div>
               </div>
               <div class="center">
-                <h1 style="color:gold;">Always Is New!</h1>
+                <h1 style="font-size: 30px;">오늘도 NEW! 내일도 새로운 NEW 를 향해!</h1>
                 <p class="click">Click!</p>
               </div>
             </div>
@@ -406,7 +447,7 @@ border-radius: 10px;position: relative;}
                 <div class="bottom" data-back="NEW"></div>
               </div>
               <div class="center">
-                <h1>I try to develop me today too.</h1>
+                <h1 style="font-size: 30px;">언제나 자기개발을 위해 힘쓰며 도전!</h1>
                 <p class="click">Click!</p>
 
               </div>
@@ -420,7 +461,7 @@ border-radius: 10px;position: relative;}
        
                 
                 
-                <p>A life that develops every day, which is rewarding and fun. </p>
+                <p style="font-size: 30px;">항상 새로운 것을 생각하며, 더 높은 목표를 향해! </p>
                 <p class="scroll_down">  Scroll down ↓</p>
       
               </div>
@@ -432,13 +473,13 @@ border-radius: 10px;position: relative;}
 
 <div class="page" id="page2">
     <div class="page_wrap">
-        <h2 class="page_title" style="text-align: center;font-size: 80px;">My SKILLS!</h2>
+        <h2 class="page_title" style="text-align: center;font-size: 80px;background-color:skyblue;">My SKILLS!</h2>
         <figure class="page_pic">
             <ul class="lst" style="margin-left: 330px;">
               <li>
                 <div class="page_m m2_01">
                   <h1 class="m2_01_text1" style="font-size: 30px;text-align: center;"></h1>
-                <div class="text_on_01"  style="border-radius: 30%;" >
+                <div class="text_on_01"  style="" >
                 <h4 style="text-decoration: underline;">HTML5</h3>
                 <p style="font-size: 15px;border-radius: 10px;">메인페이지 설계 가능<br> 서브페이지 설계 가능<br> 네비게이션 설계 가능<br> 위젯 설계 가능  </p>
                 <p style="font-size: 15px;border-radius: 10px;margin-top: 100px;opacity: 0.7;">활용가능도 80%</p>
@@ -547,7 +588,7 @@ border-radius: 10px;position: relative;}
 </div>
 <div class="page" id="page3" style="background:#333;border-radius: 10px 0px 0px 10px;">
     <div class="page_wrap">
-        <h2 class="page_title" style="text-align: center;font-size: 80px;">My SITE</h2>
+        <h2 class="page_title" style="text-align: center;font-size: 80px;background-color: skyblue;">My SITE</h2>
         <figure class="page_pic_02">
                 <ul class="lst">
                 
@@ -761,8 +802,8 @@ width:200px; }
 
 
 /* footer */
-#ft { clear:both; height: 200px; padding: 20px;border-radius: 10px; background:#333;border-radius: 10px 0px 0px 10px; color:#fff;
-    font-size:20px;border-radius: 10px; text-align:center; }
+#ft { clear:both; height: 70px; padding: 20px; background:#333; color:#fff;
+    font-size:20px; text-align:center; }
         </style>
     
   
