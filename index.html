@@ -280,13 +280,6 @@ border-radius: 10px;position: relative;}
 
 
   <style>
-   /*탑 이미지 3개숨김*/ 
-    .top_image {margin-left: 300px;display: none;}
-  .top_image img {border-radius: 100px;}
-  .top_image li {float: left;position: relative;margin-left: 100px;left: 150px;}
-  .c1_01 {background-image: url(image/my/top_01-ok.png)} 
-  .c1_02 {background-image: url(image/my/top_02.png)} 
-  .c1_03 {background-image: url(image/my/top_03.png)} 
 
   /*페이지별 스타일 */
 
@@ -345,7 +338,7 @@ border-radius: 10px;position: relative;}
 
 .lst li {margin-left: 50px;}
 
-            .txt ul {position: relative;left: 550px;bottom: 50px;}
+            .txt ul {position: relative;left: 470px;bottom: 50px;}
             .txt li {float: left;margin-left:30px}
             .txt a{width: 60px;height: 60px;}
             .txt img{width: 60px;height: 60px;border-radius: 20%;}
@@ -358,20 +351,20 @@ border-radius: 10px;position: relative;}
         .side_color2 { width:200px; height:120%; position:fixed; top:0px; left:2500px; opacity: 0.4;
         background:skyblue; transform:skewX(50deg); }
         /* 1depth*/
-#gnb { 	width:220px; position:absolute; top:10px; right:0px;}
-#gnb>li {position:relative; }
-#gnb>li>a { display:block; width:220px; height:50px; font:bold 18px/3 play; color:#222; box-sizing:border-box; padding-right:40px; text-align:right;}
-#gnb>li.on>a { background:; color:#111;}
-#gnb>li:hover>a { background:#111; color:#fff;}
-#gnb em { display:inline-block; transform:skewX(40deg)!important; }
-#gnb em i { 	margin-right:20px;}
+#gnb1 { 	width:220px; position:absolute; top:10px; right:0px;}
+#gnb1>li {position:relative; }
+#gnb1>li>a { display:block; width:220px; height:50px; font:bold 18px/3 play; color:#222; box-sizing:border-box; padding-right:40px; text-align:right;}
+#gnb1>li.on>a { background: color#111;}
+#gnb1>li:hover>a { background:#111; color:#fff;}
+#gnb1 em { display:inline-block; transform:skewX(40deg)!important; }
+#gnb1 em i { 	margin-right:20px;}
 /* 2depth */
-#gnb ul { position:absolute; left:0px;  top:0px; opacity:0; transition:all 0.4s;}
-#gnb>li:hover ul { opacity:0.8; left:205px; }
-#gnb ul a { display:block; width:150px; height:40px; background:#222; border-bottom:1px solid #b9fb05; font:bold 16px/2.5 arial; color:#fff; box-sizing:border-box; padding-left:50px; margin-bottom:3px; transition:all 0.5s; }
-#gnb ul a:hover { background:#b9fb05; color:#333; }
-#gnb>li.on ul { opacity:0.8; left:205px; top:-10px; }
-#gnb li.on ul a { background:#444; opacity:0.7; } 
+#gnb1 ul { position:absolute; left:0px;  top:0px; opacity:0; transition:all 0.4s;}
+#gnb1>li:hover ul { opacity:0.8; left:205px; }
+#gnb1 ul a { display:block; width:150px; height:40px; background:#222; border-bottom:1px solid #b9fb05; font:bold 16px/2.5 arial; color:#fff; box-sizing:border-box; padding-left:50px; margin-bottom:3px; transition:all 0.5s; }
+#gnb1 ul a:hover { background:#b9fb05; color:#333; }
+#gnb1>li.on1 ul { opacity:0.8; left:205px; top:-10px; }
+#gnb1 li.on1 ul a { background:#444; opacity:0.7; } 
 /* sns 버튼 모음*/
 #sns { position:fixed; top:60px; right:50px;}
 #sns li { float:left; margin-right:30px;}
@@ -381,25 +374,26 @@ border-radius: 10px;position: relative;}
 
 <body>
   <header>		
-		<ul id="gnb">
-			<li class="on">
-				<a href="#"><em>About YEJUN?</em></a>
+		<ul id="gnb1">
+			<li class="on1">
+        <a><em>ABOUT YEJUN?</em></a>	
 			</li>
 			<li>
-				<a href="#"><em>My SKILLS</em></a>				
+				<a><em>My SKILLS</em></a>				
 			</li>
 			<li>
-				<a href="#"><em>My SITE</em></a>
+				<a><em>My SITE</em></a>
 			</li>
 			<li>
-				<a href="#"><em>PROFILE</em></a>
+				<a><em>PROFILE</em></a>
 			</li>
 			<li>				
-				<a href="#"><em>COPYRIGHT</em></a>
+				<a><em>COPYRIGHT</em></a>
 			</li>	
 		</ul>
   </header>
-  <div class="side_color"></div> 
+  
+  <div class="side_color" style="z-index: 20;"><h3 style="margin-top: 730px;transform: rotate(-80deg);font-size: 20px;width: 250px;height: 150px;font-weight: bold;color: #fff;"> All copyright © <br> LEE YEJUN(alpstiger)</h3></div> 
   <div class="side_color2"></div> 
   
 
@@ -412,25 +406,6 @@ border-radius: 10px;position: relative;}
 -->
 <div class="page" id="page1">
     <div class="page_wrap">
-        <div class="top_image">
-        <ul>
-          <li>
-              <div class="top01 c1_01">
-              </div>
-          </li>
-          <li>
-            <div class="top01 c1_02">
-         
-            </div>
-        </li>
-        <li>
-          <div class="top01 c1_03">
-         
-          </div>
-      </li>
-
-       </ul>
-    </div>
         <div class=text_wrap>
         <div class="slider">
             <div class="slide active">
@@ -496,8 +471,8 @@ border-radius: 10px;position: relative;}
                 <div class="page_m m2_01">
             
                   <h1 class="m2_01_text1" style="font-size: 30px;text-align: center;"></h1>
-                <div class="text_on_01"  style="" >
-                <h4 style="text-decoration: underline;color: #fff;">HTML5</h3>
+                <div class="text_on_01">
+                <h4 style="text-decoration: underline;color: #fff;">HTML5</h4>
                 <p style="font-size: 15px;border-radius: 10px;">메인페이지 설계 가능<br> 서브페이지 설계 가능<br> 네비게이션 설계 가능<br> 위젯 설계 가능  </p>
                 <p style="font-size: 15px;border-radius: 10px;margin-top: 100px;opacity: 0.7;">활용가능도 80%</p>
              <div class="graph_01" style="border-radius: 10px; position: absolute;">
@@ -542,7 +517,7 @@ border-radius: 10px;position: relative;}
           <div class="page_m m2_04">
             <h1 class="m2_04_text1" style="font-size: 30px;text-align: center;"></h1> 
             <div class="text_on_04">
-            <h4 style="text-decoration: underline;color: #fff;">Photo shop</h4>
+            <h4 style="text-decoration: underline;color: #fff;">Photoshop</h4>
             <p style="font-size: 15px;border-radius: ;">이미지 편집, 시안 제작 <br>  패턴 제작 <br> 배너 제작 <br> 위젯 요소 제작 등 가능</p>
             <p style="font-size: 15px;border-radius: px;margin-top: 100px;opacity: 0.7;">활용가능도 70%</p>
             <div class="graph_04">
@@ -579,7 +554,7 @@ border-radius: 10px;position: relative;}
      
       <h1 class="m2_07_text1" style="font-size: 30px;text-align: center;"></h1>
       <div class="text_on_07" style="">
-      <h6 style="text-decoration: underline;color: #fff;">CSS 프레임 워크</h6>
+      <h6 style="text-decoration: underline;color: #fff;">CSS프레임워크</h6>
       <p style="font-size: 20px;color: #333;">bootstrap <br> foundation <br> pure <br> bulma 등 사용가능</p>
       <p style="font-size: 15px;border-radius: 10px;margin-top: 85px;opacity: 0.7;">활용가능도 70%</p>
       <div class="graph_07">
@@ -591,7 +566,7 @@ border-radius: 10px;position: relative;}
   <div class="page_m m2_08">
     <h1 class="m2_08_text1" style="font-size: 30px;text-align: center;"></h1>
     <div class="text_on_08">
-    <h6 style="text-decoration: underline;color: #fff;">기타 툴</h6>
+    <h6 style="text-decoration: underline;color: #fff;">기타툴</h6>
     <p style="font-size: 15px;border-radius: 10px;">프로토타입툴(oven) <br> 공유 및 버전관리툴 <br> (깃허브,트렐로,드롭박스) <br> 서버(아파치) <br>
       서버용언어(php)DB(my-sql) <br> 사용가능 </p>
       <p style="font-size: 15px;border-radius: 10px;margin-top: 67px;opacity: 0.7;">활용가능도 70%</p>
@@ -922,10 +897,6 @@ width:200px; }
      
     </div>
 </div>
-
-<footer class="page" id="ft">
-    <div class="ft_wrap">  2020 All copyright © LEE YEJUN(alpstiger)</div>
-</footer>
 <!-- 제이쿼리 기동시키고 오픈예정
   <div class="page_top_btn">
     <span class="txt">↑</span>
