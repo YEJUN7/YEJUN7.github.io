@@ -5,18 +5,13 @@
    <script src="http://code.jquery.com/jquery-latest.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="image/favi/favi.ico">
-  <meta property="og:image" content="image/favi/favi.png">
-  <meta property="og:description" content="이예준 포트폴리오입니다.">
-  <meta property="og:title" content="이예준 포트폴리오.">
+	<link rel="stylesheet" href="css/style.css" />
   <script type="text/javascript" src="js/prefixfree.min.js"></script>
     <title>이예준 포트폴리오</title>
     <style>
     * { margin: 0; padding: 0; }
-    ul,li { list-style:none; }
+    ul { list-style:none; }
     a { text-decoration:none; }
-
     body, html { width: 100%; -ms-scroll-style:none; }
     ::-webkit-scrollbar { display:none; } 
     html { overflow:hidden; }
@@ -194,7 +189,7 @@ text-shadow: 0 8px 9px, 0px -2px 1px #fff; }
     .lst .m2_04{ transition-delay:0.4s; }  
     .lst .m2_05{ transition-delay:0.5s; }  
     .lst .m2_06{ transition-delay:0.4s; }  
-    .lst .m2_07{ transition-delay:0.3s; }   
+    .lst .m2_07{ transition-delay:0.3s; }  
     .lst .m2_08{ transition-delay:0.2s; }  
      
     .lst.on li a img { margin-top: 0; opacity:1; }
@@ -228,35 +223,10 @@ border-radius: 10px;position: relative;}
 .graph_07_2 {width: 140px;height: 15px;background-color:#333;border-radius: 10px 0px 0px 10px;}
 .graph_08 {width: 200px;height: 15px;border: 1px solid #333;border-radius: 10px 0px 0px 10px;margin-left: 20px;border-radius: 10px;}
 .graph_08_2 {width: 140px;height: 15px;background-color:#333;border-radius: 10px 0px 0px 10px;}
-/* 페이지 3*/
-
-* {box-sizing: border-box}
-/* Style tab links */
-.tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 33.3333%;
-}
-
-.tablink:hover {
-  background-color: #777;
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {width: 100%;height: 100%;
-  color: white;
-  display: none;}
 
 
 /*  페이지 4*/
 </style>
-
  
   <script>
   $(document).on('click',nextSlide);
@@ -417,6 +387,9 @@ border-radius: 10px;position: relative;}
 			<li>
 				<a><em>PROFILE</em></a>
 			</li>
+			<li>				
+				<a><em>COPYRIGHT</em></a>
+			</li>	
 		</ul>
   </header>
   
@@ -445,7 +418,7 @@ border-radius: 10px;position: relative;}
              <p class="click">Click!</p>
              
     
-      
+             </style>
              
             </div>
             </div>
@@ -503,7 +476,10 @@ border-radius: 10px;position: relative;}
                 <p style="font-size: 15px;border-radius: 10px;">메인페이지 설계 가능<br> 서브페이지 설계 가능<br> 네비게이션 설계 가능<br> 위젯 설계 가능  </p>
                 <p style="font-size: 15px;border-radius: 10px;margin-top: 100px;opacity: 0.7;">활용가능도 80%</p>
              <div class="graph_01" style="border-radius: 10px; position: absolute;">
-                <div class="graph_01_2" style="border-radius: 10px 0px 0px 10px;position: absolute;">              
+                <div class="graph_01_2" style="border-radius: 10px 0px 0px 10px;position: absolute;">      
+                  <style>
+                    
+                    </style>         
                 </div>
              </div>
                 </div>     
@@ -606,64 +582,214 @@ border-radius: 10px;position: relative;}
 <div class="page" id="page3" style="background:#333;border-radius: 10px 0px 0px 10px;">
     <div class="page_wrap">
         <h2 class="page_title" style="text-align: center;font-size: 80px;background-color: skyblue;">My SITE</h2>
-        <button class="tablink" onclick="openPage('Home', this, 'red')">모바일</button>
-<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">반응형</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">웹</button>
+        <figure class="page_pic_02">
+                <ul class="lst">
+                
+                  <div class="mock_image">
+                    <li class="mock_li_01"><a href=""><img src="image/web_mock-ok.png" alt="">WEB 사이트</a></li>
+                   <div class="web_fadein">
+                     <ul>
+                    <li class="website_01">
+                      <div id="web_fade1" style="width:200px;height:200px;display:none;background-color:green;
+                      background-image:url(image/b2.PNG);">
+                      <a href="https://yejun7.github.io/b2/" target="_blank"><p style="margin-top: 200px; font-size: 15px;" >과학기술정보통신부</p></a></div></li>
+                 <!-- 사이트 더 구축후 오픈 예정
+                    <li><div id="web_fade2" style="width:200px;height:200px;display:none;background-color:green;">2</div></li>
+                    <li><div id="web_fade3" style="width:200px;height:200px;display:none;background-color:green;">3</div></li>
+                    <li><div id="web_fade4" style="width:200px;height:200px;display:none;background-color:red;">4</div></li>  -->
+                  </ul>
+                 </div>
+                    <li class="mock_li_02"><a href=""><img src="image/mo-ok.png" alt="">Mobile 사이트</a></li>
+                    <div class="mo_fadein_02">
+                      <ul>
+                      <li><div id="mo_fade1" style="width:200px;height:200px;display:none;background-color:black;
+                       background-image:url(image/b12.png);">
+                       <a href="https://yejun7.github.io/b12/" target="_blank">
+                        <p style="margin-top: 200px; font-size: 15px;" >The national gallery</p>
+                      </a>
+                    </div>
+                  </li>
+                 <!-- 사이트 더 구축후오픈 예정
+                      <li><div id="mo_fade2" style="width:200px;height:200px;display:none;background-color:green;">2</div></li>
+                      <li><div id="mo_fade3" style="width:200px;height:200px;display:none;background-color:green;">3</div></li>
+                      <li><div id="mo_fade4" style="width:200px;height:200px;display:none;background-color:red;">4</div></li> -->
+                    </ul>
+                   </div>
+                   
+                   <style>
+                   
+                   </style>
+                    <li class="mock_li_03"><a href=""><img src="image/ban-ok.png" alt="">반응형 사이트</a></li>
+                    <div class="ban_fadein_03">
+                      <ul>
+                      <li><div id="ban_fade1" style="width:200px;height:200px;display:none;background-color:black;
+                      background-image: url(image/ban01.png);">
+                      <a href="https://yejun7.github.io/ban01/" target="_blank"><p style="margin-top:200px; font-size: 15px;" >대전동산고등학교</p></a></div></li>
+                      <li><div id="ban_fade2" style="width:200px;height:200px;display:none;background-color:green;background-image: url(image/ban7.png);">
+                        <a href="https://yejun7.github.io/ban7/" target="_blank"><p style="margin-top:200px; font-size: 15px;" >식품의약품안전처</p></a></div></li>
+                      <li><div id="ban_fade3" style="width:200px;height:200px;display:none;background-color:green;background-image: url(image/ban04.png);">
+                        <a href="https://yejun7.github.io/ban04/" target="_blank"><p style="margin-top:200px; font-size: 15px;" >통계청</p></a></div></li>
+                      <li><div id="ban_fade4" style="width:200px;height:200px;display:none;background-color:red;background-image: url(image/ban5.png);">
+                        <a href="https://yejun7.github.io/ban5/" target="_blank"><p style="margin-top:200px; font-size: 15px;" >대전중구보건소</p></a></div></li>
+                      <li><div id="ban_fade5" style="width:200px;height:200px;display:none;background-color:red;background-image: url(image/ban6.png);">
+                        <a href="https://yejun7.github.io/ban6/" target="_blank"><p style="margin-top:200px; font-size: 15px;" >Dole</p></a></div></li>
+                        <li><div id="ban_fade6" style="width:200px;height:200px;display:none;background-color:red;background-image: url(image/ban02.png);">
+                          <a href="https://yejun7.github.io/ban02/" target="_blank"><p style="margin-top:200px; font-size: 15px;" >워너브라더스</p></a></div></li>
+                    </ul>
+                   </div>
+                    </div>
+                </ul>
+        </figure>
 
+        <!--web fade in jQuery-->
+        
+        <script>
+          $(document).ready(function(){
+            $(".mock_li_01").hover(function(){
+              $("#web_fade1").delay("slow").fadeIn();
+              $("#web_fade2").delay("fast").fadeIn();
+              $("#web_fade3").delay(200).fadeIn();
+              $("#web_fade4").delay(400).fadeIn();
+           
+            });
+          });
+          </script>
+           <script>
+            $(document).ready(function(){
+              $(".mock_li_02").hover(function(){
+                $("#web_fade1").delay("fast").fadeOut();
+                $("#web_fade2").fadeOut();
+                $("#web_fade3").fadeOut();
+                $("#web_fade4").fadeOut();
+           
+              });
+            });
+            </script>
+             <script>
+              $(document).ready(function(){
+                $(".mock_li_03").hover(function(){
+                  $("#web_fade1").delay("fast").fadeOut();
+                  $("#web_fade2").fadeOut();
+                  $("#web_fade3").fadeOut();
+                  $("#web_fade4").fadeOut();
+             
+                });
+              });
+              </script>
 
-<style>
-#News > ul > li {float: left;width:  250px;height:auto;margin-top:50px;margin-left: 60px;text-align: center;}
-#News img {width: 250px;}
-#News h6 {color: #fff;}
-#home li a {display: block;}
-#home li img {display: block;}
-.site_tab {width: 1000px;height: 600px;margin-left: 550px;}
-.site_tab img {border: 1px solid #fff;}
-.site_tab li { transition-delay:0.2s; }
-</style>
-<div class="site_tab">
-    <div id="Home" class="tabcontent">
-      <li><a href=""><img src="image/siteb12.png" alt="" style="width: 300px;height: auto;padding: auto auto;margin-left: 325px;margin-top: 70px;border: 1px solid #fff;"> 
-        <p style="text-align: center;color: #fff;margin-right: 50px;">The natoinal gallery</p></a></li>
-    </div>
-    <div id="News" class="tabcontent">
-      <ul>
-         <li><a href="https://yejun7.github.io/ban7"target="_blank"><img src="image/ban7.png" alt=""><h6>식품의약품안전처</h6></a></li>
-        <li><a href="https://yejun7.github.io/ban02"target="_blank" ><img src="image/ban02.png" alt=""><h6>워너브라더스</h6></a></li>
-        <li><a href="https://yejun7.github.io/ban04"target="_blank"><img src="image/ban04.png" alt=""><h6>통계청</h6></a></li>  
-        <li><a href="https://yejun7.github.io/ban5"target="_blank"><img src="image/ban5.png" alt=""><h6>대전중구보건소</h6></a></li>
-        <li><a href="https://yejun7.github.io/ban6"target="_blank"><img src="image/ban6.png" alt=""><h6>DOLE</h6></a></li>
-     <li><a href="https://yejun7.github.io/ban01" target="_blank"><img src="image/ban01.png" alt=""> <h6>대전동산고등학교</h6></a></li>
-      </ul>
-    </div>
+            <!--  mobile fade in out-->
 
-    <div id="Contact" class="tabcontent">
-      <li><a href=""><img src="image/siteb2.png" alt="" style="width: 400px;height: auto;margin-left:270px;margin-top: 150px;border: 1px solid #fff;" >
-        <p style="color: #fff;margin-left: 335px;">과학기술정보통신부</p></a></li>
-    </div>
-</div>
+            <script>
+              $(document).ready(function(){
+                $(".mock_li_02").hover(function(){
+                  $("#mo_fade1").delay("slow").fadeIn();
+                  $("#mo_fade2").delay("fast").fadeIn();
+                  $("#mo_fade3").delay(200).fadeIn();
+                  $("#mo_fade4").delay(400).fadeIn();
+               
+                });
+              });
+              </script>
+               <script>
+                $(document).ready(function(){
+                  $(".mock_li_01").hover(function(){
+                    $("#mo_fade1").fadeOut();
+                    $("#mo_fade2").fadeOut();
+                    $("#mo_fade3").fadeOut();
+                    $("#mo_fade4").fadeOut();
+               
+                  });
+                });
+                </script>
+                 <script>
+                  $(document).ready(function(){
+                    $(".mock_li_03").hover(function(){
+                      $("#mo_fade1").delay("fast").fadeOut();
+                      $("#mo_fade2").fadeOut();
+                      $("#mo_fade3").fadeOut();
+                      $("#mo_fade4").fadeOut();
+                 
+                    });
+                  });
+                  </script>
+
+                  <!--ban fadein out-->
+
+                  <script>
+                    $(document).ready(function(){
+                      $(".mock_li_03").hover(function(){
+                        $("#ban_fade1").delay("slow").fadeIn();
+                        $("#ban_fade2").delay("fast").fadeIn();
+                        $("#ban_fade3").delay(200).fadeIn();
+                        $("#ban_fade4").delay(400).fadeIn();
+                        $("#ban_fade5").delay(500).fadeIn();
+                        $("#ban_fade6").delay(500).fadeIn();
+                     
+                      });
+                    });
+                    </script>
+                     <script>
+                      $(document).ready(function(){
+                        $(".mock_li_01").hover(function(){
+                          $("#ban_fade1").delay("fast").fadeOut();
+                          $("#ban_fade2").fadeOut();
+                          $("#ban_fade3").fadeOut();
+                          $("#ban_fade4").fadeOut();
+                          $("#ban_fade5").fadeOut();
+                          $("#ban_fade6").fadeOut();
+                     
+                        });
+                      });
+                      </script>
+                       <script>
+                        $(document).ready(function(){
+                          $(".mock_li_02").hover(function(){
+                            $("#ban_fade1").delay("fast").fadeOut();
+                            $("#ban_fade2").fadeOut();
+                            $("#ban_fade3").fadeOut();
+                            $("#ban_fade4").fadeOut();
+                            $("#ban_fade5").fadeOut();
+                            $("#ban_fade6").fadeOut();
+                       
+                          });
+                        });
+                        </script>
+             <!-- web site link hover-->
 <script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+    $(document).ready(function(){
+            $(".website_01").hover(function(){
+              $(".website_01").css("background", "");
+        
+           
+            });
+          });
 </script>
 
-
         <style>
-  
+          /* page3 */
+          /* my site fade in */
+.mock_image {position: absolute;}
+.web_fadein,.mo_fadein_02, .ban_fadein_03 {position: absolute;}
+
+.web_fadein li{float: left;top: 500px;z-index: 10;position: absolute;}
+.mo_fadein_02 li{float: left;top: 500px;z-index: 10;position: absolute;}
+.ban_fadein_03 ul {position: relative;right: 110px;width: 100vw;}
+.ban_fadein_03 li{float: left;top: 500px;z-index: 10;position: absolute;}
+
+.mock_image  {  position:relative; }
+.mock_image li { overflow:visible; position:relative; 
+ text-align:center; }
+.mock_image li a { position:relative; margin:0 auto; }
+.mock_image li a  { text-align:center;
+box-sizing:border-box; display:block; clear:both;
+margin:0 auto;}
+.mock_image li a:before { clear:both; content:""; display:block; height:5px; background:#fff; transition:0.5s; width:0; margin:0 auto; }
+
+
+.mock_image li a:hover::before { background:#1c87dc;
+width:200px; }
+.mock_image li a:after { clear:both; content:""; display:block; height:5px; background:#fff; transition:0.5s; width:0; margin:0px auto;  }
+.mock_image li a:hover::after { background:#1c87dc; width:200px; }
 
 
 
