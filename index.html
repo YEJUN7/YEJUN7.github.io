@@ -397,6 +397,10 @@ border-radius: 10px;position: relative;}
 #sns li { float:left; margin-right:30px;}
 #sns .fa { font-size:25px; color:#fff; opacity:0.5;	transform:scale(1); 	transition:all 0.5s;}
 #sns .fa:hover { opacity:1; transform:scale(1.4);}
+
+/* footer */
+#ft { clear:both; height: 70px; padding: 20px; background:#333; color:#fff;
+    font-size:20px; text-align:center; }
   </style>
 
 <body>
@@ -604,8 +608,8 @@ border-radius: 10px;position: relative;}
     <div class="page_wrap">
         <h2 class="page_title" style="text-align: center;font-size: 80px;background-color: skyblue;">My SITE</h2>
         <button class="tablink" onclick="openPage('Home', this, 'red')">모바일</button>
-<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">반응형</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">웹</button>
+<button class="tablink" onclick="openPage('News', this, 'red')" id="defaultOpen">반응형</button>
+<button class="tablink" onclick="openPage('Contact', this, 'red')">웹</button>
 
 
 <style>
@@ -614,7 +618,7 @@ border-radius: 10px;position: relative;}
 #News h6 {color: #fff;}
 #home li a {display: block;}
 #home li img {display: block;}
-.site_tab {width: 1000px;height: 600px;margin-left: 550px;}
+.site_tab {width: 1000px;height: 600px;margin-left: 470px;}
 .site_tab img {border: 1px solid #fff;}
 .site_tab li { transition-delay:0.2s; }
 </style>
@@ -658,17 +662,13 @@ function openPage(pageName,elmnt,color) {
 document.getElementById("defaultOpen").click();
 </script>
 
-
-        <style>
   
 
 
 
 
-/* footer */
-#ft { clear:both; height: 70px; padding: 20px; background:#333; color:#fff;
-    font-size:20px; text-align:center; }
-        </style>
+
+  
     
   
   </div>
