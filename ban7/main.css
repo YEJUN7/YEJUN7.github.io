@@ -3,7 +3,7 @@
 #page1 { height: 600px; overflow-x:hidden; 
 background:#f6f6f6; }
 .page1_side { width:30%; float:left; 
-background:#28b690; height: 600px; 
+background:#369; height: 350px; 
 background-image:url("./img/bg_benefit.png"); background-repeat: no-repeat; padding:60px;
 box-sizing:border-box; padding-top:120px; }
 .pageTitle { color:#fff; font-size:60px; }
