@@ -59,13 +59,6 @@
     ::-webkit-scrollbar { display:none; }    
     ::-o-scrollbar { display:none; } 
     ::-moz-scrollbar { display:none; }     
-    
-
-
-
-
-
-
    .con { clear:both; }
     #visual { width:100vw; min-height:420px; background-image:url("./img/main_visual03.png"); background-size:100% auto; background-position:center bottom; }   
     #visual .wrap { padding-top: 50px; padding-left:300px; position:relative;
@@ -107,9 +100,9 @@
 
 button, input { border:0; outline:0; background-color:transparent; }
 figure {margin: 0;padding: 0;}
-	#vis { width:100vw; height:auto; margin:15px auto;
+	#vis { width:100vw; height:auto; margin-top:15px;
 	 overflow:hidden; clear:both; }
-	.img_box { width:100vw; height:auto; }
+	  #vis {width: 100vw;height: 600px;}
 	#vis li { display:block; float:left; position:relative; }
     #vis a { display:block; }
 	#vis img { display:block; width:100vw; height:600px; }
@@ -117,12 +110,10 @@ figure {margin: 0;padding: 0;}
          position:absolute;  z-index:10; top:20px; left:20px; text-align:center;	line-height: 40px; }
     .ac_box { clear:both; width: 300px; margin:0 auto; }
 
-	#btn_box { width:150px; height:50px; margin:0px auto; float:left;margin-top: 610px;position: absolute;margin-left: 120px; }
-	#btn_box button { display:block; width:50px; height:50px; cursor:pointer; }
-	#btn_box .left { float:left; }
-    #btn_box .right { float:right; }
-    #vis {width: 100vw;height: 600px;}
-    
+	#btn_box { width:400px; height:50px; float:left;margin-top: 630px;position: absolute;margin-left:-23px; }
+	#btn_box button { display:block; width:50px; height:50px; cursor:pointer; float: left;margin-left: 100px;}
+
+  
   
 
   </style>
@@ -191,11 +182,16 @@ figure {margin: 0;padding: 0;}
       });
   });
   </script>
+    <style>
+        .wrap li{float: left;}
+      
+        .serch {margin-top: 30px;margin-left: 30px;width: 700px;}
+        #gnb {width:60vw;padding-left: 160px;}
+        
+    </style>
 </head>
 <body>
-   
   <header class="hd">
-
     <div class="hd_row" id="hd1">
         <div class="wrap">
             <ul class="tnb left">
@@ -208,13 +204,6 @@ figure {margin: 0;padding: 0;}
             </ul>
         </div>
     </div>
-    <style>
-        .wrap li{float: left;}
-      
-        .serch {margin-top: 30px;margin-left: 30px;width: 700px;}
-        #gnb {width:60vw;padding-left: 160px;}
-        #gnb li
-    </style>
     <div class="hd_row" id="hd2">
         <div class="wrap">
             <li>
@@ -338,7 +327,8 @@ figure {margin: 0;padding: 0;}
 <figure class="vs">
     <div class="ac_box">
         <div id="btn_box">
-            <button class="left">◀</button><button class="right">▶</button>
+            <button class="left">◀</button>
+            <button class="right">▶</button>
         </div>
     </div>    
 	<div id="vis">
@@ -350,14 +340,14 @@ figure {margin: 0;padding: 0;}
                 </a>
             </li>
             <li>
-                <a href="">
-                    <img src="image/main/slide_new_02.jp" alt="">
+                
+                    <img src="image/main/slide_03ok.png" alt="">
                 
                 </a>
             </li>
             <li>
-                <a href="">
-                    <img src="image/main/slide_03.jp" alt="">
+               
+                    <img src="image/main/slide_02ok.png" alt="">
                    
                 </a>
             </li>
@@ -393,12 +383,11 @@ figure {margin: 0;padding: 0;}
 	-webkit-transform: translateY(5px);
     opacity: 1;
 }
-.column {width: 200px;height: auto;}
-.column a {width: 200px;}
-.column a {border-radius: 30px;}
-.column .expanded {width: 200px;}
+div.column {width: 200px;height: auto;position: relative;}
+div.column a {width:200px;}
+div.column .expanded {width: 200px;border-radius: 30px;}
 .expanded {width: 200px;} 
-.scroll {margin-left:50%;bottom: 70px;position: relative;height:auto;opacity: 0.7;}
+.scroll {margin-left:49.5%;bottom: 25px;position: relative;height:auto;opacity: 0.7;}
 .scroll img {height: 100px;width: 70px;}
 </style>
 <button class="scroll" onclick="down()"><img src="image/main/scroll_down.jfif" alt=""></button>
@@ -407,12 +396,12 @@ function down(){
     window.scrollBy(0,900);
 }
 </script>
-<div class="row column text-center" style="margin-top: 100px;" >
+<div class="row column text-center">
 <h3 style="font-size:17px;margin-bottom: 50px;right: 400px;;">알림 사항</h3>
 </div>
 <div class="row small-up-2 large-up-4" id="back_03">
 <div class="column">
-<a href=""><img id="ban" class="thumbnail" src="image/main/noti_01.PNG"></a>
+<a href=""><img id="ban"  style="width: 800px;" class="thumbnail" src="image/main/noti_01.PNG"></a>
 <a href="#" class="button expanded">안심 프로젝트</a>
 </div>
 <div class="column" >
@@ -436,7 +425,9 @@ function down(){
 </div>
 
 <!--배너 왼쪽으로 슬라이드 -->
-
+<style>
+#page1 {margin-top: 100px;}
+</style>
 <div class="page" id="page1">
     <aside class="page1_side">
         <h1 class="pageTitle">정책정보</h1>
