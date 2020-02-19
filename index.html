@@ -22,7 +22,7 @@
     .page { clear:both; background-repeat: no-repeat; background-size:cover;
         background-position: center center;  overflow:hidden;
     box-sizing:border-box; }    
-    .page_wrap { width:100%; height:100vh; margin:0 auto; overflow:hidden;
+    .page_wrap { height:100vh; margin:0 auto; overflow:hidden;
     box-sizing:border-box; } 
     #page1 { background-image:url("image/my/top_back.jpg"); }
     .page_wrap {  height: 100vh;
@@ -559,23 +559,25 @@ border-radius: 10px;position: relative;}
 </div>
 <div class="page" id="page3" style="background:#333;border-radius: 10px 0px 0px 10px;">
     <div class="page_wrap">
-        <h2 class="page_title" style="text-align: center;font-size: 80px;background-color: skyblue;">My SITE</h2>
+        <h2 class="page_title" style="text-align: center;font-size: 150%;background-color: skyblue;">My SITE</h2>
         <button class="tablink" onclick="openPage('Home', this, 'red')">모바일</button>
 <button class="tablink" onclick="openPage('News', this, 'red')" id="defaultOpen">반응형</button>
 <button class="tablink" onclick="openPage('Contact', this, 'red')">웹</button>
 <style>
-#News > ul > li {float: left;width:  250px;height:auto;margin-top:50px;margin-left: 60px;text-align: center;}
-#News img {width: 250px;}
+#News > ul > li {float: left;width:  25%;height:auto;margin-top:50px; margin-left: 6%;text-align: center;}
+#News img {width: 55%;}
 #News h6 {color: #fff;}
 #home li a {display: block;}
 #home li img {display: block;}
-.site_tab {width: 1000px;height: 600px;margin-left: 470px;}
+
 .site_tab img {border: 1px solid #fff;}
 .site_tab li { transition-delay:0.2s; }
 </style>
 <div class="site_tab">
     <div id="Home" class="tabcontent">
-      <li><a href="https://yejun7.github.io/b12" target="_blank"><img src="image/siteb12.png" alt="" style="width: 300px;height: auto;padding: auto auto;margin-left: 325px;margin-top: 70px;border: 1px solid #fff;"> 
+      <li style="height: 30%;"><a href="https://yejun7.github.io/b12" target="_blank"><img src="image/siteb12.png" alt=""
+      style="width: 33.33%;margin-left: 33.33%;;height: auto;
+      padding: auto auto;margin-top: 5%;border: 1px solid #fff;"> 
         <p style="text-align: center;color: #fff;margin-right: 50px;">The natoinal gallery</p></a></li>
     </div>
     <div id="News" class="tabcontent">
