@@ -107,7 +107,7 @@
 			var item = this.items[i];
 			if( i < this.options.visible ) {
 				item.style.opacity = 1;
-				item.style.pointerEvents = 'auto';
+				item.style.pointerEvents = 'auto'
 				item.style.zIndex = i === 0 ? parseInt(this.options.visible + 1) : parseInt(this.options.visible - i);
 				item.style.WebkitTransform = item.style.transform = 'translate3d(0px, 0px, ' + parseInt(-1 * 50 * i) + 'px)';
 			}
